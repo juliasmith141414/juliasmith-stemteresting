@@ -13,7 +13,7 @@ exhibits that engage audiences of all ages,
 inspiring wonder and curiosity for the world 
 around them.
 ### Our Goals <br>
-- Have the product we design demonstrate a concept in STEM that can be easily be observed by people of all ages. 
+- Have the product we design demonstrate a concept in STEM that can be easily be observed by people of all ages
 - Make something that we are proud of
 - Implement our device in 3 museum displays by
 the end of the year
