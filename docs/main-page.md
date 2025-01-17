@@ -14,3 +14,4 @@ Arizona State University <br>
 EGR 314, Prof. Nichols <br>
 
 [Team Organization](team-organization.md)
+[Appendix](appendix.md)
