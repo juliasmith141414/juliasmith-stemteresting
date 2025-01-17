@@ -13,3 +13,4 @@ Spring 2025 <br>
 Arizona State University <br>
 EGR 314, Prof. Nichols <br>
 
+[Team Organization](team-organization.md)
