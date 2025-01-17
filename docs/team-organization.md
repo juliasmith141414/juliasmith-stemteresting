@@ -12,10 +12,23 @@ interesting for all ages through interactive
 exhibits that engage audiences of all ages, 
 inspiring wonder and curiosity for the world 
 around them.
+### Our Goals <br>
+- Have the product we design demonstrate X
+- Make something that we are proud of
+- Implement our device in X museum displays by
+the end of the year
+- Learn a new scientific principle, and 
+demonstrate it for our audience in a clear and 
+entertaining fashion
+- Enhance our personal engineering portfolios
+with a well-designed, well-executed device
+
 ## Mission Statement
 ***Our Mission:*** <br>
 Sharing STEM education to inspire curiosity in 
 people of all ages.
+
+## Communication Channels
 
 <br>
 
