@@ -31,12 +31,12 @@ people of all ages.
 ## Communication Channels
  <br>
 
-Name |Preferred Contact Method |Email            |Phone       |Discord Name
------|-------------------------|-----------------|------------|------------
-Sara |Discord                  |sjbohart@asu.edu |4805226934  |Sara (@bananabreadmfn)
+Name  |Preferred Contact Method |Email            |Phone       |Discord Name
+------|-------------------------|-----------------|------------|------------
+Sara  |Discord                  |sjbohart@asu.edu |4805226934  |Sara (@bananabreadmfn)
+Xander|Discord/text             |xheafey@asu.edu  |4809380900  |(@mr.shitman)
 
 name | favorite
 -----|---------
 lala | yah     
------|---------
-lala | gogo
+gaga | gogo
