@@ -31,8 +31,9 @@ people of all ages.
 ## Communication Channels
  <br>
 
-Name  |Preferred Contact Method |Email            |Phone       |Discord Name
-------|-------------------------|-----------------|------------|------------
-Sara  |Discord                  |sjbohart@asu.edu |4805226934  |Sara (@bananabreadmfn)
-Xander|Discord/text             |xheafey@asu.edu  |4809380900  |(@mr.shitman)
-Ella  |Discord                  |egreetis@asu.edu |8327601995  |(@hella8931)
+Name  | Preferred Contact Method |Email            |Phone       |Discord Name
+------|--------------------------|-----------------|------------|------------
+Sara  | Discord                  |sjbohart@asu.edu |4805226934  |Sara (@bananabreadmfn)
+Xander| Discord/text             |xheafey@asu.edu  |4809380900  |(@mr.shitman)
+Ella  | Discord                  |egreetis@asu.edu |8327601995  |(@hella8931)
+Julia | Discord                  |jasmi157@asu.edu |8458077919  |(@juliasmith141)
