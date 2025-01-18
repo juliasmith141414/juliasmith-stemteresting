@@ -30,7 +30,13 @@ people of all ages.
 
 ## Communication Channels
  <br>
+
 Name |Preferred Contact Method |Email            |Phone       |Discord Name
------|-------------------------|-----------------|------------|----------------------
+-----|-------------------------|-----------------|------------|------------
 Sara |Discord                  |sjbohart@asu.edu |4805226934  |Sara (@bananabreadmfn)
 
+name | favorite
+-----|---------
+lala | yah     
+-----|---------
+lala | gogo
