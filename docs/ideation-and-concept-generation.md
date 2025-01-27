@@ -13,16 +13,16 @@ In the article, “[Ideation in Practice: How Effective UX Teams Generate Ideas]
 
 Our team did preliminary research before generating ideas for 4th-8th graders. To do this, we found it necessary to research what children were learning in the STEM field. Each STEM field has its subcategories. In the science field, there is life science, physical science, and space/earth science. We found these subcategories and then sorted them into a table. Then for each of these subcategories we found topics relating to them. We made sure that these topics are plausible for 4th-8th graders to learn and that they have some concept of it before viewing/interacting with the project. From these topics we were able to then create ideas for a project. <br>
 
-# Topics for 4th-8th Graders
+#### Topics for 4th-8th Graders
 ![Table 1](Tables%20of%20ideas%20-%20Sheet1-1.png)
 
 ### Design Concept Sketch
 Our team has decided to demonstrate that gravity can be mimicked using a centrifuge in an interactive science exhibit geared towards fourth to eighth grade students. Even though this is not explicitly a standard topic for the grade level, exposing a student to this concept could ignite their curiosity and make them more interested in related topics in the future. The exhibit will feature a centrifuge that is driven by a motor. The speed of the motor depends on what planet the student selects. The student selects the planet by placing their hands on a mat that shows the planets. A distance sensor will measure how far away their hand is. This data will be communicated with the motor and an OLED screen through the micro controllers. The OLED screen will print out the name of the planet the student has selected. The name of the planet will be sent to the user’s phone through internet communication. If the user presses a button, the OLED screen will display a fact about the current planet. The student using the machine will be given a small piece of clay that they can shape. Once it is their turn to use the machine, their clay is placed on the edge of the machine. When they select their gravity, the machine will spin, squishing their clay figure. The student will get to keep their clay figure once the demonstration is over. A concept design can be seen in Fig.1 and an exploded view in Fig.2 with labeled parts.
 
-# Fig.1 Centrifuge Concept
+#### Fig.1 Centrifuge Concept
 ![Fig1](AssemblyConcept-1.png)
 
-# Fig.2 Exploded View of Centrifuge Concept
+#### Fig.2 Exploded View of Centrifuge Concept
 ![Fig2](AssemblyConcept-2.png)
 
 Users will be provided with written instructions and illustrations to guide them through how to interact with the exhibit. These will be printed on the exhibit near the feature that they pertain to in order to ensure that the user sees the instructions and understands how to safely operate the machine. There will be a warning about the centrifuge spinning at high speeds to keep the user from behaving dangerously around the machine. Where appropriate, team members will guide the audience through the demonstration prompts. Users will be asked to “choose their planet” to model their selected acceleration value. Users will identify their planet of choice in the marked location relative to their chosen planet’s distance from the sun. The use of a distance sensor ensures users are a safe distance from rotating components to initiate simulation by requiring that at least one of their hands be significantly far from the centrifuge.
