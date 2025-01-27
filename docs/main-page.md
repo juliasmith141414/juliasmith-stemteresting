@@ -16,3 +16,9 @@ EGR 314, Prof. Nichols <br>
 [Team Organization](team-organization.md) <br>
 [Ideation and Concept Generation](ideation-and-concept-generation.md) <br>
 [Appendix](appendix.md)
+
+### Individual GitHub Links
+[Ella Greetis]() Coming soon
+[Sara Bohart](https://sarabohart.github.io/)
+[Julia Smith](https://juliasmith141414.github.io/)
+[Xander Heafey](https://xanderheafey.github.io/)
