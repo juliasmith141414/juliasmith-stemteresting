@@ -14,4 +14,5 @@ Arizona State University <br>
 EGR 314, Prof. Nichols <br>
 
 [Team Organization](team-organization.md) <br>
+[Ideation and Concept Generation](ideation-and-concept-generation.md) <br>
 [Appendix](appendix.md)
