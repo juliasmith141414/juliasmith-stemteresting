@@ -27,101 +27,101 @@ From these topics we then generated several ideas that we could make an exhibit 
 5. Gear ratios
 6. Sorting game
 7. WiFi enabled waiting list
-Parts of flowers
-Pollinators
-Motion sensor
-Distance sensor
-Pressure sensor
-Seismograph
-Impulse
-Bell ringing arcade game
-Leverage (move the base of a seesaw and show how much easier it is t lift things with the long end)
-Water cycle (sort the stages)
-Energy generation (kid spins motor, power output measured, powers a speaker that plays something selected over the internet)
-Eddy Currents (motor drops magnet in tube, distance sensor at bottom, show fall speed with an OLED screen)
-OLED Screen showing sensor data
-Use motor to drop something
-Ice melt experiment (moisture sensor on plate, cup full of ice and water, detect spillover and announce with speaker)
-Thermometer
-Show muscle contraction and relaxation 
-Pressure sensor to activate the demo
-Motorized pulley 
-Model of extruder
-Motor spinning an auger
-Astronomy (How many earths fit in the sun)
-the kid pours how many earth can fit in the sun into a model sun
-weight the model and calculate number of earths
-announce the number on a speaker
-Camera for color sensing through matlab
-Camera for centering
-Diodes (show how direction affects the width of the two regions)
-Kid puts model diode in modle circuit forward of backwards
-Motor moves model to reflect internal motion of the diode
-Interactive Plant Cell
-Screen for images and picture
-Logic gate interactive
-Changing states via internet
-Light prism mixing
-Rotating motor based of human input
-Light sensor
-Color sensor
-Basic LED Circuit
-Voltmeter sensor
-Ampmeter sensor
-Pulley Demonstration
-Equivalent Planet Gravity
-Centrifuge type actuator
-Rotating Rock Plate
-Floating Styrofoam
-Speakers to make standing wave
-Sound sensor
-Precipitation Demonstration
-Moisture sensor
-Liquid, Solid, Gas H20 demonstration
-Interactive Survey of Questions
-Real time changing statistics
-Wind generator
-Solar generator
-Motor
-Power a wind turbine with a modular fan
-Curdle milk with lemon juice (chemical reaction)
-Rotationally accurate modle solar system (Powered with motor that sppeds up with touch sensor and everything moves at the correct rate with gears)
-Touch slider
-Tesla Coil
-Drive spark gap open and closed with a motor
-Centrifuge to separate liquid mixtures (i.e. milk, impure water, koolaid, etc)
-Pressure sensor on hammer to show how hard something is being hit
-Types of teeth
-Turn a telescope and display a different constilation based off of where it is pointing
-Build a tower above a certain line
-Green screen
-Heat sensor
-Thermal camera
-Boyancy (kid makes a paper boat and puts it on water, marbles are added, sensor tells when boat sinks, speaker plays a "womp womp womp" noise to indicate the boat sunk)
-Generate and store electric charge
-Hydroelectric generator
-Run-of- the-River generator model
-Windmill
-Light Wavelength Imaging
-Moon Mirror and Laser Experiment
-Round Earth Experiment
-Line following robot
-Relative speed experiment: kids are asked whether a projectile will move faster if launched with some velocity in initial conditions. Sensors determine results.
-Feather and bowling ball experiment
-Signature tracking projectile (But make it cute? Like a heat seeking stuffed animal?)
-Googles that use machine learning to identify objects
-Steam engine
-Robot with markers for legs that paints drawings for the kids
-Remote controlled underwater robot that takes footage we could send to parents
-3d printed or popsicle stick drone kids the kids can easily assemble during the showcase
-“Build a bristle bot” make hex bugs out of toothbrushes and a battery and tiny motor to make it wiggle
-Vibration Motor
-Light tracker
-Search and rescue robot
-“Build a bot” kids pick from simple materials, (paper clips etc) to build their own wiggle bot
-Moon phases tracking device
-Moon phase demo (shine light on ball and show how light curves around the model of the moon)
-Live “Distance to the Moon” tracker
+8. Parts of flowers
+9. Pollinators
+10. Motion sensor
+11. Distance sensor
+12. Pressure sensor
+13. Seismograph
+14. Impulse
+15. Bell ringing arcade game
+16. Leverage (move the base of a seesaw and show how much easier it is t lift things with the long end)
+17. Water cycle (sort the stages)
+18. Energy generation (kid spins motor, power output measured, powers a speaker that plays something selected over the internet)
+19. Eddy Currents (motor drops magnet in tube, distance sensor at bottom, show fall speed with an OLED screen)
+20. OLED Screen showing sensor data
+21. Use motor to drop something
+22. Ice melt experiment (moisture sensor on plate, cup full of ice and water, detect spillover and announce with speaker)
+23. Thermometer
+24. Show muscle contraction and relaxation 
+25. Pressure sensor to activate the demo
+26. Motorized pulley 
+27. Model of extruder
+28. Motor spinning an auger
+29. Astronomy (How many earths can fit in the sun)
+30. A kid pours how many earth can fit in the sun into a model sun
+31. Weight the model and calculate number of earths
+32. Announce the number on a speaker
+33. Camera for color sensing through matlab
+34. Camera for centering
+35. Diodes (show how direction affects the width of the two regions)
+36. Kid puts model diode in modle circuit forward of backwards
+37. Motor moves model to reflect internal motion of the diode
+38. Interactive Plant Cell
+39. Screen for images and picture
+40. Logic gate interactive
+41. Changing states via internet
+42. Light prism mixing
+43. Rotating motor based of human input
+44. Light sensor
+45. Color sensor
+46. Basic LED Circuit
+47. Voltmeter sensor
+48. Ampmeter sensor
+49. Pulley Demonstration
+50. Equivalent Planet Gravity
+51. Centrifuge type actuator
+52. Rotating Rock Plate
+53. Floating Styrofoam
+54. Speakers to make standing wave
+55. Sound sensor
+56. Precipitation Demonstration
+57. Moisture sensor
+58. Liquid, Solid, Gas H20 demonstration
+59. Interactive Survey of Questions
+60. Real time changing statistics
+61. Wind generator
+62. Solar generator
+63. Motor
+64. Power a wind turbine with a modular fan
+65. Curdle milk with lemon juice (chemical reaction)
+66. Rotationally accurate modle solar system (Powered with motor that sppeds up with touch sensor and everything moves at the correct rate with gears)
+67. Touch slider
+68. Tesla Coil
+69. Drive spark gap open and closed with a motor
+70. Centrifuge to separate liquid mixtures (i.e. milk, impure water, koolaid, etc)
+71. Pressure sensor on hammer to show how hard something is being hit
+72. Types of teeth
+73. Turn a telescope and display a different constilation based off of where it is pointing
+74. Build a tower above a certain line
+75. Green screen
+76. Heat sensor
+77. Thermal camera
+78. Boyancy (kid makes a paper boat and puts it on water, marbles are added, sensor tells when boat sinks, speaker plays a "womp womp womp" noise to indicate the boat sunk)
+79. Generate and store electric charge
+80. Hydroelectric generator
+81. Run-of- the-River generator model
+82. Windmill
+83. Light Wavelength Imaging
+84. Moon Mirror and Laser Experiment
+85. Round Earth Experiment
+86. Line following robot
+87. Relative speed experiment: kids are asked whether a projectile will move faster if launched with some velocity in initial conditions. Sensors determine results.
+88. Feather and bowling ball experiment
+89. Signature tracking projectile (But make it cute? Like a heat seeking stuffed animal?)
+90. Googles that use machine learning to identify objects
+91. Steam engine
+92. Robot with markers for legs that paints drawings for the kids
+93. Remote controlled underwater robot that takes footage we could send to parents
+94. 3d printed or popsicle stick drone kids the kids can easily assemble during the showcase
+95. “Build a bristle bot” make hex bugs out of toothbrushes and a battery and tiny motor to make it wiggle
+96. Vibration Motor
+97. Light tracker
+98. Search and rescue robot
+99. “Build a bot” kids pick from simple materials, (paper clips etc) to build their own wiggle bot
+100. Moon phases tracking device
+101. Moon phase demo (shine light on ball and show how light curves around the model of the moon)
+102. Live “Distance to the Moon” tracker
 
 ## Design Concept Sketch
 Our team has decided to demonstrate that gravity can be mimicked using a centrifuge in an interactive science exhibit geared towards fourth to eighth grade students. Even though this is not explicitly a standard topic for the grade level, exposing a student to this concept could ignite their curiosity and make them more interested in related topics in the future. The exhibit will feature a centrifuge that is driven by a motor. The speed of the motor depends on what planet the student selects. The student selects the planet by placing their hands on a mat that shows the planets. A distance sensor will measure how far away their hand is. This data will be communicated with the motor and an OLED screen through the micro controllers. The OLED screen will print out the name of the planet the student has selected. The name of the planet will be sent to the user’s phone through internet communication. If the user presses a button, the OLED screen will display a fact about the current planet. The student using the machine will be given a small piece of clay that they can shape. Once it is their turn to use the machine, their clay is placed on the edge of the machine. When they select their gravity, the machine will spin, squishing their clay figure. The student will get to keep their clay figure once the demonstration is over. A concept design can be seen in Fig.1 and an exploded view in Fig.2 with labeled parts.
