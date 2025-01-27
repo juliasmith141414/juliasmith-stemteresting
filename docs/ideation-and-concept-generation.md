@@ -10,4 +10,4 @@ In the article, “[Ideation in Practice: How Effective UX Teams Generate Ideas]
 
 Our team did preliminary research before generating ideas for 4th-8th graders. To do this, we found it necessary to research what children were learning in the STEM field. Each STEM field has its subcategories. In the science field, there is life science, physical science, and space/earth science. We found these subcategories and then sorted them into a table. Then for each of these subcategories we found topics relating to them. We made sure that these topics are plausible for 4th-8th graders to learn and that they have some concept of it before viewing/interacting with the project. From these topics we were able to then create ideas for a project.
 
-![Table 1](Tables%20of%20ideas%20-%20Sheet1.pdf)
+![Table 1](Tables%20of%20ideas%20-%20Sheet1-1.png)
