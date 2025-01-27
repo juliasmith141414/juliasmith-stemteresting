@@ -16,7 +16,7 @@ Our team did preliminary research before generating ideas for 4th-8th graders. T
 ### Table 1 Topics for 4th-8th Graders
 ![Table 1](Tables%20of%20ideas%20-%20Sheet1-1.png)
 
-From these topics we then generated several ideas that we could make an exhibit around. After generating these ideas, we then label if they were actuator, human interface, sensor and/or topic idea. Below is the list of ideas we made in a doc.
+From these topics we then generated several ideas that we could make an exhibit around. After generating these ideas, we then label if they were actuator, human interface, sensor and/or topic ideas. Below is the list of ideas we made in a doc. The labeling process can be seen in Table 2. We then took these labeled ideas and sorted them into a ranking system. As a Team, we select ideas that we liked (Table 3), selected the best out of that bunch (Table 4), and then made a final decision in each category (Table 5). With these final decisions, we pieced together an exhibit. 
 
 ### List of Ideas
 
@@ -55,7 +55,7 @@ From these topics we then generated several ideas that we could make an exhibit 
 33. Camera for color sensing through matlab
 34. Camera for centering
 35. Diodes (show how direction affects the width of the two regions)
-36. Kid puts model diode in modle circuit forward of backwards
+36. Kid puts model diode in model circuit forward of backwards
 37. Motor moves model to reflect internal motion of the diode
 38. Interactive Plant Cell
 39. Screen for images and picture
@@ -85,19 +85,19 @@ From these topics we then generated several ideas that we could make an exhibit 
 63. Motor
 64. Power a wind turbine with a modular fan
 65. Curdle milk with lemon juice (chemical reaction)
-66. Rotationally accurate modle solar system (Powered with motor that sppeds up with touch sensor and everything moves at the correct rate with gears)
+66. Rotationally accurate model solar system (Powered with motor that speeds up with touch sensor and everything moves at the correct rate with gears)
 67. Touch slider
 68. Tesla Coil
 69. Drive spark gap open and closed with a motor
 70. Centrifuge to separate liquid mixtures (i.e. milk, impure water, koolaid, etc)
 71. Pressure sensor on hammer to show how hard something is being hit
 72. Types of teeth
-73. Turn a telescope and display a different constilation based off of where it is pointing
+73. Turn a telescope and display a different constellation based off of where it is pointing
 74. Build a tower above a certain line
 75. Green screen
 76. Heat sensor
 77. Thermal camera
-78. Boyancy (kid makes a paper boat and puts it on water, marbles are added, sensor tells when boat sinks, speaker plays a "womp womp womp" noise to indicate the boat sunk)
+78. buoyancy (kid makes a paper boat and puts it on water, marbles are added, sensor tells when boat sinks, speaker plays a "womp womp womp" noise to indicate the boat sunk)
 79. Generate and store electric charge
 80. Hydroelectric generator
 81. Run-of- the-River generator model
@@ -122,6 +122,18 @@ From these topics we then generated several ideas that we could make an exhibit 
 100. Moon phases tracking device
 101. Moon phase demo (shine light on ball and show how light curves around the model of the moon)
 102. Live “Distance to the Moon” tracker
+
+### Table 2 Labeled Ideas
+![Table2](Brainstorming-1.png)
+
+### Table 3 Ideas We Like (Orange)
+![Table3](Brainstorming-4.png)
+
+### Table 4 Best of the Bunch (Blue)
+![Table4](Brainstorming-3.png)
+
+### Table 5 Final Choices (Purple)
+![Table5](Brainstorming-2.png)
 
 ## Design Concept Sketch
 Our team has decided to demonstrate that gravity can be mimicked using a centrifuge in an interactive science exhibit geared towards fourth to eighth grade students. Even though this is not explicitly a standard topic for the grade level, exposing a student to this concept could ignite their curiosity and make them more interested in related topics in the future. The exhibit will feature a centrifuge that is driven by a motor. The speed of the motor depends on what planet the student selects. The student selects the planet by placing their hands on a mat that shows the planets. A distance sensor will measure how far away their hand is. This data will be communicated with the motor and an OLED screen through the micro controllers. The OLED screen will print out the name of the planet the student has selected. The name of the planet will be sent to the user’s phone through internet communication. If the user presses a button, the OLED screen will display a fact about the current planet. The student using the machine will be given a small piece of clay that they can shape. Once it is their turn to use the machine, their clay is placed on the edge of the machine. When they select their gravity, the machine will spin, squishing their clay figure. The student will get to keep their clay figure once the demonstration is over. A concept design can be seen in Fig.1 and an exploded view in Fig.2 with labeled parts.
