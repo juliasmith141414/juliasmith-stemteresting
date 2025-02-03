@@ -1,4 +1,5 @@
-# Subsystem Block Diagram: Distance Sensor
+# Block Diagram
+## Block Diagram of Subsystem: Distance Sensor
 
 This is the block diagram for our distance sensor subsystem project.
 
