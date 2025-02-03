@@ -2,14 +2,20 @@ site_name: EGR314 Report Template
 site_url: https://embedded-systems-design.github.io/template_report
 repo_url: https://github.com/embedded-systems-design/template_report
 edit_uri: edit/main/docs/
+
 theme:
   name: material
   custom_dir: custom_theme/
+  
+  # Easily editable sci-fi theme parameters
   palette:
-    primary: blue
-    accent: indigo
+    primary: neon_green  # Custom color name; see color definitions below
+    accent: neon_blue    # Secondary accent color
+
   font:
-    text: Roboto
+    text: Orbitron       # Sci-fi font, change as needed (e.g., Roboto, Audiowide)
+    code: 'Courier New'
+
   logo: static/logo.svg
   favicon: static/logo.png
 
@@ -23,13 +29,10 @@ theme:
     - navigation.prune
     - content.action.edit
     - navigation.footer
-#    - navigation.sections
-#    - navigation.expand
-#    - navigation.instant # doesn't work that well
 
 markdown_extensions:
-  - attr_list #add attributes using curly brackets to images, see https://squidfunk.github.io/mkdocs-material/reference/images/
-  - md_in_html # see https://squidfunk.github.io/mkdocs-material/reference/images/
+  - attr_list
+  - md_in_html
   - footnotes
   - pymdownx.arithmatex:
       generic: true
@@ -44,26 +47,39 @@ draft_docs: |
   **/*_unpublished.md
   **/*_draft.md
   **/*_draft**
-  
+
 plugins:
   - search
-  - glightbox # allow resize images, see https://squidfunk.github.io/mkdocs-material/reference/images/
+  - glightbox
 
 extra_css:
-  - stylesheets/extra.css  
+  - stylesheets/extra.css  # Main stylesheet for extra custom styles
 
 extra_javascript:
- - javascripts/mathjax.js
- - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
-    
-not_in_nav: |
-  static
-  
-copyright: "Copyright &copy; 2024 team-name-here"
+  - javascripts/mathjax.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
+# Custom color definitions (update as needed)
+palette_colors:
+  neon_green: "#00ffcc"  # Neon green primary color
+  neon_blue: "#00ccff"   # Bright neon blue for accents
+  background_dark: "#0d0d0d"  # Deep sci-fi background color
+  text_glow: "#ff00ff"  # Purple glowing text
+
+# Easily configurable background image settings
 extra:
   generator: false
+  background_images:
+    header: static/header-bg.png  # Path to the background image for the header
+    content: static/content-bg.png  # Path to the main content area background image
+
+  # Add social icons or links
   social:
     - icon: fontawesome/regular/file-code
       link: /2023_fall
-      name: 2023 Site    
+      name: 2023 Site
+
+not_in_nav: |
+  static
+
+copyright: "Copyright &copy; 2024 team-name-here"
