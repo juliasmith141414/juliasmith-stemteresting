@@ -1,76 +1,12 @@
-/* General body styling */
-body {
-    font-family: 'Orbitron', sans-serif;  /* You can change to any sci-fi font */
-    background-color: #0d0d0d;  /* Dark background */
-    color: #00ffcc;  /* Neon green text */
-    text-shadow: 0 0 10px rgba(0, 255, 204, 0.7);
+article{
+    a {
+        font-style:italic;
+        }
 }
 
-/* Headings with a neon glow */
-h1, h2, h3 {
-    color: #ff00ff;
-    text-shadow: 0 0 20px rgba(255, 0, 255, 0.8);
-}
-
-/* Links with a glowing effect */
-a {
-    color: #00ccff;
-    text-decoration: none;
-    font-weight: bold;
-    text-shadow: 0 0 15px rgba(0, 204, 255, 0.8);
-}
-
-a:hover {
-    color: #ff6600;
-    text-shadow: 0 0 25px rgba(255, 102, 0, 0.9);
-    text-decoration: underline;
-}
-
-/* Blockquotes with glowing neon background */
-blockquote {
-    background: linear-gradient(135deg, #ff0066, #6600ff);
-    color: #ffffff;
-    padding: 10px;
-    border-radius: 8px;
-    box-shadow: 0 0 30px rgba(102, 0, 255, 0.7);
-}
-
-/* Add a grid-style effect */
-article {
-    border: 1px solid #00ffcc;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(10px);
-}
-
-/* Button styling */
-button {
-    background: linear-gradient(135deg, #00ffcc, #ff0066);
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 12px;
-    font-size: 1.2rem;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
-    cursor: pointer;
-    box-shadow: 0 0 15px rgba(0, 255, 204, 0.9);
-}
-
-button:hover {
-    background: linear-gradient(135deg, #ff0066, #00ccff);
-    box-shadow: 0 0 30px rgba(255, 0, 102, 0.8);
-}
-
-/* Animations for cool sci-fi feel */
-@keyframes neon-flicker {
-    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
-        opacity: 1;
+blockquote{
+    background: #ffc;
+    p,li{
+        color: var(--md-typeset-color);
     }
-    20%, 24%, 55% {
-        opacity: 0.4;
-    }
-}
-
-h1 {
-    animation: neon-flicker 1.5s infinite alternate;
 }
