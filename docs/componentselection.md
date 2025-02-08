@@ -55,43 +55,22 @@ Mount: Surface <br>
 [Product Link](https://www.digikey.com/en/products/detail/ams-osram-usa-inc/TMF8801-1B-OLGA12-LF-T-RDP/11477805?gclsrc=aw.ds&&utm_adgroup=General&utm_source=google&utm_medium=cpc&utm_campaign=PMax%20Shopping_Product_Zombie%20SKUs&utm_term=&utm_content=General&utm_id=go_cmp-17815035045_adg-_ad-__dev-c_ext-_prd-11477805_sig-Cj0KCQiA-5a9BhCBARIsACwMkJ415ydI0m81_pdt0JT6dCtN3Qli_Api3Z743eGKMrIpfMpnrbdwwvoaAuVGEALw_wcB&gad_source=1&gclid=Cj0KCQiA-5a9BhCBARIsACwMkJ415ydI0m81_pdt0JT6dCtN3Qli_Api3Z743eGKMrIpfMpnrbdwwvoaAuVGEALw_wcB&gclsrc=aw.ds) <br>
 $5.91 <br>
 Max range: 400 cm <br>
-Operating Voltage: 5V <br>
+Operating Voltage: 2.8V - 3.3V <br>
 Communication: I2C <br>
 Mount: Surface <br>
 
 
+### **VL53L5CX Sensor**
 
-| **Pros**                   | **Cons**                   |
-|----------------------------|-----------------------------|
-| Industrial-grade sensor     | Expensive compared to others |
-| I²C and SPI compatibility   | Larger surface-mount package |
-| Long range up to 10 meters  | Requires more complex setup |
+| **Pros**                                                   | **Cons**                                                  |
+|------------------------------------------------------------|-----------------------------------------------------------|
+| Measures up to **4 meters** with high accuracy             | Surface-mount **LGA-16** package requires reflow soldering |
+| **Multi-zone detection** (up to 64 zones)                  | May require precise alignment for accurate measurements    |
+| **Low power consumption** suitable for battery-powered systems | Sensitive to environmental conditions (e.g., ambient light)|
+| Compatible with **I²C communication**                      | Complex multi-zone data handling may need additional processing power |
+| Supports both **short-range and long-range modes**         | Higher price than simpler sensors                          |
+| Reliable integration with **Microchip PIC microcontrollers** using MCC | Documentation may require some technical expertise to fully understand |
 
----
+### **VL53L5CX Datasheet and Information**
+- [VL53L5CX Datasheet (STMicroelectronics)](https://www.st.com/resource/en/datasheet/vl53l5cx.pdf)
 
-### **Option 4: Sensirion SCD4x**
-| **Pros**                   | **Cons**                   |
-|----------------------------|-----------------------------|
-| High precision sensing      | Primarily designed for CO₂ sensing |
-| I²C interface               | Limited ToF distance range  |
-| Small LGA package           | May require additional calibration |
-
----
-
-### **Option 5: AMS TMF8801**
-| **Pros**                   | **Cons**                   |
-|----------------------------|-----------------------------|
-| Small form factor           | Limited to 2.5 meters       |
-| Low power consumption       | Potential availability issues |
-| I²C compatible              | Requires precise configuration |
-
-
-![image](https://github.com/user-attachments/assets/c8e1a7ac-492f-433f-a816-04dea4397ca5)
-
-### Option 2:
-### Option 3: 
-
- 
-
-
-![Smith Individual Block Diagram](https://github.com/user-attachments/assets/205f7cd8-9876-49a6-9849-721d542834f1)
