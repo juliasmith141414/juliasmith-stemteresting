@@ -8,7 +8,7 @@
 ## Distance Sensor
 ### Option 1: VL53L1CXV0FY/1
 ![image](https://github.com/user-attachments/assets/22add513-4aa3-4a45-926c-3bb4cddefcbf)
-[[Link Text](https://www.digikey.com/en/products/detail/stmicroelectronics/VL53L1CXV0FY-1/8258055?gclsrc=aw.ds&&utm_adgroup=Sensors%20%26%20Transducers&utm_source=google&utm_medium=cpc&utm_campaign=Dynamic%20Search_EN_Product&utm_term=&utm_content=Sensors%20%26%20Transducers&utm_id=go_cmp-120565755_adg-9159613635_ad-665604606719_dsa-118454329515_dev-c_ext-_prd-_sig-Cj0KCQiA-5a9BhCBARIsACwMkJ5tpM-SWtOWcLFeYXKLWrr322Ie9MSGfVXNjbXu15Vl1KLtmgiQEdUaApbPEALw_wcB&gad_source=1&gclid=Cj0KCQiA-5a9BhCBARIsACwMkJ5tpM-SWtOWcLFeYXKLWrr322Ie9MSGfVXNjbXu15Vl1KLtmgiQEdUaApbPEALw_wcB&gclsrc=aw.ds)](URL "Datasheet")
+[https://www.st.com/resource/en/datasheet/vl53l1x.pdf](URL "Datasheet")
 Max range: 4 Meters <br>
 Operating Voltage: 2.6V - 3.5V <br>
 Communication: I2C <br>
