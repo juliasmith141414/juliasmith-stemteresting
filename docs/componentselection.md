@@ -84,6 +84,27 @@ This diagram outlines the key components and subsystems: microcontroller, distan
 
 ---
 
+### **Option 3: VL53L5CX**
+![image](https://github.com/user-attachments/assets/1aa3bbe1-f7fd-4b78-8c1a-2a87a2839143)  
+[Datasheet](https://arizonastateu-my.sharepoint.com/:b:/g/personal/jasmi157_sundevils_asu_edu/ETmD_ntduohApG-p0T8vbO0BsWPYG0gU-rsxDNol8xd_AQ?e=xIRxcY)  
+[Product Link](https://www.digikey.com/en/products/detail/ams-osram-usa-inc/TMF8801-1B-OLGA12-LF-T-RDP/11477805)  
+**Cost:** $5.91  
+**Max Range:** 4 Meters  
+**Operating Voltage:** 2.8V - 3.3V  
+**Communication:** I²C  
+**Mount:** Surface  
+
+| **Pros**                                                   | **Cons**                                                  |
+|------------------------------------------------------------|-----------------------------------------------------------|
+| Measures up to **4 meters** with high accuracy             | Surface-mount **LGA-16** package requires reflow soldering |
+| **Multi-zone detection** (up to 64 zones)                  | May require precise alignment for accurate measurements    |
+| **Low power consumption** suitable for battery-powered systems | Sensitive to environmental conditions (e.g., ambient light)|
+| Compatible with **I²C communication**                      | Complex multi-zone data handling may need additional processing power |
+| Supports both **short-range and long-range modes**         | Higher price than simpler sensors                          |
+| Reliable integration with **Microchip PIC microcontrollers** using MCC | Documentation may require some technical expertise to fully understand |
+
+---
+
 ### **Final Sensor Choice**
 Based on the evaluation of range, cost, and ease of integration, I have selected the **VL53L1CXV0FY/1** sensor. It offers extended range capabilities and multi-target detection, making it suitable for our project requirements.
 
