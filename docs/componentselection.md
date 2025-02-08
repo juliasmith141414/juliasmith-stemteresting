@@ -11,6 +11,7 @@
 ### Option 1: VL53L1CXV0FY/1
 ![image](https://github.com/user-attachments/assets/22add513-4aa3-4a45-926c-3bb4cddefcbf) <br>
 [Datasheet](https://arizonastateu-my.sharepoint.com/:b:/g/personal/jasmi157_sundevils_asu_edu/EbF6q-VkyolOulMk80JgWMkB3oZ_hcvkSHapQ7gW-guFWQ?e=OiwQhq "Datasheet Link") <br>
+$5.77 <br>
 Max range: 4 Meters <br>
 Operating Voltage: 2.6V - 3.5V <br>
 Communication: I2C <br>
@@ -25,8 +26,9 @@ Mount: Surface <br>
 ---
 
 ### **Option 2: VL53L0X**
-$2.64 <br>
 ![image](https://github.com/user-attachments/assets/e787c161-59c0-4130-a716-be647bf55d72) <br>
+$2.64 <br>
+
 
 | **Pros**                   | **Cons**                   |
 |----------------------------|-----------------------------|
