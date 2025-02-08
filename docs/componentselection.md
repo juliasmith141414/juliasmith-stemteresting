@@ -115,7 +115,11 @@ Based on the evaluation of range, cost, and ease of integration, I have selected
 ---
 
 ## Power Budget
-  
+The power budget shown below demonstrates that the project is well within the power supply's capacity, allowing for additional components or design modifications if needed.
+<img width="668" alt="image" src="https://github.com/user-attachments/assets/5516459e-cac8-411d-bb32-c080b8c06e2c" />
+
+[Link to Spreadsheet](https://docs.google.com/spreadsheets/d/12uf9W3mrbqPYXF1pln1ugqOVY8jhmh9nDuVUHxvh6Tg/edit?usp=sharing)
+
 ---
 
 
