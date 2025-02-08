@@ -15,7 +15,6 @@ Max range: 4 Meters <br>
 Operating Voltage: 2.6V - 3.5V <br>
 Communication: I2C <br>
 Mount: Surface <br>
-### **Option 1: VL53L1CX**
 | **Pros**                   | **Cons**                   |
 |----------------------------|-----------------------------|
 | Long range up to 4 meters   | Requires proper alignment   |
@@ -26,6 +25,8 @@ Mount: Surface <br>
 ---
 
 ### **Option 2: VL53L0X**
+![image](https://github.com/user-attachments/assets/e787c161-59c0-4130-a716-be647bf55d72) <br>
+
 | **Pros**                   | **Cons**                   |
 |----------------------------|-----------------------------|
 | Compact and cost-effective  | Shorter range (1.2 meters)  |
