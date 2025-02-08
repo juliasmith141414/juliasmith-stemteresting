@@ -34,7 +34,12 @@ Mount: Surface <br>
 [Datasheet](https://arizonastateu-my.sharepoint.com/:b:/g/personal/jasmi157_sundevils_asu_edu/EVZtUUkWE9xGhCSLo-Ec1scBudzi0_jGqGujjsDPeXDivA?e=c6nOMb) <br>
 [Product Link](https://estore.st.com/en/products/imaging-and-photonics-solutions/time-of-flight-sensors/vl53l0x.html) <br>
 $2.64 <br>
+Max range: 2 Meters <br>
+Operating Voltage: 2.6V - 3.5V <br>
+Communication: I2C <br>
+Mount: Surface <br>
 
+--- 
 
 | **Pros**                   | **Cons**                   |
 |----------------------------|-----------------------------|
@@ -44,7 +49,19 @@ $2.64 <br>
 
 ---
 
-### **Option 3: AFBR-S50MV85G**
+### **Option 3: TMF8801-1B OLGA12 LF T&RDP**
+![image](https://github.com/user-attachments/assets/6894416f-8772-49bc-8478-751c5bc7dba6)
+) <br>
+[Datasheet](https://arizonastateu-my.sharepoint.com/:b:/g/personal/jasmi157_sundevils_asu_edu/Eb9_SNTSWIdFqPXhU7DI-wQBLAtn6Ve8HSmdrRvSD38SDA?e=4PkmL9)
+[Product Link](https://www.digikey.com/en/products/detail/ams-osram-usa-inc/TMF8801-1B-OLGA12-LF-T-RDP/11477805?gclsrc=aw.ds&&utm_adgroup=General&utm_source=google&utm_medium=cpc&utm_campaign=PMax%20Shopping_Product_Zombie%20SKUs&utm_term=&utm_content=General&utm_id=go_cmp-17815035045_adg-_ad-__dev-c_ext-_prd-11477805_sig-Cj0KCQiA-5a9BhCBARIsACwMkJ415ydI0m81_pdt0JT6dCtN3Qli_Api3Z743eGKMrIpfMpnrbdwwvoaAuVGEALw_wcB&gad_source=1&gclid=Cj0KCQiA-5a9BhCBARIsACwMkJ415ydI0m81_pdt0JT6dCtN3Qli_Api3Z743eGKMrIpfMpnrbdwwvoaAuVGEALw_wcB&gclsrc=aw.ds) <br>
+$52.57 <br>
+Max range: 2 Meters <br>
+Operating Voltage: 2.6V - 3.5V <br>
+Communication: I2C <br>
+Mount: Surface <br>
+
+
+
 | **Pros**                   | **Cons**                   |
 |----------------------------|-----------------------------|
 | Industrial-grade sensor     | Expensive compared to others |
