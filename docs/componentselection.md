@@ -11,6 +11,50 @@ Max range: 4 Meters
 Operating Voltage: 2.6V - 3.5V
 Communication: I2C
 Mount: Surface
+### **Option 1: VL53L1CX**
+| **Pros**                   | **Cons**                   |
+|----------------------------|-----------------------------|
+| Long range up to 4 meters   | Requires proper alignment   |
+| I²C compatible              | Sensitive to environmental factors |
+| Surface-mount package       | May require 3.3V regulator  |
+| Compatible Operating Voltage|
+
+---
+
+### **Option 2: VL53L0X**
+| **Pros**                   | **Cons**                   |
+|----------------------------|-----------------------------|
+| Compact and cost-effective  | Shorter range (1.2 meters)  |
+| I²C compatible              | Reduced accuracy at longer distances |
+| Simple integration          | Sensitive to ambient light  |
+
+---
+
+### **Option 3: AFBR-S50MV85G**
+| **Pros**                   | **Cons**                   |
+|----------------------------|-----------------------------|
+| Industrial-grade sensor     | Expensive compared to others |
+| I²C and SPI compatibility   | Larger surface-mount package |
+| Long range up to 10 meters  | Requires more complex setup |
+
+---
+
+### **Option 4: Sensirion SCD4x**
+| **Pros**                   | **Cons**                   |
+|----------------------------|-----------------------------|
+| High precision sensing      | Primarily designed for CO₂ sensing |
+| I²C interface               | Limited ToF distance range  |
+| Small LGA package           | May require additional calibration |
+
+---
+
+### **Option 5: AMS TMF8801**
+| **Pros**                   | **Cons**                   |
+|----------------------------|-----------------------------|
+| Small form factor           | Limited to 2.5 meters       |
+| Low power consumption       | Potential availability issues |
+| I²C compatible              | Requires precise configuration |
+
 
 ![image](https://github.com/user-attachments/assets/c8e1a7ac-492f-433f-a816-04dea4397ca5)
 
