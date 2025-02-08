@@ -33,6 +33,7 @@ Mount: Surface <br>
 | Simple integration          | Sensitive to ambient light  |
 
 ---
+[Datasheet](https://arizonastateu-my.sharepoint.com/:b:/g/personal/jasmi157_sundevils_asu_edu/EVZtUUkWE9xGhCSLo-Ec1scBudzi0_jGqGujjsDPeXDivA?e=c6nOMb) <br>
 
 ### **Option 3: AFBR-S50MV85G**
 | **Pros**                   | **Cons**                   |
