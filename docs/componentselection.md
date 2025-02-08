@@ -12,7 +12,7 @@ As part of the project team, my role involves designing and integrating the sens
 
 ## Electrical Block Diagram
 
-> Insert your block diagram here.
+![Smith Individual Block Diagram](https://github.com/user-attachments/assets/205f7cd8-9876-49a6-9849-721d542834f1)
 
 This diagram outlines the key components and subsystems: microcontroller, distance sensor (via I²C), motor driver, and actuators. Each subsystem requires separate research and component selection.
 
