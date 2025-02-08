@@ -25,6 +25,7 @@ Mount: Surface <br>
 ---
 
 ### **Option 2: VL53L0X**
+$2.64 <br>
 ![image](https://github.com/user-attachments/assets/e787c161-59c0-4130-a716-be647bf55d72) <br>
 
 | **Pros**                   | **Cons**                   |
