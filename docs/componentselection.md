@@ -17,6 +17,9 @@ Max range: 4 Meters <br>
 Operating Voltage: 2.6V - 3.5V <br>
 Communication: I2C <br>
 Mount: Surface <br>
+
+---
+
 | **Pros**                   | **Cons**                   |
 |----------------------------|-----------------------------|
 | Long range up to 4 meters   | Requires proper alignment   |
