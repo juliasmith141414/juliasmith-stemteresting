@@ -91,11 +91,9 @@ Based on the evaluation of range, cost, and ease of integration, I have selected
 
 ## MCC Configuration
 
-
 ---
 
 ## Power Budget
-> Insert your power budget spreadsheet or data here. Ensure that all major components (e.g., microcontroller, sensor, motor driver) and their power requirements are listed.
   
 ---
 
