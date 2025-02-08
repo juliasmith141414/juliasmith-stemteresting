@@ -7,10 +7,10 @@
 
 ## Distance Sensor
 ### Option 1: VL53L1CXV0FY/1
-Max range: 4 Meters
-Operating Voltage: 2.6V - 3.5V
-Communication: I2C
-Mount: Surface
+Max range: 4 Meters <br>
+Operating Voltage: 2.6V - 3.5V <br>
+Communication: I2C <br>
+Mount: Surface <br>
 ### **Option 1: VL53L1CX**
 | **Pros**                   | **Cons**                   |
 |----------------------------|-----------------------------|
