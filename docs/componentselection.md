@@ -11,6 +11,7 @@
 ### Option 1: VL53L1CXV0FY/1
 ![image](https://github.com/user-attachments/assets/22add513-4aa3-4a45-926c-3bb4cddefcbf) <br>
 [Datasheet](https://arizonastateu-my.sharepoint.com/:b:/g/personal/jasmi157_sundevils_asu_edu/EbF6q-VkyolOulMk80JgWMkB3oZ_hcvkSHapQ7gW-guFWQ?e=OiwQhq "Datasheet Link") <br>
+[Product Link](https://www.digikey.com/en/products/detail/stmicroelectronics/VL53L1CXV0FY-1/8258055?gclsrc=aw.ds&&utm_adgroup=Sensors%20%26%20Transducers&utm_source=google&utm_medium=cpc&utm_campaign=Dynamic%20Search_EN_Product&utm_term=&utm_content=Sensors%20%26%20Transducers&utm_id=go_cmp-120565755_adg-9159613635_ad-665604606719_dsa-118454329515_dev-c_ext-_prd-_sig-Cj0KCQiA-5a9BhCBARIsACwMkJ5tpM-SWtOWcLFeYXKLWrr322Ie9MSGfVXNjbXu15Vl1KLtmgiQEdUaApbPEALw_wcB&gad_source=1&gclid=Cj0KCQiA-5a9BhCBARIsACwMkJ5tpM-SWtOWcLFeYXKLWrr322Ie9MSGfVXNjbXu15Vl1KLtmgiQEdUaApbPEALw_wcB&gclsrc=aw.ds)
 $5.77 <br>
 Max range: 4 Meters <br>
 Operating Voltage: 2.6V - 3.5V <br>
@@ -38,6 +39,7 @@ $2.64 <br>
 
 ---
 [Datasheet](https://arizonastateu-my.sharepoint.com/:b:/g/personal/jasmi157_sundevils_asu_edu/EVZtUUkWE9xGhCSLo-Ec1scBudzi0_jGqGujjsDPeXDivA?e=c6nOMb) <br>
+[Product Link](https://estore.st.com/en/products/imaging-and-photonics-solutions/time-of-flight-sensors/vl53l0x.html) <br>
 
 ### **Option 3: AFBR-S50MV85G**
 | **Pros**                   | **Cons**                   |
