@@ -1,4 +1,4 @@
-# Datasheet
+# Component Selection
 
 ## Objective
 The purpose of this pageis to compare, and contrast multiple solutions for each major component in my subsystem design. This includes identifying off-the-shelf and custom electrical or mechanical components, assessing compatibility with project specifications, and articulating rationale for final choices.
