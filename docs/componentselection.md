@@ -32,10 +32,10 @@ Mount: Surface <br>
 ### **Option 2: VL53L0X**
 ![image](https://github.com/user-attachments/assets/e787c161-59c0-4130-a716-be647bf55d72) <br>
 [Datasheet](https://arizonastateu-my.sharepoint.com/:b:/g/personal/jasmi157_sundevils_asu_edu/EVZtUUkWE9xGhCSLo-Ec1scBudzi0_jGqGujjsDPeXDivA?e=c6nOMb) <br>
-[Product Link](https://estore.st.com/en/products/imaging-and-photonics-solutions/time-of-flight-sensors/vl53l0x.html) <br>
+[Product Link]([https://estore.st.com/en/products/imaging-and-photonics-solutions/time-of-flight-sensors/vl53l5cx.html](https://estore.st.com/en/products/imaging-and-photonics-solutions/time-of-flight-sensors/vl53l0x.html)) <br>
 $2.64 <br>
 Max range: 2 Meters <br>
-Operating Voltage: 2.6V - 3.5V <br>
+Operating Voltage: 2.8V - 3.3V <br>
 Communication: I2C <br>
 Mount: Surface <br>
 
@@ -49,14 +49,13 @@ Mount: Surface <br>
 
 ---
 
-### **Option 3: TMF8801-1B OLGA12 LF T&RDP**
-![image](https://github.com/user-attachments/assets/6894416f-8772-49bc-8478-751c5bc7dba6)
-) <br>
-[Datasheet](https://arizonastateu-my.sharepoint.com/:b:/g/personal/jasmi157_sundevils_asu_edu/Eb9_SNTSWIdFqPXhU7DI-wQBLAtn6Ve8HSmdrRvSD38SDA?e=4PkmL9)
+### **Option 3: VL53L5CX**
+![image](https://github.com/user-attachments/assets/1aa3bbe1-f7fd-4b78-8c1a-2a87a2839143) <br>
+[Datasheet](https://arizonastateu-my.sharepoint.com/:b:/g/personal/jasmi157_sundevils_asu_edu/ETmD_ntduohApG-p0T8vbO0BsWPYG0gU-rsxDNol8xd_AQ?e=xIRxcY) <br>
 [Product Link](https://www.digikey.com/en/products/detail/ams-osram-usa-inc/TMF8801-1B-OLGA12-LF-T-RDP/11477805?gclsrc=aw.ds&&utm_adgroup=General&utm_source=google&utm_medium=cpc&utm_campaign=PMax%20Shopping_Product_Zombie%20SKUs&utm_term=&utm_content=General&utm_id=go_cmp-17815035045_adg-_ad-__dev-c_ext-_prd-11477805_sig-Cj0KCQiA-5a9BhCBARIsACwMkJ415ydI0m81_pdt0JT6dCtN3Qli_Api3Z743eGKMrIpfMpnrbdwwvoaAuVGEALw_wcB&gad_source=1&gclid=Cj0KCQiA-5a9BhCBARIsACwMkJ415ydI0m81_pdt0JT6dCtN3Qli_Api3Z743eGKMrIpfMpnrbdwwvoaAuVGEALw_wcB&gclsrc=aw.ds) <br>
-$52.57 <br>
-Max range: 2 Meters <br>
-Operating Voltage: 2.6V - 3.5V <br>
+$5.91 <br>
+Max range: 400 cm <br>
+Operating Voltage: 5V <br>
 Communication: I2C <br>
 Mount: Surface <br>
 
