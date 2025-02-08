@@ -7,8 +7,8 @@
 
 ## Distance Sensor
 ### Option 1: VL53L1CXV0FY/1
-![image](https://github.com/user-attachments/assets/22add513-4aa3-4a45-926c-3bb4cddefcbf)
-[Datasheet](URL "(https://arizonastateu-my.sharepoint.com/:b:/g/personal/jasmi157_sundevils_asu_edu/EbF6q-VkyolOulMk80JgWMkB3oZ_hcvkSHapQ7gW-guFWQ?e=OiwQhq)")
+![image](https://github.com/user-attachments/assets/22add513-4aa3-4a45-926c-3bb4cddefcbf) <br>
+[Datasheet](URL "(https://arizonastateu-my.sharepoint.com/:b:/g/personal/jasmi157_sundevils_asu_edu/EbF6q-VkyolOulMk80JgWMkB3oZ_hcvkSHapQ7gW-guFWQ?e=OiwQhq)") <br>
 Max range: 4 Meters <br>
 Operating Voltage: 2.6V - 3.5V <br>
 Communication: I2C <br>
