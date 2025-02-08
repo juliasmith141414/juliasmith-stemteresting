@@ -1,6 +1,7 @@
 # Component Selection
 ## Microcontroller: PIC18F27/47Q10
-![image](https://github.com/user-attachments/assets/75a595da-e7bf-443a-b91f-c7affd50d812)
+![image](https://github.com/user-attachments/assets/75a595da-e7bf-443a-b91f-c7affd50d812) <br>
+[Datasheet](https://arizonastateu-my.sharepoint.com/:b:/g/personal/jasmi157_sundevils_asu_edu/EY412CZrEBFCm1RPcBUdK0ABFQC27qYPnXhWjqNXUzvurw?e=bMb4OQ) <br>
 
 ## Programmer: MPLab Snap Programmer 
 ![image](https://github.com/user-attachments/assets/1ad9faf8-0440-4068-9b8d-6f026b02ac68)
