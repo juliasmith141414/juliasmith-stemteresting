@@ -18,16 +18,16 @@ Operating Voltage: 2.6V - 3.5V <br>
 Communication: I2C <br>
 Mount: Surface <br>
 
----
+### **VL53L1CXV0FY/1 Sensor**
 
-| **Pros**                   | **Cons**                   |
-|----------------------------|-----------------------------|
-| Long range up to 4 meters   | Requires proper alignment   |
-| I²C compatible              | Sensitive to environmental factors |
-| Surface-mount package       | May require 3.3V regulator  |
-| Compatible Operating Voltage|
-
----
+| **Pros**                                                 | **Cons**                                                 |
+|----------------------------------------------------------|----------------------------------------------------------|
+| **Extended range** up to 4 meters                        | Surface-mount **LGA-16** package may require reflow soldering |
+| **I²C communication** simplifies integration with MCUs   | Requires **precise alignment** for accurate measurements  |
+| Supports **variable timing budgets** for power efficiency| More expensive than **VL53L0X**                          |
+| **Multi-target detection** with programmable distance modes | Slightly larger LGA footprint than smaller sensors        |
+| Compatible with **Microchip PIC microcontrollers** via MCC | Sensitive to ambient lighting conditions in some environments |
+| Excellent for both short and long-range applications     | Initial setup may require calibration                     | <br>
 
 ### **Option 2: VL53L0X**
 ![image](https://github.com/user-attachments/assets/e787c161-59c0-4130-a716-be647bf55d72) <br>
@@ -39,15 +39,17 @@ Operating Voltage: 2.8V - 3.3V <br>
 Communication: I2C <br>
 Mount: Surface <br>
 
---- 
+### **VL53L0X Sensor**
 
-| **Pros**                   | **Cons**                   |
-|----------------------------|-----------------------------|
-| Compact and cost-effective  | Shorter range (1.2 meters)  |
-| I²C compatible              | Reduced accuracy at longer distances |
-| Simple integration          | Sensitive to ambient light  |
+| **Pros**                                                | **Cons**                                               |
+|---------------------------------------------------------|--------------------------------------------------------|
+| Compact and **low-cost** sensor for short-range sensing | **Limited range** (up to 1.2 meters)                   |
+| **I²C communication** for easy integration              | **LGA package** can be difficult to solder manually     |
+| **Low power consumption** ideal for portable devices    | Sensitive to ambient lighting interference              |
+| Available with extensive documentation and example code | Less accurate at distances near the upper limit         |
+| Compatible with **Microchip PIC microcontrollers** via MCC | Requires calibration for optimal performance            |
+| Fast response time suitable for real-time applications  | Fewer advanced features compared to newer ToF sensors   | <br>
 
----
 
 ### **Option 3: VL53L5CX**
 ![image](https://github.com/user-attachments/assets/1aa3bbe1-f7fd-4b78-8c1a-2a87a2839143) <br>
@@ -69,8 +71,5 @@ Mount: Surface <br>
 | **Low power consumption** suitable for battery-powered systems | Sensitive to environmental conditions (e.g., ambient light)|
 | Compatible with **I²C communication**                      | Complex multi-zone data handling may need additional processing power |
 | Supports both **short-range and long-range modes**         | Higher price than simpler sensors                          |
-| Reliable integration with **Microchip PIC microcontrollers** using MCC | Documentation may require some technical expertise to fully understand |
-
-### **VL53L5CX Datasheet and Information**
-- [VL53L5CX Datasheet (STMicroelectronics)](https://www.st.com/resource/en/datasheet/vl53l5cx.pdf)
+| Reliable integration with **Microchip PIC microcontrollers** using MCC | Documentation may require some technical expertise to fully understand | <br>
 
