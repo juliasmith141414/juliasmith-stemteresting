@@ -32,7 +32,7 @@ Mount: Surface <br>
 ### **Option 2: VL53L0X**
 ![image](https://github.com/user-attachments/assets/e787c161-59c0-4130-a716-be647bf55d72) <br>
 [Datasheet](https://arizonastateu-my.sharepoint.com/:b:/g/personal/jasmi157_sundevils_asu_edu/EVZtUUkWE9xGhCSLo-Ec1scBudzi0_jGqGujjsDPeXDivA?e=c6nOMb) <br>
-[Product Link]([https://estore.st.com/en/products/imaging-and-photonics-solutions/time-of-flight-sensors/vl53l5cx.html](https://estore.st.com/en/products/imaging-and-photonics-solutions/time-of-flight-sensors/vl53l0x.html)) <br>
+[Product Link](https://estore.st.com/en/products/imaging-and-photonics-solutions/time-of-flight-sensors/vl53l0x.html) <br>
 $2.64 <br>
 Max range: 2 Meters <br>
 Operating Voltage: 2.8V - 3.3V <br>
