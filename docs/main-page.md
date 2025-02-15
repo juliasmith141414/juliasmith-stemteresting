@@ -18,7 +18,7 @@ EGR 314, Prof. Nichols <br>
 [Appendix](appendix.md)
 
 ### Individual GitHub Links
-[Ella Greetis]() Coming soon
-[Sara Bohart](https://sarabohart.github.io/)
-[Julia Smith](https://juliasmith141414.github.io/)
-[Xander Heafey](https://xanderheafey.github.io/)
+[Ella Greetis](https://starfruwuit.github.io/egr314report/main%20page/) <br>
+[Sara Bohart](https://sarabohart.github.io/) <br>
+[Julia Smith](https://juliasmith141414.github.io/) <br>
+[Xander Heafey](https://xanderheafey.github.io/) <br>
