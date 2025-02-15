@@ -15,6 +15,7 @@ EGR 314, Prof. Nichols <br>
 
 [Team Organization](team-organization.md) <br>
 [Ideation and Concept Generation](ideation-and-concept-generation.md) <br>
+[Block Diagram, Process Diagram, and Message Structure](Block-Diagram-Process-Diagram-and-Message-Structure.md) <br>
 [Appendix](appendix.md)
 
 ### Individual GitHub Links
