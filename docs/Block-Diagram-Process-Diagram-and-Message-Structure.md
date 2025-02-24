@@ -24,7 +24,7 @@ Message Type Byte 1-2 (uint16_t)	|Description	|Byte 1-2 (uint16_t)	|Byte 3 (uint
 4	|Motor Off	|0x04(uint16_t)	|JS(uint16_t)	|SB(uint16_t)	|No(uint16_t)	|0x6e (uint16_t)	|0x64 (uint16_t)|
 5	|Direct Drive	|0x05(uint16_t)	|XH(uint16_t)	|SB(uint16_t)	|Change Direction(uint16_t)	|0x6e (uint16_t)	|0x64 (uint16_t)|
 6	|Motor Speed	|0x06(uint16_t)	|SB(uint16_t)	|EG(uint16_t)	|Speed(uint16_t)	|0x6e (uint16_t)	|0x64 (uint16_t)|
-
+This table details the messages that will be sent between the boards. The identifiers at the begining of the messages show who is sending the message to whom. The messages are labled with English identifiers for ease of reading.
 
 ### Key
 Systems	| IDS
