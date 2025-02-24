@@ -6,6 +6,11 @@ tags:
 ---
 ## Team Block Diagram
 ![EGR_314_Team_Block_Diaram-Page-1 drawio](https://github.com/user-attachments/assets/bdf843b4-6444-43c4-8d9b-3085cfe64fee) <br>
+This image shows how our individual systems would connect to eachother to send messages over UART. As this is only meant to show the daisy-chain connection, the detainls of each system have been left out. For more detailed versions of the individual systems, check out our individual githubs! <br>
+[Xander's Human Machine Interface](https://xanderheafey.github.io/Block-Diagram/)<br>
+[Sara's Motor](https://sarabohart.github.io/blockdiagram/)<br>
+[Julia's Sensor](https://juliasmith141414.github.io/blockdiagram/)<br>
+[Ella's Bidirectional Internet Communication](https://starfruwuit.github.io/egr314report/mainPage/01BlockDiagram/)
 ## Process Diagram
 ![301 Sequence Diagram](https://github.com/user-attachments/assets/b03f7472-f672-4f33-be5f-4564422824ab) <br>
 ## Message Structure
