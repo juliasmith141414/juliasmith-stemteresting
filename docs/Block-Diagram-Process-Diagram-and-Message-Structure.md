@@ -10,7 +10,7 @@ This image shows how our individual systems would connect to eachother to send m
 [Xander's Human Machine Interface](https://xanderheafey.github.io/Block-Diagram/)<br>
 [Sara's Motor](https://sarabohart.github.io/blockdiagram/)<br>
 [Julia's Sensor](https://juliasmith141414.github.io/blockdiagram/)<br>
-[Ella's Bidirectional Internet Communication](https://starfruwuit.github.io/egr314report/mainPage/01BlockDiagram/)
+[Ella's Bidirectional Internet Communication](https://starfruwuit.github.io/egr314report/01BlockDiagram/)
 ## Process Diagram
 ![301 Sequence Diagram](https://github.com/user-attachments/assets/b03f7472-f672-4f33-be5f-4564422824ab) <br>
 ## Message Structure
