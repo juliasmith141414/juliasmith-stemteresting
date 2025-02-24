@@ -16,6 +16,7 @@ This image shows how our individual systems would connect to eachother to send m
 ![301 Sequence Diagram](https://github.com/user-attachments/assets/b03f7472-f672-4f33-be5f-4564422824ab) 
 ## Message Structure
 This table details the messages that will be sent between the boards. The identifiers at the begining of the messages show who is sending the message to whom. The messages are labled with English identifiers for ease of reading. <br>
+
 Message Type Byte 1-2 (uint16_t)	|Description	|Byte 1-2 (uint16_t)	|Byte 3 (uint8_t)	|Byte 4 (uint16_t)	|M	|Byte 63 (uint16_t)	|Byte 64 (uint16_t)|
 ----------------------------------|-------------|---------------------|-----------------|-------------------|---|-------------------|------------------|
 1	|Desired speed	|0x01(uint16_t)|XH(uint16_t)	|SB(uint16_t)	|Change Speed(uint16_t)	|0x6e (uint16_t)	|0x64 (uint16_t)|
