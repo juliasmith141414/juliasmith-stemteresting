@@ -13,6 +13,7 @@ This image shows how our individual systems would connect to eachother to send m
 [Ella's Bidirectional Internet Communication](https://starfruwuit.github.io/egr314report/01BlockDiagram/)
 ## Process Diagram
 ![301 Sequence Diagram](https://github.com/user-attachments/assets/b03f7472-f672-4f33-be5f-4564422824ab) <br>
+This process diagram shows how the messages will be transfered over the daisy chain. 
 ## Message Structure
 ### Key
 Systems	| IDS
