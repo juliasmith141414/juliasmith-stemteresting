@@ -125,13 +125,14 @@ This diagram outlines the key components and subsystems: microcontroller, distan
 **Cost:** $2.64  
 **Max Range:** 2 Meters  
 **Operating Voltage:** 2.8V - 3.3V  
+**FOV:** 25° <br>
 **Communication:** I²C  
 **Mount:** Surface  
 
 | **Pros**                                                | **Cons**                                               |
 |---------------------------------------------------------|--------------------------------------------------------|
 | Compact and **low-cost** sensor for short-range sensing | **Limited range** (up to 1.2 meters)                   |
-| **I²C communication** for easy integration              | **LGA package** can be difficult to solder manually     |
+| Higher FOV of 25°        | **LGA package** can be difficult to solder manually     |
 | **Low power consumption** ideal for portable devices    | Sensitive to ambient lighting interference              |
 
 ---
@@ -149,7 +150,7 @@ This diagram outlines the key components and subsystems: microcontroller, distan
 
 | **Pros**                                                  | **Cons**                                                  |
 |-----------------------------------------------------------|-----------------------------------------------------------|
-| Compact **surface-mount package** suitable for space-constrained designs | Low FOV   |
+| Compact **surface-mount package** suitable for space-constrained designs | Low FOV of 3°  |
 | Operates at **3.3V**, compatible with low-voltage MCUs     | Limited to **2.5 meters** maximum range                   |
 | **Low power consumption**, ideal for battery-powered applications | Very small, may be difficult to mount manually      |
 | **High accuracy** with minimal ambient light sensitivity  | May require **external components** for optimal operation |
@@ -158,7 +159,7 @@ This diagram outlines the key components and subsystems: microcontroller, distan
 ---
 
 ### **Final Component Selections**
-After evaluating range, cost, and ease of integration, the **VL53L1CXV0FY/1** sensor was selected due to its **extended range capabilities** and **multi-target detection**, making it the best fit for our project requirements.
+After evaluating range, cost, and ease of integration, the **VL53L1CXV0FY/1** sensor was selected due to its **extended range capabilities**, **multi-target detection**, and **FOV of 27°**, making it the best fit for our users.
 
 For voltage regulation, the **LM2575-3.3V** was chosen as the final voltage regulator. It provides **high efficiency (~75-88%)**, supports up to **1.0A output current**, and includes **built-in protections** such as thermal shutdown and current limiting. Its **switching regulator design** ensures minimal heat dissipation, making it well-suited for the power demands of the system.
 
