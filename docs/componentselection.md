@@ -137,10 +137,10 @@ This diagram outlines the key components and subsystems: microcontroller, distan
 ---
 
 #### **Option 3: TMF8801 Time-of-Flight Distance Sensor**
-![TMF8801-1B](https://github.com/user-attachments/assets/f16c2f09-108c-432d-8cc9-10be5da8c93b)
-[Datasheet](https://ams.com/documents/20143/36005/TMF8801_DS000599_3-00.pdf)  
-[Product Link](https://ams.com/tmf8801)  
-**Cost:** Varies by supplier  
+![TMF8801-1B](https://github.com/user-attachments/assets/f16c2f09-108c-432d-8cc9-10be5da8c93b) <br>
+[Datasheet](https://github.com/user-attachments/files/19034104/2304140030_Advanced-Monolithic-Systems-TMF8801-1B_C1852800.pdf) <br>
+[Product Link](https://jlcpcb.com/partdetail/Ams-TMF88011B/C1852800)  
+**Cost:** $3.57
 **Max Range:** 2.5 Meters  
 **Operating Voltage:** 2.7V – 3.6V  
 **Communication:** I²C  
