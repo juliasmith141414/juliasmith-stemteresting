@@ -167,7 +167,7 @@ For voltage regulation, the **LM2575-3.3V** was chosen as the final voltage regu
 
 ## **Power Budget**
 ![image](https://github.com/user-attachments/assets/039d18e6-2ede-46cf-98b2-902b85683dc9)  
-[EGR 314 Power Budget V2.pdf](https://github.com/user-attachments/files/19033580/EGR.314.Power.Budget.V2.pdf)  
+[Link to PDF](https://github.com/user-attachments/files/19033580/EGR.314.Power.Budget.V2.pdf)  
 [Link to Spreadsheet](https://docs.google.com/spreadsheets/d/12uf9W3mrbqPYXF1pln1ugqOVY8jhmh9nDuVUHxvh6Tg/edit?usp=sharing)
 
 ---
