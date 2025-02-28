@@ -505,6 +505,40 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#voltage-regulators" class="md-nav__link">
+    Voltage Regulators
+  </a>
+  
+    <nav class="md-nav" aria-label="Voltage Regulators">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#option-1-lm2575-33v-chosen" class="md-nav__link">
+    Option 1: LM2575-3.3V (Chosen)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-2-ams1117-33v-alternative" class="md-nav__link">
+    Option 2: AMS1117-3.3V (Alternative)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-3-mp2315-step-down-regulator-alternative" class="md-nav__link">
+    Option 3: MP2315 Step-Down Regulator (Alternative)
+  </a>
+  
+</li>
+        
           <li class="md-nav__item">
   <a href="#distance-sensor-options" class="md-nav__link">
     Distance Sensor Options
@@ -540,21 +574,14 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#final-sensor-choice" class="md-nav__link">
-    Final Sensor Choice
+  <a href="#final-component-selections" class="md-nav__link">
+    Final Component Selections
   </a>
   
 </li>
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#mcc-configuration" class="md-nav__link">
-    MCC Configuration
-  </a>
   
 </li>
       
@@ -702,6 +729,40 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#voltage-regulators" class="md-nav__link">
+    Voltage Regulators
+  </a>
+  
+    <nav class="md-nav" aria-label="Voltage Regulators">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#option-1-lm2575-33v-chosen" class="md-nav__link">
+    Option 1: LM2575-3.3V (Chosen)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-2-ams1117-33v-alternative" class="md-nav__link">
+    Option 2: AMS1117-3.3V (Alternative)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-3-mp2315-step-down-regulator-alternative" class="md-nav__link">
+    Option 3: MP2315 Step-Down Regulator (Alternative)
+  </a>
+  
+</li>
+        
           <li class="md-nav__item">
   <a href="#distance-sensor-options" class="md-nav__link">
     Distance Sensor Options
@@ -737,21 +798,14 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#final-sensor-choice" class="md-nav__link">
-    Final Sensor Choice
+  <a href="#final-component-selections" class="md-nav__link">
+    Final Component Selections
   </a>
   
 </li>
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#mcc-configuration" class="md-nav__link">
-    MCC Configuration
-  </a>
   
 </li>
       
@@ -849,6 +903,106 @@
 <tr>
 <td>Easy to integrate with <strong>MPLab X IDE</strong></td>
 <td>Not as durable as other higher-end programmers</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="voltage-regulators"><strong>Voltage Regulators</strong></h2>
+<h4 id="option-1-lm2575-33v-chosen"><strong>Option 1: LM2575-3.3V (Chosen)</strong></h4>
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/6a2d6f7f-9e91-4c5d-b57e-fd1fcd3dbe5d" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/6a2d6f7f-9e91-4c5d-b57e-fd1fcd3dbe5d" /></a><br />
+<a href="https://arizonastateu-my.sharepoint.com/:b:/g/personal/jasmi157_sundevils_asu_edu/EXAMPLE_LM2575.pdf">Datasheet</a><br />
+<strong>Max Current:</strong> <strong>1.0A</strong><br />
+<strong>Efficiency:</strong> ~75-88%<br />
+<strong>Operating Voltage:</strong> 4.75V – 40V  </p>
+<table>
+<thead>
+<tr>
+<th><strong>Pros</strong></th>
+<th><strong>Cons</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Handles up to 1.0A</strong> output current</td>
+<td>Requires <strong>external inductor</strong> for regulation</td>
+</tr>
+<tr>
+<td><strong>High efficiency</strong> (compared to linear regulators)</td>
+<td>Slightly larger than other options</td>
+</tr>
+<tr>
+<td><strong>Built-in thermal shutdown &amp; current limiting</strong></td>
+<td>Fixed output voltage version requires selection</td>
+</tr>
+<tr>
+<td><strong>Switching regulator minimizes heat dissipation</strong></td>
+<td>Requires a <strong>few external passive components</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="option-2-ams1117-33v-alternative"><strong>Option 2: AMS1117-3.3V (Alternative)</strong></h4>
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/2bd1f3dc-f22e-4a2a-b21a-964b1a0ff6b4" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/2bd1f3dc-f22e-4a2a-b21a-964b1a0ff6b4" /></a><br />
+<a href="https://arizonastateu-my.sharepoint.com/:b:/g/personal/jasmi157_sundevils_asu_edu/EXAMPLE_AMS1117.pdf">Datasheet</a><br />
+<strong>Max Current:</strong> <strong>800mA</strong><br />
+<strong>Efficiency:</strong> <strong>Linear, ~50-60%</strong><br />
+<strong>Operating Voltage:</strong> <strong>4.5V – 15V</strong>  </p>
+<table>
+<thead>
+<tr>
+<th><strong>Pros</strong></th>
+<th><strong>Cons</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Small &amp; simple to use (3-pin LDO)</strong></td>
+<td><strong>Lower efficiency</strong> compared to switching regulators</td>
+</tr>
+<tr>
+<td><strong>Minimal external components required</strong></td>
+<td><strong>Dissipates more heat (wasted as power loss)</strong></td>
+</tr>
+<tr>
+<td><strong>Cost-effective &amp; widely available</strong></td>
+<td>Max <strong>800mA</strong>, less than LM2575</td>
+</tr>
+<tr>
+<td><strong>Ideal for low-noise applications</strong></td>
+<td>Requires good heat dissipation if near max load</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="option-3-mp2315-step-down-regulator-alternative"><strong>Option 3: MP2315 Step-Down Regulator (Alternative)</strong></h4>
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/4d79a8ea-8d22-4edb-aeb4-ef3f0ff237e9" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/4d79a8ea-8d22-4edb-aeb4-ef3f0ff237e9" /></a><br />
+<a href="https://arizonastateu-my.sharepoint.com/:b:/g/personal/jasmi157_sundevils_asu_edu/EXAMPLE_MP2315.pdf">Datasheet</a><br />
+<strong>Max Current:</strong> <strong>2.5A</strong><br />
+<strong>Efficiency:</strong> <strong>Up to 90%</strong><br />
+<strong>Operating Voltage:</strong> <strong>4.5V – 24V</strong>  </p>
+<table>
+<thead>
+<tr>
+<th><strong>Pros</strong></th>
+<th><strong>Cons</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>High efficiency (~90%) saves power</strong></td>
+<td>Requires <strong>external inductor &amp; capacitors</strong></td>
+</tr>
+<tr>
+<td><strong>Compact size</strong> (SMT, small footprint)</td>
+<td>Slightly more complex than AMS1117</td>
+</tr>
+<tr>
+<td><strong>Supports up to 2.5A</strong> (ideal for high-power loads)</td>
+<td>Higher cost than AMS1117</td>
+</tr>
+<tr>
+<td><strong>Adjustable output voltage available</strong></td>
+<td>More difficult to solder for beginners</td>
 </tr>
 </tbody>
 </table>
@@ -966,15 +1120,13 @@
 </tbody>
 </table>
 <hr />
-<h3 id="final-sensor-choice"><strong>Final Sensor Choice</strong></h3>
-<p>Based on the evaluation of range, cost, and ease of integration, I have selected the <strong>VL53L1CXV0FY/1</strong> sensor. It offers extended range capabilities and multi-target detection, making it suitable for our project requirements.</p>
+<h3 id="final-component-selections"><strong>Final Component Selections</strong></h3>
+<p>After evaluating range, cost, and ease of integration, the <strong>VL53L1CXV0FY/1</strong> sensor was selected due to its <strong>extended range capabilities</strong> and <strong>multi-target detection</strong>, making it the best fit for our project requirements.</p>
+<p>For voltage regulation, the <strong>LM2575-3.3V</strong> was chosen as the final voltage regulator. It provides <strong>high efficiency (~75-88%)</strong>, supports up to <strong>1.0A output current</strong>, and includes <strong>built-in protections</strong> such as thermal shutdown and current limiting. Its <strong>switching regulator design</strong> ensures minimal heat dissipation, making it well-suited for the power demands of the system.</p>
 <hr />
-<h2 id="mcc-configuration">MCC Configuration</h2>
-<hr />
-<h2 id="power-budget">Power Budget</h2>
-<p>The power budget shown below demonstrates that the project is well within the power supply's capacity, allowing for additional components or design modifications if needed.<br>
-<a class="glightbox" href="https://github.com/user-attachments/assets/039d18e6-2ede-46cf-98b2-902b85683dc9" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/039d18e6-2ede-46cf-98b2-902b85683dc9" /></a><br>
-<a href="https://github.com/user-attachments/files/19033580/EGR.314.Power.Budget.V2.pdf">EGR 314 Power Budget V2.pdf</a><br>
+<h2 id="power-budget"><strong>Power Budget</strong></h2>
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/039d18e6-2ede-46cf-98b2-902b85683dc9" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/039d18e6-2ede-46cf-98b2-902b85683dc9" /></a><br />
+<a href="https://github.com/user-attachments/files/19033580/EGR.314.Power.Budget.V2.pdf">EGR 314 Power Budget V2.pdf</a><br />
 <a href="https://docs.google.com/spreadsheets/d/12uf9W3mrbqPYXF1pln1ugqOVY8jhmh9nDuVUHxvh6Tg/edit?usp=sharing">Link to Spreadsheet</a></p>
 <hr />
 
