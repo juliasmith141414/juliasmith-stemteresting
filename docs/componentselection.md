@@ -136,24 +136,24 @@ This diagram outlines the key components and subsystems: microcontroller, distan
 
 ---
 
-#### **Option 3: VL53L5CX**
-![image](https://github.com/user-attachments/assets/1aa3bbe1-f7fd-4b78-8c1a-2a87a2839143)  <br>
-[Datasheet](https://arizonastateu-my.sharepoint.com/:b:/g/personal/jasmi157_sundevils_asu_edu/ETmD_ntduohApG-p0T8vbO0BsWPYG0gU-rsxDNol8xd_AQ?e=xIRxcY)  
-[Product Link](https://www.digikey.com/en/products/detail/ams-osram-usa-inc/TMF8801-1B-OLGA12-LF-T-RDP/11477805)  
-**Cost:** $5.91  
-**Max Range:** 4 Meters  
-**Operating Voltage:** 2.8V - 3.3V  
+#### **Option 3: TMF8801 Time-of-Flight Distance Sensor**
+![TMF8801-1B](https://github.com/user-attachments/assets/f16c2f09-108c-432d-8cc9-10be5da8c93b)
+[Datasheet](https://ams.com/documents/20143/36005/TMF8801_DS000599_3-00.pdf)  
+[Product Link](https://ams.com/tmf8801)  
+**Cost:** Varies by supplier  
+**Max Range:** 2.5 Meters  
+**Operating Voltage:** 2.7V – 3.6V  
 **Communication:** I²C  
-**Mount:** Surface  
+**Mount:** Surface-Mount (OLGA-12 Package)  
+**Field of View:** 3&deg;  
 
-| **Pros**                                                   | **Cons**                                                  |
-|------------------------------------------------------------|-----------------------------------------------------------|
-| Measures up to **4 meters** with high accuracy             | Surface-mount **LGA-16** package requires reflow soldering |
-| **Multi-zone detection** (up to 64 zones)                  | May require precise alignment for accurate measurements    |
-| **Low power consumption** suitable for battery-powered systems | Sensitive to environmental conditions (e.g., ambient light)|
-| Compatible with **I²C communication**                      | Complex multi-zone data handling may need additional processing power |
-| Supports both **short-range and long-range modes**         | Higher price than simpler sensors                          |
-| Reliable integration with **Microchip PIC microcontrollers** using MCC | Documentation may require some technical expertise to fully understand |
+| **Pros**                                                  | **Cons**                                                  |
+|-----------------------------------------------------------|-----------------------------------------------------------|
+| Compact **surface-mount package** suitable for space-constrained designs | Low FOV   |
+| Operates at **3.3V**, compatible with low-voltage MCUs     | Limited to **2.5 meters** maximum range                   |
+| **Low power consumption**, ideal for battery-powered applications | Very small, may be difficult to mount manually      |
+| **High accuracy** with minimal ambient light sensitivity  | May require **external components** for optimal operation |
+
 
 ---
 
