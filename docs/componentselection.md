@@ -14,7 +14,6 @@ As part of the project team, my role involves designing and integrating the sens
 
 ![Smith Individual Block Diagram drawio V2](https://github.com/user-attachments/assets/62313fd9-333f-428a-a932-9d0ebc18b512)
 
-
 This diagram outlines the key components and subsystems: microcontroller, distance sensor (via I²C), motor driver, and actuators. Each subsystem requires separate research and component selection.
 
 ---
@@ -43,6 +42,57 @@ This diagram outlines the key components and subsystems: microcontroller, distan
 | Affordable and **official Microchip support**             | May require **firmware updates**                        |
 | **Compatible** with multiple PIC microcontrollers         | Limited debugging features                              |
 | Easy to integrate with **MPLab X IDE**                    | Not as durable as other higher-end programmers          |
+
+---
+
+## **Voltage Regulators**
+
+#### **Option 1: LM2575-3.3V (Chosen)**
+![image](https://github.com/user-attachments/assets/6a2d6f7f-9e91-4c5d-b57e-fd1fcd3dbe5d)  
+[Datasheet](https://arizonastateu-my.sharepoint.com/:b:/g/personal/jasmi157_sundevils_asu_edu/EXAMPLE_LM2575.pdf)  
+**Max Current:** **1.0A**  
+**Efficiency:** ~75-88%  
+**Operating Voltage:** 4.75V – 40V  
+
+| **Pros**                                               | **Cons**                                        |
+|--------------------------------------------------------|-------------------------------------------------|
+| **Handles up to 1.0A** output current                  | Requires **external inductor** for regulation   |
+| **High efficiency** (compared to linear regulators)    | Slightly larger than other options              |
+| **Built-in thermal shutdown & current limiting**       | Fixed output voltage version requires selection |
+| **Switching regulator minimizes heat dissipation**     | Requires a **few external passive components**  |
+
+---
+
+#### **Option 2: AMS1117-3.3V (Alternative)**
+![image](https://github.com/user-attachments/assets/2bd1f3dc-f22e-4a2a-b21a-964b1a0ff6b4)  
+[Datasheet](https://arizonastateu-my.sharepoint.com/:b:/g/personal/jasmi157_sundevils_asu_edu/EXAMPLE_AMS1117.pdf)  
+**Max Current:** **800mA**  
+**Efficiency:** **Linear, ~50-60%**  
+**Operating Voltage:** **4.5V – 15V**  
+
+| **Pros**                                      | **Cons**                                        |
+|-----------------------------------------------|-------------------------------------------------|
+| **Small & simple to use (3-pin LDO)**         | **Lower efficiency** compared to switching regulators |
+| **Minimal external components required**      | **Dissipates more heat (wasted as power loss)** |
+| **Cost-effective & widely available**         | Max **800mA**, less than LM2575                 |
+| **Ideal for low-noise applications**         | Requires good heat dissipation if near max load |
+
+---
+
+#### **Option 3: MP2315 Step-Down Regulator (Alternative)**
+![image](https://github.com/user-attachments/assets/4d79a8ea-8d22-4edb-aeb4-ef3f0ff237e9)  
+[Datasheet](https://arizonastateu-my.sharepoint.com/:b:/g/personal/jasmi157_sundevils_asu_edu/EXAMPLE_MP2315.pdf)  
+**Max Current:** **2.5A**  
+**Efficiency:** **Up to 90%**  
+**Operating Voltage:** **4.5V – 24V**  
+
+| **Pros**                                             | **Cons**                                      |
+|------------------------------------------------------|-----------------------------------------------|
+| **High efficiency (~90%) saves power**               | Requires **external inductor & capacitors**  |
+| **Compact size** (SMT, small footprint)              | Slightly more complex than AMS1117          |
+| **Supports up to 2.5A** (ideal for high-power loads) | Higher cost than AMS1117                    |
+| **Adjustable output voltage available**              | More difficult to solder for beginners       |
+
 
 ---
 
@@ -106,21 +156,16 @@ This diagram outlines the key components and subsystems: microcontroller, distan
 
 ---
 
-### **Final Sensor Choice**
-Based on the evaluation of range, cost, and ease of integration, I have selected the **VL53L1CXV0FY/1** sensor. It offers extended range capabilities and multi-target detection, making it suitable for our project requirements.
+### **Final Component Selections**
+After evaluating range, cost, and ease of integration, the **VL53L1CXV0FY/1** sensor was selected due to its **extended range capabilities** and **multi-target detection**, making it the best fit for our project requirements.
+
+For voltage regulation, the **LM2575-3.3V** was chosen as the final voltage regulator. It provides **high efficiency (~75-88%)**, supports up to **1.0A output current**, and includes **built-in protections** such as thermal shutdown and current limiting. Its **switching regulator design** ensures minimal heat dissipation, making it well-suited for the power demands of the system.
 
 ---
 
-## MCC Configuration
-
----
-
-## Power Budget
-The power budget shown below demonstrates that the project is well within the power supply's capacity, allowing for additional components or design modifications if needed.<br>
-![image](https://github.com/user-attachments/assets/039d18e6-2ede-46cf-98b2-902b85683dc9)<br>
-[EGR 314 Power Budget V2.pdf](https://github.com/user-attachments/files/19033580/EGR.314.Power.Budget.V2.pdf)<br>
+## **Power Budget**
+![image](https://github.com/user-attachments/assets/039d18e6-2ede-46cf-98b2-902b85683dc9)  
+[EGR 314 Power Budget V2.pdf](https://github.com/user-attachments/files/19033580/EGR.314.Power.Budget.V2.pdf)  
 [Link to Spreadsheet](https://docs.google.com/spreadsheets/d/12uf9W3mrbqPYXF1pln1ugqOVY8jhmh9nDuVUHxvh6Tg/edit?usp=sharing)
 
 ---
-
-
