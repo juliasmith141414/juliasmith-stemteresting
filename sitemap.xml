@@ -6,6 +6,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://embedded-systems-design.github.io/template_report/billofmaterials/</loc>
+         <lastmod>2025-02-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://embedded-systems-design.github.io/template_report/blockdiagram/</loc>
          <lastmod>2025-02-28</lastmod>
          <changefreq>daily</changefreq>
