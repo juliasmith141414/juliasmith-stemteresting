@@ -11,8 +11,7 @@ As part of the project team, my role involves designing and integrating the sens
 ---
 
 ## Electrical Block Diagram
-
-![Smith Individual Block Diagram drawio V2](https://github.com/user-attachments/assets/62313fd9-333f-428a-a932-9d0ebc18b512)
+<img width="444" alt="block diagram image on git" src="https://github.com/user-attachments/assets/f0ce3cfd-3833-4a22-a8e6-265df952e3ed" style="max-width: 300px; height: auto;" /> <br>
 
 This diagram outlines the key components and subsystems: microcontroller, distance sensor (via I²C), motor driver, and actuators. Each subsystem requires separate research and component selection.
 
@@ -21,7 +20,7 @@ This diagram outlines the key components and subsystems: microcontroller, distan
 ## Major Component Selections
 
 ### **Microcontroller: PIC18F47Q10**
-![image](https://github.com/user-attachments/assets/75a595da-e7bf-443a-b91f-c7affd50d812)  <br>
+![image](https://github.com/user-attachments/assets/75a595da-e7bf-443a-b91f-c7affd50d812 )  <br>
 [Datasheet](https://arizonastateu-my.sharepoint.com/:b:/g/personal/jasmi157_sundevils_asu_edu/EY412CZrEBFCm1RPcBUdK0ABFQC27qYPnXhWjqNXUzvurw?e=bMb4OQ)  
 
 | **Pros**                                                  | **Cons**                                                |
