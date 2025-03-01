@@ -167,8 +167,13 @@ For voltage regulation, the **LM2574MX-3.3/NOPB** was chosen as the final voltag
 ---
 
 ## **Power Budget**
-![image](https://github.com/user-attachments/assets/039d18e6-2ede-46cf-98b2-902b85683dc9)  
-[Link to PDF](https://github.com/user-attachments/files/19033580/EGR.314.Power.Budget.V2.pdf)  
-[Link to Spreadsheet](https://docs.google.com/spreadsheets/d/12uf9W3mrbqPYXF1pln1ugqOVY8jhmh9nDuVUHxvh6Tg/edit?usp=sharing)
+![image](https://github.com/user-attachments/assets/039d18e6-2ede-46cf-98b2-902b85683dc9)  <br>
+<h2>Additional Links</h2>
+<ul>
+    <li><a href="https://docs.google.com/spreadsheets/d/12uf9W3mrbqPYXF1pln1ugqOVY8jhmh9nDuVUHxvh6Tg/edit?usp=sharing">Power Budget Spreadsheet</a></li>
+    <li><a href="https://arizonastateu-my.sharepoint.com/:b:/g/personal/jasmi157_sundevils_asu_edu/EY98v2uzDuJGu2QtrsfiZEkBGJH39mKIZ5E7EZyC-jLRFQ?e=B9aNIO">Power Budget PDF</a></li> <br>
+    <li><a href="https://juliasmith141414.github.io/">Home</a></li>
+    <li><a href="https://egr314-2025-s-301.github.io/main-page/">Team Page</a></li>
+</ul>
 
 ---
