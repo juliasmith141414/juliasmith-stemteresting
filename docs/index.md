@@ -12,6 +12,6 @@ Email: jasmi157@asu.edu <br>
 
 <h2>Team Webpage</h2>
 <ul>
-    <li><a href="https://egr314-2025-s-301.github.io/main-page/">Link to Team Page</a></li>
+    <li><a href="https://egr314-2025-s-301.github.io/main-page/">Team Page</a></li>
 </ul>
 
