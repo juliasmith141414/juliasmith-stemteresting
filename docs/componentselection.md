@@ -47,22 +47,23 @@ This diagram outlines the key components and subsystems: microcontroller, distan
 
 ## **Voltage Regulators**
 
-#### **Option 1: LM2576SX-3.3/NOPB (Chosen)**
-![LM2576SX-3.3/NOPB_front](https://github.com/user-attachments/assets/1e9eaddd-e5c4-426c-9f26-3c28b0cb6cc6)<br>
-[Datasheet](https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Texas-Instruments-LM2576SX-3-3-NOPB_C14403.pdf)  
-**Max Current:** **3.0A**  
-**Efficiency:** ~77-88%  
+#### **Option 1: LM2574MX-3.3/NOPB (Chosen)**
+![LM2574MX-3.3/NOPB_front](https://github.com/user-attachments/assets/1e9eaddd-e5c4-426c-9f26-3c28b0cb6cc6)<br>
+[Datasheet](https://arizonastateu-my.sharepoint.com/:b:/g/personal/jasmi157_sundevils_asu_edu/EXAMPLE_LM2574MX-3.3-NOPB.pdf)  
+**Max Current:** **0.5A**  
+**Efficiency:** ~72% at 12V input  
 **Operating Voltage:** 4.75V – 40V  
+**Switching Frequency:** 52kHz  
 
-| **Pros**                                               | **Cons**                                        |
-|--------------------------------------------------------|-------------------------------------------------|
-| **Handles up to 3.0A** output current                  | Requires **external inductor** for regulation   |
-| **Higher efficiency** (compared to linear regulators)  | Larger footprint compared to LM2575             |
-| **Built-in thermal shutdown & current limiting**       | Fixed output voltage version requires selection |
-| **Switching regulator minimizes heat dissipation**     | Requires **a few external passive components**  |
+| **Pros**                                              | **Cons**                                      |
+|-------------------------------------------------------|-----------------------------------------------|
+| **Compact and simple step-down (buck) regulator**     | **Lower current capacity (0.5A max)**        |
+| **Fixed 3.3V output – no external resistors needed**  | **Requires external inductor & diode**       |
+| **Wide input voltage range (4.75V - 40V)**            | **Less efficient than higher-frequency buck converters** |
+| **Thermal shutdown & current limiting protection**    | **Lower efficiency (~72%) compared to newer switchers** |
+| **Minimal external components required**             | **Limited to applications with low current needs** |
 
 ---
-
 
 #### **Option 2: AMS1117-3.3V (Alternative)**
 ![AMS1117-3 3](https://github.com/user-attachments/assets/d1f93a3a-8333-49b8-9a18-0645716dbe16)<br>
@@ -162,7 +163,7 @@ This diagram outlines the key components and subsystems: microcontroller, distan
 ### **Final Component Selections**
 After evaluating range, cost, and ease of integration, the **VL53L1CXV0FY/1** sensor was selected due to its **extended range capabilities**, **multi-target detection**, and **FOV of 27°**, making it the best fit for our users.
 
-For voltage regulation, the **LM2575-3.3V** was chosen as the final voltage regulator. It provides **high efficiency (~75-88%)**, supports up to **1.0A output current**, and includes **built-in protections** such as thermal shutdown and current limiting. Its **switching regulator design** ensures minimal heat dissipation, making it well-suited for the power demands of the system.
+For voltage regulation, the **LM2574MX-3.3/NOPB** was chosen as the final voltage regulator. It provides **moderate efficiency (~72%)**, supports up to **0.5A output current**, and includes **built-in protections** such as thermal shutdown and current limiting. Its **switching regulator design** reduces power dissipation compared to linear regulators, making it a reliable choice for low-power applications within the system.
 
 ---
 
