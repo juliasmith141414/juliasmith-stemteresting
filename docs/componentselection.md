@@ -3,13 +3,6 @@
 ## Objective
 The purpose of this page is to compare, and contrast multiple solutions for each major component in my subsystem design. This includes identifying off-the-shelf and custom electrical or mechanical components, assessing compatibility with project specifications, and articulating rationale for final choices.
 
----
-
-## Role Description
-As part of the project team, my role involves designing and integrating the sensor subsystem. This includes selecting an appropriate distance sensor, ensuring compatibility with the **PIC18F47Q10**, and configuring I²C communication. Additionally, I will assist with the microcontroller's programming, actuation, and communication subsystems.
-
----
-
 ## Electrical Block Diagram
 <img width="444" alt="block diagram image on git" src="https://github.com/user-attachments/assets/f0ce3cfd-3833-4a22-a8e6-265df952e3ed" style="max-width: 300px; height: auto;" /> <br>
 
