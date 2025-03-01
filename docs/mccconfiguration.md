@@ -10,7 +10,7 @@ are configured as digital outputs.
 
 ## MCC Configuration
 ### Pin Assignments
-![image](https://github.com/user-attachments/assets/61b5443c-4b42-4663-9705-9de9d4dac16b)
+<img src="https://github.com/user-attachments/assets/61b5443c-4b42-4663-9705-9de9d4dac16b" width="300" height="auto" /> <br>
 ### Application Builder
 ![image](https://github.com/user-attachments/assets/be01fa48-ff0e-4ece-a317-99b4bc84e295)
 ### Full Screen View
