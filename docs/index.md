@@ -10,3 +10,8 @@ Email: jasmi157@asu.edu <br>
     <li><a href="https://juliasmith141414.github.io/billofmaterials/">Bill of Materials</a></li>
 </ul>
 
+<h2>Team Webpage</h2>
+<ul>
+    <li><a href="https://egr314-2025-s-301.github.io/main-page/">Link to Team Page</a></li>
+</ul>
+
