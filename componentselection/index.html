@@ -555,8 +555,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#option-1-lm2576sx-33nopb-chosen" class="md-nav__link">
-    Option 1: LM2576SX-3.3/NOPB (Chosen)
+  <a href="#option-1-lm2574mx-33nopb-chosen" class="md-nav__link">
+    Option 1: LM2574MX-3.3/NOPB (Chosen)
   </a>
   
 </li>
@@ -779,8 +779,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#option-1-lm2576sx-33nopb-chosen" class="md-nav__link">
-    Option 1: LM2576SX-3.3/NOPB (Chosen)
+  <a href="#option-1-lm2574mx-33nopb-chosen" class="md-nav__link">
+    Option 1: LM2574MX-3.3/NOPB (Chosen)
   </a>
   
 </li>
@@ -944,12 +944,13 @@
 </table>
 <hr />
 <h2 id="voltage-regulators"><strong>Voltage Regulators</strong></h2>
-<h4 id="option-1-lm2576sx-33nopb-chosen"><strong>Option 1: LM2576SX-3.3/NOPB (Chosen)</strong></h4>
-<p><a class="glightbox" href="https://github.com/user-attachments/assets/1e9eaddd-e5c4-426c-9f26-3c28b0cb6cc6" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="LM2576SX-3.3/NOPB_front" src="https://github.com/user-attachments/assets/1e9eaddd-e5c4-426c-9f26-3c28b0cb6cc6" /></a><br>
-<a href="https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Texas-Instruments-LM2576SX-3-3-NOPB_C14403.pdf">Datasheet</a><br />
-<strong>Max Current:</strong> <strong>3.0A</strong><br />
-<strong>Efficiency:</strong> ~77-88%<br />
-<strong>Operating Voltage:</strong> 4.75V – 40V  </p>
+<h4 id="option-1-lm2574mx-33nopb-chosen"><strong>Option 1: LM2574MX-3.3/NOPB (Chosen)</strong></h4>
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/1e9eaddd-e5c4-426c-9f26-3c28b0cb6cc6" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="LM2574MX-3.3/NOPB_front" src="https://github.com/user-attachments/assets/1e9eaddd-e5c4-426c-9f26-3c28b0cb6cc6" /></a><br>
+<a href="https://arizonastateu-my.sharepoint.com/:b:/g/personal/jasmi157_sundevils_asu_edu/EXAMPLE_LM2574MX-3.3-NOPB.pdf">Datasheet</a><br />
+<strong>Max Current:</strong> <strong>0.5A</strong><br />
+<strong>Efficiency:</strong> ~72% at 12V input<br />
+<strong>Operating Voltage:</strong> 4.75V – 40V<br />
+<strong>Switching Frequency:</strong> 52kHz  </p>
 <table>
 <thead>
 <tr>
@@ -959,20 +960,24 @@
 </thead>
 <tbody>
 <tr>
-<td><strong>Handles up to 3.0A</strong> output current</td>
-<td>Requires <strong>external inductor</strong> for regulation</td>
+<td><strong>Compact and simple step-down (buck) regulator</strong></td>
+<td><strong>Lower current capacity (0.5A max)</strong></td>
 </tr>
 <tr>
-<td><strong>Higher efficiency</strong> (compared to linear regulators)</td>
-<td>Larger footprint compared to LM2575</td>
+<td><strong>Fixed 3.3V output – no external resistors needed</strong></td>
+<td><strong>Requires external inductor &amp; diode</strong></td>
 </tr>
 <tr>
-<td><strong>Built-in thermal shutdown &amp; current limiting</strong></td>
-<td>Fixed output voltage version requires selection</td>
+<td><strong>Wide input voltage range (4.75V - 40V)</strong></td>
+<td><strong>Less efficient than higher-frequency buck converters</strong></td>
 </tr>
 <tr>
-<td><strong>Switching regulator minimizes heat dissipation</strong></td>
-<td>Requires <strong>a few external passive components</strong></td>
+<td><strong>Thermal shutdown &amp; current limiting protection</strong></td>
+<td><strong>Lower efficiency (~72%) compared to newer switchers</strong></td>
+</tr>
+<tr>
+<td><strong>Minimal external components required</strong></td>
+<td><strong>Limited to applications with low current needs</strong></td>
 </tr>
 </tbody>
 </table>
@@ -1153,7 +1158,7 @@
 <hr />
 <h3 id="final-component-selections"><strong>Final Component Selections</strong></h3>
 <p>After evaluating range, cost, and ease of integration, the <strong>VL53L1CXV0FY/1</strong> sensor was selected due to its <strong>extended range capabilities</strong>, <strong>multi-target detection</strong>, and <strong>FOV of 27°</strong>, making it the best fit for our users.</p>
-<p>For voltage regulation, the <strong>LM2575-3.3V</strong> was chosen as the final voltage regulator. It provides <strong>high efficiency (~75-88%)</strong>, supports up to <strong>1.0A output current</strong>, and includes <strong>built-in protections</strong> such as thermal shutdown and current limiting. Its <strong>switching regulator design</strong> ensures minimal heat dissipation, making it well-suited for the power demands of the system.</p>
+<p>For voltage regulation, the <strong>LM2574MX-3.3/NOPB</strong> was chosen as the final voltage regulator. It provides <strong>moderate efficiency (~72%)</strong>, supports up to <strong>0.5A output current</strong>, and includes <strong>built-in protections</strong> such as thermal shutdown and current limiting. Its <strong>switching regulator design</strong> reduces power dissipation compared to linear regulators, making it a reliable choice for low-power applications within the system.</p>
 <hr />
 <h2 id="power-budget"><strong>Power Budget</strong></h2>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/039d18e6-2ede-46cf-98b2-902b85683dc9" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/039d18e6-2ede-46cf-98b2-902b85683dc9" /></a><br />
