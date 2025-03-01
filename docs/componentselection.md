@@ -29,8 +29,8 @@ This diagram outlines the key components and subsystems: microcontroller, distan
 
 ### **MPLab Snap Programmer: PG160100**
 <img src="https://github.com/user-attachments/assets/1ad9faf8-0440-4068-9b8d-6f026b02ac68" width="300" height="400" /> <br>
-**Cost:** $14.99
-**Operating Voltage:** 1.20V - 5.5V
+**Cost:** $14.99 <br>
+**Operating Voltage:** 1.20V - 5.5V<br>
 [Datasheet](https://arizonastateu-my.sharepoint.com/:b:/g/personal/jasmi157_sundevils_asu_edu/EQGcT4hhqEpHhpjXQ1mo-LEBesul2oAfO8pAhaCQ58yQCQ?e=vgC0Pv)  
 
 | **Pros**                                                  | **Cons**                                                |
