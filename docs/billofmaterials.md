@@ -1,4 +1,4 @@
-# Bill of Materials (BOM)
+# Bill of Materials
 
 ## Overview
 This document outlines the components used in the **I2C Distance Sensor Subsystem** project, including their part numbers, descriptions, and Digi-Key links.
