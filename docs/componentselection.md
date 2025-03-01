@@ -19,8 +19,8 @@ This diagram outlines the key components and subsystems: microcontroller, distan
 
 ## Major Component Selections
 
-### **Microcontroller: PIC18F47Q10**
-![image](https://github.com/user-attachments/assets/75a595da-e7bf-443a-b91f-c7affd50d812 )  <br>
+### **Microcontroller: PIC18F47Q10-I/PT**
+<img src="https://github.com/user-attachments/assets/2f574860-11a0-4407-83ab-fafb947c047d" width="300" height="300" /> <br>
 [Datasheet](https://arizonastateu-my.sharepoint.com/:b:/g/personal/jasmi157_sundevils_asu_edu/EY412CZrEBFCm1RPcBUdK0ABFQC27qYPnXhWjqNXUzvurw?e=bMb4OQ)  
 
 | **Pros**                                                  | **Cons**                                                |
@@ -33,7 +33,7 @@ This diagram outlines the key components and subsystems: microcontroller, distan
 ---
 
 ### **Programmer: MPLab Snap Programmer**
-![image](https://github.com/user-attachments/assets/1ad9faf8-0440-4068-9b8d-6f026b02ac68)  <br>
+<img src="https://github.com/user-attachments/assets/1ad9faf8-0440-4068-9b8d-6f026b02ac68" width="300" height="400" /> <br>
 [Datasheet](https://arizonastateu-my.sharepoint.com/:b:/g/personal/jasmi157_sundevils_asu_edu/EQGcT4hhqEpHhpjXQ1mo-LEBesul2oAfO8pAhaCQ58yQCQ?e=vgC0Pv)  
 
 | **Pros**                                                  | **Cons**                                                |
@@ -47,7 +47,7 @@ This diagram outlines the key components and subsystems: microcontroller, distan
 ## **Voltage Regulators**
 
 #### **Option 1: LM2574MX-3.3/NOPB (Chosen)**
-![LM2574MX-3.3/NOPB_front](https://github.com/user-attachments/assets/1e9eaddd-e5c4-426c-9f26-3c28b0cb6cc6)<br>
+<img src="https://github.com/user-attachments/assets/1e9eaddd-e5c4-426c-9f26-3c28b0cb6cc6" width="300" height="300" /> <br>
 [Datasheet](https://github.com/user-attachments/files/19035115/LM2574MX-3.3-NOPB.pdf)<br>
 **Max Current:** **0.5A**  
 **Efficiency:** ~72% at 12V input  
@@ -65,8 +65,8 @@ This diagram outlines the key components and subsystems: microcontroller, distan
 ---
 
 #### **Option 2: AMS1117-3.3V (Alternative)**
-![AMS1117-3 3](https://github.com/user-attachments/assets/d1f93a3a-8333-49b8-9a18-0645716dbe16)<br>
-[Datasheet](https://arizonastateu-my.sharepoint.com/:b:/g/personal/jasmi157_sundevils_asu_edu/EXAMPLE_AMS1117.pdf)  
+<img src="https://github.com/user-attachments/assets/d1f93a3a-8333-49b8-9a18-0645716dbe16" width="300" height="300" /> <br>
+[Datasheet](https://arizonastateu-my.sharepoint.com/:b:/g/personal/jasmi157_sundevils_asu_edu/EXAMPLE_AMS1117.pdf) 
 **Max Current:** **800mA**  
 **Efficiency:** **Linear, ~50-60%**  
 **Operating Voltage:** **4.5V – 15V**  
@@ -81,7 +81,7 @@ This diagram outlines the key components and subsystems: microcontroller, distan
 ---
 
 #### **Option 3: MP2315 Step-Down Regulator (Alternative)**
-![MP2315GJ-Z VOLTAGE REGULATOR](https://github.com/user-attachments/assets/0ec08087-8771-4c70-b557-854364f03e4d)<br>
+<img src="https://github.com/user-attachments/assets/0ec08087-8771-4c70-b557-854364f03e4d" width="300" height="300" /> <br>
 [Datasheet](https://arizonastateu-my.sharepoint.com/:b:/g/personal/jasmi157_sundevils_asu_edu/EXAMPLE_MP2315.pdf)  
 **Max Current:** **2.5A**  
 **Efficiency:** **Up to 90%**  
@@ -100,7 +100,7 @@ This diagram outlines the key components and subsystems: microcontroller, distan
 ### **Distance Sensor Options**
 
 #### **Option 1: VL53L1CXV0FY/1**
-![VL53L1CXV0FY-1 DISTANCE SENSOR SMD](https://github.com/user-attachments/assets/60dd9436-97b2-49df-bd5d-6accfdb9a356) <br>
+<img src="https://github.com/user-attachments/assets/60dd9436-97b2-49df-bd5d-6accfdb9a356" width="300" height="300" /> <br>
 [Datasheet](https://arizonastateu-my.sharepoint.com/:b:/g/personal/jasmi157_sundevils_asu_edu/EbF6q-VkyolOulMk80JgWMkB3oZ_hcvkSHapQ7gW-guFWQ?e=OiwQhq)  
 [Product Link](https://www.digikey.com/en/products/detail/stmicroelectronics/VL53L1CXV0FY-1/8258055)  
 **Cost:** $5.77  
@@ -120,7 +120,7 @@ This diagram outlines the key components and subsystems: microcontroller, distan
 ---
 
 #### **Option 2: VL53L0X**
-![image](https://github.com/user-attachments/assets/e787c161-59c0-4130-a716-be647bf55d72) <br> 
+<img src="https://github.com/user-attachments/assets/e787c161-59c0-4130-a716-be647bf55d72" width="300" height="300" /> <br>
 [Datasheet](https://arizonastateu-my.sharepoint.com/:b:/g/personal/jasmi157_sundevils_asu_edu/EVZtUUkWE9xGhCSLo-Ec1scBudzi0_jGqGujjsDPeXDivA?e=c6nOMb)  
 [Product Link](https://estore.st.com/en/products/imaging-and-photonics-solutions/time-of-flight-sensors/vl53l0x.html)  
 **Cost:** $2.64  
@@ -139,7 +139,7 @@ This diagram outlines the key components and subsystems: microcontroller, distan
 ---
 
 #### **Option 3: TMF8801 Time-of-Flight Distance Sensor**
-![TMF8801-1B](https://github.com/user-attachments/assets/f16c2f09-108c-432d-8cc9-10be5da8c93b) <br>
+<img src="https://github.com/user-attachments/assets/f16c2f09-108c-432d-8cc9-10be5da8c93b" width="300" height="300" /> <br>
 [Datasheet](https://github.com/user-attachments/files/19034104/2304140030_Advanced-Monolithic-Systems-TMF8801-1B_C1852800.pdf) <br>
 [Product Link](https://jlcpcb.com/partdetail/Ams-TMF88011B/C1852800)  
 **Cost:** $3.57
