@@ -16,3 +16,9 @@ are configured as digital outputs.
 ### Full Screen View
 ![image](https://github.com/user-attachments/assets/5dfbb9cc-e7f7-4d93-92b8-621c842bc89e)
 
+<h2>Additional Links</h2>
+<ul>
+    <li><a href="https://arizonastateu-my.sharepoint.com/:u:/g/personal/jasmi157_sundevils_asu_edu/ES7NgWyFxkZGs0l4NIz622IBPVdM1EN7gJTgi7BO9tcfeA?e=ELuAgG">MPLabs Zip File</a></li> <br>
+    <li><a href="https://juliasmith141414.github.io/">Home</a></li>
+    <li><a href="https://egr314-2025-s-301.github.io/main-page/">Team Page</a></li>
+</ul>
