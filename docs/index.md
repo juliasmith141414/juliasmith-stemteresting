@@ -1,4 +1,4 @@
-# Welcome
+# Home
 My name is Julia Smith <br>
 Email: jasmi157@asu.edu <br>
 
