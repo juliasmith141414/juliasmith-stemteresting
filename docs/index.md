@@ -7,5 +7,6 @@ Email: jasmi157@asu.edu <br>
     <li><a href="https://juliasmith141414.github.io/componentselection/">Component Selection</a></li>
     <li><a href="https://juliasmith141414.github.io/blockdiagram/">Block Diagram</a></li>
     <li><a href="https://juliasmith141414.github.io/schematic/">Schematic</a></li>
+    <li><a href="https://juliasmith141414.github.io/billofmaterials/">Bill of Materials</a></li>
 </ul>
 
