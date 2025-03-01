@@ -1,5 +1,6 @@
 # Home
-My name is Julia Smith <br>
+My name is Julia Smith. As a member of STEMteresting (Team 301), my role involves designing and integrating the sensor subsystem. This includes selecting an appropriate distance sensor, ensuring compatibility with the **PIC18F47Q10**, and configuring I²C communication. Additionally, I will assist with the microcontroller's programming, actuation, and communication subsystems. <br>
+
 Email: jasmi157@asu.edu <br>
 
 <h2>Assignments</h2>
