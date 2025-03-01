@@ -47,21 +47,22 @@ This diagram outlines the key components and subsystems: microcontroller, distan
 
 ## **Voltage Regulators**
 
-#### **Option 1: LM2575-3.3V (Chosen)**
-![LM2575D2T-3-3R4G_C70337_front](https://github.com/user-attachments/assets/1e9eaddd-e5c4-426c-9f26-3c28b0cb6cc6)<br>
-[Datasheet](https://arizonastateu-my.sharepoint.com/:b:/g/personal/jasmi157_sundevils_asu_edu/EXAMPLE_LM2575.pdf)  
-**Max Current:** **1.0A**  
-**Efficiency:** ~75-88%  
+#### **Option 1: LM2576SX-3.3/NOPB (Chosen)**
+![LM2576SX-3.3/NOPB_front](https://github.com/user-attachments/assets/1e9eaddd-e5c4-426c-9f26-3c28b0cb6cc6)<br>
+[Datasheet](https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Texas-Instruments-LM2576SX-3-3-NOPB_C14403.pdf)  
+**Max Current:** **3.0A**  
+**Efficiency:** ~77-88%  
 **Operating Voltage:** 4.75V – 40V  
 
 | **Pros**                                               | **Cons**                                        |
 |--------------------------------------------------------|-------------------------------------------------|
-| **Handles up to 1.0A** output current                  | Requires **external inductor** for regulation   |
-| **High efficiency** (compared to linear regulators)    | Slightly larger than other options              |
+| **Handles up to 3.0A** output current                  | Requires **external inductor** for regulation   |
+| **Higher efficiency** (compared to linear regulators)  | Larger footprint compared to LM2575             |
 | **Built-in thermal shutdown & current limiting**       | Fixed output voltage version requires selection |
-| **Switching regulator minimizes heat dissipation**     | Requires a **few external passive components**  |
+| **Switching regulator minimizes heat dissipation**     | Requires **a few external passive components**  |
 
 ---
+
 
 #### **Option 2: AMS1117-3.3V (Alternative)**
 ![AMS1117-3 3](https://github.com/user-attachments/assets/d1f93a3a-8333-49b8-9a18-0645716dbe16)<br>
