@@ -49,7 +49,7 @@ This diagram outlines the key components and subsystems: microcontroller, distan
 
 #### **Option 1: LM2574MX-3.3/NOPB (Chosen)**
 ![LM2574MX-3.3/NOPB_front](https://github.com/user-attachments/assets/1e9eaddd-e5c4-426c-9f26-3c28b0cb6cc6)<br>
-[Datasheet](https://arizonastateu-my.sharepoint.com/:b:/g/personal/jasmi157_sundevils_asu_edu/EXAMPLE_LM2574MX-3.3-NOPB.pdf)  
+[Datasheet](https://github.com/user-attachments/files/19035115/LM2574MX-3.3-NOPB.pdf)<br>
 **Max Current:** **0.5A**  
 **Efficiency:** ~72% at 12V input  
 **Operating Voltage:** 4.75V – 40V  
