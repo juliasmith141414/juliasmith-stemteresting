@@ -53,7 +53,7 @@ This MPLAB X project implements the firmware for the distance sensor subsystem i
 
 <ul style="list-style-type: none; padding-left: 0;">
   <li>
-    <a href="https://github.com/user-attachments/files/19400781/CLASSIC_MESSAGE_STRUCTURE.X.zip)" style="color:#ff8c00; text-decoration: none;">📁 <strong>MPLABS Zip File</strong></a>
+    <a href="https://github.com/user-attachments/files/19400781/CLASSIC_MESSAGE_STRUCTURE.X.zip)" style="color:#004dff; text-decoration: none;">📁 <strong>MPLABS Zip File</strong></a>
   </li>
   </ul>
 
