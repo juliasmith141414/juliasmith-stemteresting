@@ -2,7 +2,9 @@
 
 ## Overview
 
+<div style="background-color:#000000; padding:20px; color:#ffffff;">
 The tables below describe the messages sent from the distance sensor subsystem (Julia) using `uint8_t` binary flags (0 = False, 1 = True). All messages are formatted using the class UART protocol and occupy the data field (bytes 5–61) of the 64-byte message frame.
+</div>
 
 ## Tables
 
@@ -85,7 +87,7 @@ This MPLAB X project implements the firmware for the distance sensor subsystem i
 
 <ul style="list-style-type: none; padding-left: 0;">
   <li>
-    <a href="home_page_link_here" style="color:#008026; text-decoration: none;">🏠 <strong>Home</strong></a>
+    <a href="home_page_link_here" style="color:#004dff; text-decoration: none;">🏠 <strong>Home</strong></a>
   </li>
   <li>
     <a href="team_page_link_here" style="color:#004dff; text-decoration: none;">👥 <strong>Team Page</strong></a>
