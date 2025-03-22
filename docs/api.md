@@ -49,7 +49,7 @@ The tables below describe the messages sent from the distance sensor subsystem (
 
 This MPLAB X project implements the firmware for the distance sensor subsystem in our team’s UART-based communication network. It continuously reads simulated distance data and broadcasts key system state messages to other subsystems (Motor, OLED, and WiFi) using a standardized UART protocol.
 
-## 🗂️ Files
+### 🗂️ Files
 
 <ul style="list-style-type: none; padding-left: 0;">
   <li>
@@ -57,7 +57,7 @@ This MPLAB X project implements the firmware for the distance sensor subsystem i
   </li>
   </ul>
 
-## 📑 Key Features
+### 📑 Key Features
 
 - **UART Messaging Protocol** 
   Each message follows the class-defined structure:  
