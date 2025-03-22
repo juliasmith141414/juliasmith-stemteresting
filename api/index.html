@@ -504,6 +504,33 @@
     📋 Tables
   </a>
   
+    <nav class="md-nav" aria-label="📋 Tables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#safety-response-message-to-motor" class="md-nav__link">
+    🟥 Safety Response Message (to Motor)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oled-display-message-to-oled" class="md-nav__link">
+    🟧 OLED Display Message (to OLED)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#machine-use-status-message-to-wifi" class="md-nav__link">
+    🟨 Machine Use Status Message (to WiFi)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -754,6 +781,33 @@
     📋 Tables
   </a>
   
+    <nav class="md-nav" aria-label="📋 Tables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#safety-response-message-to-motor" class="md-nav__link">
+    🟥 Safety Response Message (to Motor)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oled-display-message-to-oled" class="md-nav__link">
+    🟧 OLED Display Message (to OLED)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#machine-use-status-message-to-wifi" class="md-nav__link">
+    🟨 Machine Use Status Message (to WiFi)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -809,13 +863,9 @@
 
 <h1 id="api">API</h1>
 <h2 id="overview">🌈 Overview</h2>
-<div style="background-color:#000000; padding:20px; color:#ffffff;">
-The tables below describe the messages sent from the distance sensor subsystem (Julia) using `uint8_t` binary flags (0 = False, 1 = True). All messages are formatted using the class UART protocol and occupy the data field (bytes 5–61) of the 64-byte message frame.
-</div>
-
+<p>The tables below describe the messages sent from the distance sensor subsystem (Julia) using <code>uint8_t</code> binary flags (0 = False, 1 = True). All messages are formatted using the class UART protocol and occupy the data field (bytes 5–61) of the 64-byte message frame.</p>
 <h2 id="tables">📋 Tables</h2>
-<h3 style="color:#e40303">🟥 Safety Response Message (to Motor)</h3>
-
+<h3 id="safety-response-message-to-motor">🟥 Safety Response Message (to Motor)</h3>
 <p>🚨 This message tells the motor subsystem whether the user is currently in a safe position.</p>
 <table>
 <thead>
@@ -851,8 +901,7 @@ The tables below describe the messages sent from the distance sensor subsystem (
 </tr>
 </tbody>
 </table>
-<h3 style="color:#ff8c00">🟧 OLED Display Message (to OLED)</h3>
-
+<h3 id="oled-display-message-to-oled">🟧 OLED Display Message (to OLED)</h3>
 <p>🖥️ This message instructs the OLED display what message to show based on user status.</p>
 <table>
 <thead>
@@ -888,8 +937,7 @@ The tables below describe the messages sent from the distance sensor subsystem (
 </tr>
 </tbody>
 </table>
-<h3 style="color:#ffed00">🟨 Machine Use Status Message (to WiFi)</h3>
-
+<h3 id="machine-use-status-message-to-wifi">🟨 Machine Use Status Message (to WiFi)</h3>
 <p>📶 This message tells the WiFi module whether the machine is currently in use.</p>
 <table>
 <thead>
