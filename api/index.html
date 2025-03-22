@@ -29,7 +29,7 @@
 
     
       
-        <title>Api - Julia Smith</title>
+        <title>API - Julia Smith</title>
       
     
     
@@ -93,7 +93,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#distance-sensor-subsystem-mplab-project-overview" class="md-skip">
+        <a href="#api" class="md-skip">
           Skip to content
         </a>
       
@@ -128,7 +128,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Api
+              API
             
           </span>
         </div>
@@ -226,7 +226,7 @@
   
     
   
-  Api
+  API
 
       </a>
     </li>
@@ -453,12 +453,14 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
   <span class="md-ellipsis">
-    Api
+    API
   </span>
   
 
@@ -469,7 +471,7 @@
         
   
   <span class="md-ellipsis">
-    Api
+    API
   </span>
   
 
@@ -481,6 +483,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -489,35 +493,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#distance-sensor-subsystem-mplab-project-overview" class="md-nav__link">
-    🔧 Distance Sensor Subsystem – MPLAB Project Overview
-  </a>
-  
-    <nav class="md-nav" aria-label="🔧 Distance Sensor Subsystem – MPLAB Project Overview">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#key-features" class="md-nav__link">
-    📦 Key Features
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#included-files" class="md-nav__link">
-    📁 Included Files
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#api" class="md-nav__link">
-    API
+  <a href="#_1" class="md-nav__link">
+    
   </a>
   
 </li>
@@ -721,6 +698,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -729,35 +708,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#distance-sensor-subsystem-mplab-project-overview" class="md-nav__link">
-    🔧 Distance Sensor Subsystem – MPLAB Project Overview
-  </a>
-  
-    <nav class="md-nav" aria-label="🔧 Distance Sensor Subsystem – MPLAB Project Overview">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#key-features" class="md-nav__link">
-    📦 Key Features
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#included-files" class="md-nav__link">
-    📁 Included Files
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#api" class="md-nav__link">
-    API
+  <a href="#_1" class="md-nav__link">
+    
   </a>
   
 </li>
@@ -785,25 +737,148 @@
   
 
 
-<h2 id="distance-sensor-subsystem-mplab-project-overview">🔧 Distance Sensor Subsystem – MPLAB Project Overview</h2>
+<h1 id="api">API</h1>
+<p>The tables below describe the messages sent from the distance sensor subsystem (Julia) using <code>uint8_t</code> binary flags (0 = False, 1 = True). All messages are formatted using the class UART protocol and occupy the data field (bytes 5–61) of the 64-byte message frame.</p>
+<h3 style="color:#e40303">🟥 Safety Response Message (to Motor)</h3>
+
+<p>🚨 This message tells the motor subsystem whether the user is currently in a safe position.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>📦 <strong>Byte 1</strong></td>
+<td><code>User_Safe_Flag</code></td>
+</tr>
+<tr>
+<td>📐 <strong>Variable Type</strong></td>
+<td><code>uint8_t</code></td>
+</tr>
+<tr>
+<td>🔻 <strong>Min Value</strong></td>
+<td><code>0</code> (User Not Safe)</td>
+</tr>
+<tr>
+<td>🔺 <strong>Max Value</strong></td>
+<td><code>1</code> (User Safe)</td>
+</tr>
+<tr>
+<td>🔢 <strong>Example</strong></td>
+<td><code>1</code></td>
+</tr>
+<tr>
+<td>💡 <strong>Use</strong></td>
+<td>Tells the motor whether to activate based on user position</td>
+</tr>
+</tbody>
+</table>
+<h3 style="color:#ff8c00">🟧 OLED Display Message (to OLED)</h3>
+
+<p>🖥️ This message instructs the OLED display what message to show based on user status.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>📦 <strong>Byte 1</strong></td>
+<td><code>OLED_Display_Flag</code></td>
+</tr>
+<tr>
+<td>📐 <strong>Variable Type</strong></td>
+<td><code>uint8_t</code></td>
+</tr>
+<tr>
+<td>🔻 <strong>Min Value</strong></td>
+<td><code>0</code> (Display 'Stand on X')</td>
+</tr>
+<tr>
+<td>🔺 <strong>Max Value</strong></td>
+<td><code>1</code> (Display 'Initializing')</td>
+</tr>
+<tr>
+<td>🔢 <strong>Example</strong></td>
+<td><code>1</code></td>
+</tr>
+<tr>
+<td>💡 <strong>Use</strong></td>
+<td>Tells the OLED whether to show initialization or waiting instructions</td>
+</tr>
+</tbody>
+</table>
+<h3 style="color:#ffed00">🟨 Machine Use Status Message (to WiFi)</h3>
+
+<p>📶 This message tells the WiFi module whether the machine is currently in use.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>📦 <strong>Byte 1</strong></td>
+<td><code>Machine_Use_Status</code></td>
+</tr>
+<tr>
+<td>📐 <strong>Variable Type</strong></td>
+<td><code>uint8_t</code></td>
+</tr>
+<tr>
+<td>🔻 <strong>Min Value</strong></td>
+<td><code>0</code> (Idle)</td>
+</tr>
+<tr>
+<td>🔺 <strong>Max Value</strong></td>
+<td><code>1</code> (In Use)</td>
+</tr>
+<tr>
+<td>🔢 <strong>Example</strong></td>
+<td><code>1</code></td>
+</tr>
+<tr>
+<td>💡 <strong>Use</strong></td>
+<td>Tells the WiFi module whether the machine is active</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 style="color:#e40303;">🔧 Distance Sensor Subsystem – MPLAB Project Overview
+</h3>
+
 <p>This MPLAB X project implements the firmware for the distance sensor subsystem in our team’s UART-based communication network. It continuously reads simulated distance data and broadcasts key system state messages to other subsystems (Motor, OLED, and WiFi) using a standardized UART protocol.</p>
-<h3 id="key-features">📦 Key Features</h3>
+<p>🌈📁✨ Files</h3></p>
+<ul style="list-style-type: none; padding-left: 0;">
+  <li>
+    <a href="https://github.com/user-attachments/files/19400781/CLASSIC_MESSAGE_STRUCTURE.X.zip)" style="color:#ff8c00; text-decoration: none;">📁 <strong>MPLABS Zip File</strong></a>
+  </li>
+  </ul>
+
+<p>📦 Key Features</p>
 <ul>
 <li>
-<p><strong>UART Messaging Protocol</strong><br />
+<p><strong>UART Messaging Protocol</strong> 
   Each message follows the class-defined structure:<br />
-<code>[Prefix1] [Prefix2] [Sender] [Receiver] [Message Type] [Data...] [Suffix1] [Suffix2]</code><br />
+  [Prefix1] [Prefix2] [Sender] [Receiver] [Message Type] [Data...] [Suffix1] [Suffix2]<br />
   All messages are 64 bytes in length and framed for reliability.</p>
 </li>
 <li>
 <p><strong>Subsystem Communication</strong><br />
   This subsystem transmits:</p>
 </li>
-<li>User distance data (<code>MSG_DISTANCE_DATA</code>) – broadcast to all</li>
-<li>Safety flag (<code>MSG_SAFETY_RESPONSE</code>) – sent to Motor subsystem</li>
-<li>Display flag (<code>MSG_OLED_FLAG</code>) – sent to OLED subsystem</li>
+<li>User distance data (MSG_DISTANCE_DATA) – broadcast to all</li>
+<li>Safety flag (MSG_SAFETY_RESPONSE) – sent to Motor subsystem</li>
+<li>Display flag (MSG_OLED_FLAG) – sent to OLED subsystem</li>
 <li>
-<p>Machine use status (<code>MSG_MACHINE_STATUS</code>) – sent to WiFi module</p>
+<p>Machine use status (MSG_MACHINE_STATUS) – sent to WiFi module</p>
 </li>
 <li>
 <p><strong>Timeout Handling &amp; Message Trashing</strong><br />
@@ -815,128 +890,21 @@
 </li>
 <li>
 <p><strong>Code Structure</strong><br />
-  The main logic resides in <code>main.c</code> with UART handling and timed messaging built using MCC-generated peripheral drivers (EUSART1, Timer1).</p>
+  The main logic resides in main.c with UART handling and timed messaging built using MCC-generated peripheral drivers (EUSART1, Timer1).</p>
 </li>
 </ul>
-<h3 id="included-files">📁 Included Files</h3>
-<ul>
-<li><code>main.c</code> – primary message logic</li>
-<li><code>mcc_generated_files/</code> – auto-generated by MPLAB Code Configurator (MCC)</li>
-<li><code>system/</code> – clock, interrupt, and initialization settings</li>
+<h3 id="_1"></h3>
+<hr>
+<h3 style="color:#e40303;">🌈🔗✨ Links</h3>
+
+<ul style="list-style-type: none; padding-left: 0;">
+  <li>
+    <a href="home_page_link_here" style="color:#008026; text-decoration: none;">🏠 <strong>Home</strong></a>
+  </li>
+  <li>
+    <a href="team_page_link_here" style="color:#004dff; text-decoration: none;">👥 <strong>Team Page</strong></a>
+  </li>
 </ul>
-<h1 id="api">API</h1>
-<p>This table describes the messages sent from the distance sensor subsystem (Julia) using <code>uint8_t</code> binary flags (0 = False, 1 = True). All messages are formatted using the class UART protocol and occupy the data field (bytes 5–61) of the 64-byte message frame.</p>
-<h3 style="color:#e40303">Safety Response Message (to Motor)</h3>
-
-<p>This message tells the motor subsystem whether the user is currently in a safe position.</p>
-<table>
-<thead>
-<tr>
-<th>Field</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Byte 1</strong></td>
-<td><code>User_Safe_Flag</code></td>
-</tr>
-<tr>
-<td><strong>Variable Type</strong></td>
-<td><code>uint8_t</code></td>
-</tr>
-<tr>
-<td><strong>Min Value</strong></td>
-<td><code>0</code> (User Not Safe)</td>
-</tr>
-<tr>
-<td><strong>Max Value</strong></td>
-<td><code>1</code> (User Safe)</td>
-</tr>
-<tr>
-<td><strong>Example</strong></td>
-<td><code>1</code></td>
-</tr>
-<tr>
-<td><strong>Use</strong></td>
-<td>Tells the motor whether to activate based on user position</td>
-</tr>
-</tbody>
-</table>
-<h3 style="color:#ff8c00">OLED Display Message (to OLED)</h3>
-
-<p>This message instructs the OLED display what message to show based on user status.</p>
-<table>
-<thead>
-<tr>
-<th>Field</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Byte 1</strong></td>
-<td><code>OLED_Display_Flag</code></td>
-</tr>
-<tr>
-<td><strong>Variable Type</strong></td>
-<td><code>uint8_t</code></td>
-</tr>
-<tr>
-<td><strong>Min Value</strong></td>
-<td><code>0</code> (Display 'Stand on X')</td>
-</tr>
-<tr>
-<td><strong>Max Value</strong></td>
-<td><code>1</code> (Display 'Initializing')</td>
-</tr>
-<tr>
-<td><strong>Example</strong></td>
-<td><code>1</code></td>
-</tr>
-<tr>
-<td><strong>Use</strong></td>
-<td>Tells the OLED whether to show initialization or waiting instructions</td>
-</tr>
-</tbody>
-</table>
-<h3 style="color:#ffed00">Machine Use Status Message (to WiFi)</h3>
-
-<p>This message tells the WiFi module whether the machine is currently in use.</p>
-<table>
-<thead>
-<tr>
-<th>Field</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Byte 1</strong></td>
-<td><code>Machine_Use_Status</code></td>
-</tr>
-<tr>
-<td><strong>Variable Type</strong></td>
-<td><code>uint8_t</code></td>
-</tr>
-<tr>
-<td><strong>Min Value</strong></td>
-<td><code>0</code> (Idle)</td>
-</tr>
-<tr>
-<td><strong>Max Value</strong></td>
-<td><code>1</code> (In Use)</td>
-</tr>
-<tr>
-<td><strong>Example</strong></td>
-<td><code>1</code></td>
-</tr>
-<tr>
-<td><strong>Use</strong></td>
-<td>Tells the WiFi module whether the machine is active</td>
-</tr>
-</tbody>
-</table>
 
 
 
