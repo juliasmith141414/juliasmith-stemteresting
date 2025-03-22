@@ -45,7 +45,7 @@ The tables below describe the messages sent from the distance sensor subsystem (
 | 🔢 **Example** | `1` |
 | 💡 **Use** | Tells the WiFi module whether the machine is active |
  
-## 🔧 MPLAB File Contents Overview
+## 🟩 MPLAB File Overview
 
 This MPLAB X project implements the firmware for the distance sensor subsystem in our team’s UART-based communication network. It continuously reads simulated distance data and broadcasts key system state messages to other subsystems (Motor, OLED, and WiFi) using a standardized UART protocol.
 
