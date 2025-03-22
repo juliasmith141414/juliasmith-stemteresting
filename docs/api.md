@@ -2,13 +2,11 @@
 
 ## 🌈 Overview
 
-<div style="background-color:#000000; padding:20px; color:#ffffff;">
 The tables below describe the messages sent from the distance sensor subsystem (Julia) using `uint8_t` binary flags (0 = False, 1 = True). All messages are formatted using the class UART protocol and occupy the data field (bytes 5–61) of the 64-byte message frame.
-</div>
 
 ## 📋 Tables
 
-<h3 style="color:#e40303">🟥 Safety Response Message (to Motor)</h3>
+### 🟥 Safety Response Message (to Motor)
 
 🚨 This message tells the motor subsystem whether the user is currently in a safe position.
 
@@ -21,7 +19,7 @@ The tables below describe the messages sent from the distance sensor subsystem (
 | 🔢 **Example** | `1` |
 | 💡 **Use** | Tells the motor whether to activate based on user position |
 
-<h3 style="color:#ff8c00">🟧 OLED Display Message (to OLED)</h3>
+### 🟧 OLED Display Message (to OLED)
 
 🖥️ This message instructs the OLED display what message to show based on user status.
 
@@ -34,7 +32,7 @@ The tables below describe the messages sent from the distance sensor subsystem (
 | 🔢 **Example** | `1` |
 | 💡 **Use** | Tells the OLED whether to show initialization or waiting instructions |
 
-<h3 style="color:#ffed00">🟨 Machine Use Status Message (to WiFi)</h3>
+### 🟨 Machine Use Status Message (to WiFi)
 
 📶 This message tells the WiFi module whether the machine is currently in use.
 
