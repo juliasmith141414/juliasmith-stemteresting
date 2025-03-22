@@ -3,18 +3,37 @@ My name is Julia Smith. As a member of STEMteresting (Team 301), my role involve
 
 Email: jasmi157@asu.edu <br>
 
-<h2>Assignments</h2>
-<ul>
-    <li><a href="https://juliasmith141414.github.io/blockdiagram/">Block Diagram</a></li>
-    <li><a href="https://juliasmith141414.github.io/componentselection/">Component Selection</a></li>
-    <li><a href="https://juliasmith141414.github.io/componentselection/">MCC Configuration</a></li>
-    <li><a href="https://juliasmith141414.github.io/powerbudget/">Power Budget</a></li>
-    <li><a href="https://juliasmith141414.github.io/schematic/">Schematic</a></li>
-    <li><a href="https://juliasmith141414.github.io/billofmaterials/">Bill of Materials</a></li>
-    <li><a href="https://juliasmith141414.github.io/api/">API</a></li>
+## 📚 Datasheet: Distance Sensor Subsystem
+
+<ul style="list-style-type: none; padding-left: 0;">
+  <li>
+    <a href="https://juliasmith141414.github.io/blockdiagram/" style="color:#e40303; text-decoration: none;"> <strong>Block Diagram</strong></a>
+  </li>
+  <li>
+    <a href="https://juliasmith141414.github.io/componentselection/" style="color:#ff8c00; text-decoration: none;"> <strong>Component Selection</strong></a>
+  </li>
+  <li>
+    <a href="https://juliasmith141414.github.io/mccconfiguration/" style="color:#ffed00; text-decoration: none;"> <strong>MCC Configuration</strong></a>
+  </li>
+  <li>
+    <a href="https://juliasmith141414.github.io/powerbudget/" style="color:#008026; text-decoration: none;"> <strong>Power Budget</strong></a>
+  </li>
+  <li>
+    <a href="https://juliasmith141414.github.io/schematic/" style="color:#004dff; text-decoration: none;"> <strong>Schematic</strong></a>
+  </li>
+  <li>
+    <a href="https://juliasmith141414.github.io/billofmaterials/" style="color:#750787; text-decoration: none;"> <strong>Bill of Materials</strong></a>
+  </li>
+  <li>
+    <a href="https://juliasmith141414.github.io/api/" style="color:#ff1493; text-decoration: none;"> <strong>API</strong></a>
+  </li>
 </ul>
 
-<h2>Team Webpage</h2>
-<ul>
-    <li><a href="https://egr314-2025-s-301.github.io/main-page/">Team Page</a></li>
+## 👥 Team Webpage
+
+<ul style="list-style-type: none; padding-left: 0;">
+  <li>
+    <a href="https://egr314-2025-s-301.github.io/main-page/" style="color:#004dff; text-decoration: none;"> <strong>Team Page</strong></a>
+  </li>
 </ul>
+
