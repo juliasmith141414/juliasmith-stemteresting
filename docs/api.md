@@ -1,12 +1,12 @@
 # API
 
-## Overview
+## 🌈 Overview
 
 <div style="background-color:#000000; padding:20px; color:#ffffff;">
 The tables below describe the messages sent from the distance sensor subsystem (Julia) using `uint8_t` binary flags (0 = False, 1 = True). All messages are formatted using the class UART protocol and occupy the data field (bytes 5–61) of the 64-byte message frame.
 </div>
 
-## Tables
+## 📋 Tables
 
 <h3 style="color:#e40303">🟥 Safety Response Message (to Motor)</h3>
 
@@ -51,7 +51,7 @@ The tables below describe the messages sent from the distance sensor subsystem (
 
 This MPLAB X project implements the firmware for the distance sensor subsystem in our team’s UART-based communication network. It continuously reads simulated distance data and broadcasts key system state messages to other subsystems (Motor, OLED, and WiFi) using a standardized UART protocol.
 
-## 🌈📁✨ Files
+## 🗂️ Files
 
 <ul style="list-style-type: none; padding-left: 0;">
   <li>
@@ -59,7 +59,7 @@ This MPLAB X project implements the firmware for the distance sensor subsystem i
   </li>
   </ul>
 
-## 📦 Key Features
+## 📑 Key Features
 
 - **UART Messaging Protocol** 
   Each message follows the class-defined structure:  
@@ -83,7 +83,7 @@ This MPLAB X project implements the firmware for the distance sensor subsystem i
   The main logic resides in main.c with UART handling and timed messaging built using MCC-generated peripheral drivers (EUSART1, Timer1).
 
 
-## 🌈🔗✨ Links
+## 🔗 Links
 
 <ul style="list-style-type: none; padding-left: 0;">
   <li>
