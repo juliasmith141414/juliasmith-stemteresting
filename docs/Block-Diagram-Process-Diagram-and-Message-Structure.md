@@ -29,7 +29,18 @@ Message Type Byte 1-2 (uint16_t)	|Description	|Byte 1-2 (uint16_t)	|Byte 3 (uint
 ### Key
 Systems	| IDS
 --------|------------
-Xander	|XH(uint16_t)
-Sara	  |SB(uint16_t)
-Julia	  |JS(uint16_t)
-Ella	  |EG(uint16_t)
+Xander	|H(uint16_t)
+Sara	  |B(uint16_t)
+Julia	  |S(uint16_t)
+Ella	  |G(uint16_t)
+
+<br>The IDs are assigned based on the sender and receiver's last names, as X would interfear with the brodcast character defined by the course.<br>
+### Sample String
+For example, the string sent from Xander to Sara concerning the direction and speed of the motor would be written as follows:<br>
+**AZHB05YB** <br>
+AZ identifies the start of a string<br>
+H means that Xander's system is sending the message<br>
+B means that the message is meant to be received by Sara's system<br>
+1 indicates the direction Sara's motor should spin <br>
+5 indicates the speed should be representitive of Jupiter's gravity <br>
+YB indicates the end of the string
