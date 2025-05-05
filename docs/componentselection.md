@@ -42,7 +42,12 @@ Chosen due to my familiarity with the component and the ease of soldering. While
 
 ## Microcontroller Selection
 
-### [ESP32-S3-WROOM-1-N4](https://www.digikey.com/en/products/detail/espressif-systems/ESP32-S3-WROOM-1-N4/16162639) – $5.06
+This section compares three microcontroller options for the subsystem: the ESP32-S3-WROOM-1-N4 (final selection), the PIC18F47Q10 (original classroom-based choice), and the ESP32-WROOM-32 (a popular alternative ESP variant). The comparison focuses on communication flexibility, compatibility with I2C peripherals, ease of development, and solderability.
+
+---
+
+### [ESP32-S3-WROOM-1-N4](https://www.digikey.com/en/products/detail/espressif-systems/ESP32-S3-WROOM-1-N4/16162639) – $5.06  
+![MFG_Attachment-2-ESP32-S3-WROOM-1](https://github.com/user-attachments/assets/375f18d5-2e0d-474b-b8d2-364e079eaf60)
 
 | **Specs** | **Value** |
 |-----------|-----------|
@@ -56,23 +61,84 @@ Chosen due to my familiarity with the component and the ease of soldering. While
 
 | **Pros** | **Cons** |
 |----------|----------|
-| All GPIOs are flexible for I2C/UART | Slightly higher power consumption |
-| Integrated Wi-Fi/BLE | More expensive than PIC18F47Q10 |
-| Strong community and library support | |
-| Fast development in MicroPython/Arduino | |
+| Flexible I2C pin assignments | Slightly higher power consumption |
+| Built-in Wi-Fi + BLE | Slightly more expensive |
+| Fast dev cycle using MicroPython or Arduino | |
+| Community support and driver libraries | |
 
-### Comparison with PIC18F47Q10
+---
 
-| **ESP32-S3-WROOM-1-N4** | **PIC18F47Q10** |
-|-------------------------|------------------|
-| Wi-Fi + BLE integrated | No wireless |
-| Flexible GPIO mapping for I2C/SPI | Limited multiplexing |
-| Faster CPU, more memory | Lower power consumption |
-| More dev tools (VSCode, Arduino, MicroPython) | Requires MPLAB X / MCC |
-| Better documentation for peripherals | Easier to learn in classroom context |
+### [PIC18F47Q10](https://www.digikey.com/en/products/detail/microchip-technology/pic18f47q10-i-pt/10187786) – ~$3.00  
+![pic](https://github.com/user-attachments/assets/3443e163-f268-498f-bc5c-8a70c2ffd998)
+
+| **Specs** | **Value** |
+|-----------|-----------|
+| Package | TQFP-44 or DIP |
+| Supply Voltage Range | 1.8–5.5 V |
+| Max Current | ~200 mA |
+| Max GPIO Current | ~25 mA per pin |
+| Interfaces | UART, I2C, SPI, ADC, PWM, GPIO |
+| Wireless | None |
+| External Interrupts | Supported |
+
+| **Pros** | **Cons** |
+|----------|----------|
+| Familiar from in-class labs | No built-in wireless |
+| Wide voltage input range | Fewer libraries and slower development |
+| Supported by MCC in MPLAB X | Limited RAM and speed |
+| Easy to solder and test in lab | Not as flexible with I2C/SPI pins |
+
+---
+
+### [ESP32-WROOM-32UE-N4](https://www.digikey.com/en/products/detail/espressif-systems/ESP32-WROOM-32UE-N4/11613136) – $4.40  
+![ESP32-WROOM-32UE-N4](https://github.com/user-attachments/assets/6f7ffa71-822c-4632-82b7-8f0d28e40bcc)
+
+
+| **Specs** | **Value** |
+|-----------|-----------|
+| Package | PCB surface-mount module |
+| Supply Voltage Range | 2.3–3.6 V |
+| Max Current | ~500 mA |
+| Max GPIO Current | 40 mA per pin |
+| Interfaces | UART, I2C, SPI, ADC, PWM, GPIO |
+| Wireless | Wi-Fi + BLE (U.FL external antenna) |
+| External Interrupts | Supported |
+| CPU | Dual-core Xtensa @ 240 MHz |
+| Flash | 4 MB |
+| RAM | 520 KB |
+
+| **Pros** | **Cons** |
+|----------|----------|
+| U.FL connector for external antenna improves wireless signal in enclosures | Fewer hardware instructions compared to S3 |
+| Dual-core performance for multitasking | Fewer GPIOs due to flash memory sharing pins |
+| Lower cost than ESP32-S3-WROOM-1-N4 | No vector instructions or advanced acceleration |
+| Well-supported in Arduino and ESP-IDF | Slightly older architecture with fewer new libraries |
+
+**Why Not Chosen:**  
+While the ESP32-WROOM-32UE-N4 offers excellent wireless connectivity with an external antenna and a similar power envelope to the S3, it lacks some critical performance features. Most notably, it does not support vector instructions or hardware acceleration required for advanced peripherals. Additionally, GPIO allocation is less flexible due to internal flash wiring, which increases the risk of pin conflicts. Given our system's reliance on reliable I²C communication and the potential need for multiple peripherals, the S3’s improved I/O multiplexing and library compatibility made it the better fit for our design.
+
+---
+
+
+### Comparison Table
+
+| Feature                    | **ESP32-S3-WROOM-1-N4** | **ESP32-WROOM-32** | **PIC18F47Q10** |
+|----------------------------|--------------------------|---------------------|------------------|
+| Wireless                   | Wi-Fi + BLE              | Wi-Fi + BLE         | ❌ None          |
+| I2C Pin Flexibility        | Any GPIO                 | Limited             | Limited          |
+| Development Environment    | MicroPython / Arduino    | Arduino / ESP-IDF   | MPLAB X + MCC    |
+| Processing Power           | Dual-core w/ vector ops  | Dual-core           | Single-core      |
+| Memory (RAM / Flash)       | 512KB RAM / 8MB Flash     | 520KB / 4MB         | 4KB RAM / 64KB Flash |
+| Power Consumption          | Higher                   | Medium              | Low              |
+| Ease of Use in Lab         | Moderate                 | High (dev boards)   | High             |
+| Community / Library Support| Extensive                | Strong              | Moderate         |
+| Price                     | $5.06                    | ~$4.50              | ~$3.00           |
+
+---
 
 **✅ Final Selection: ESP32-S3-WROOM-1-N4**  
-While initially working with the PIC18F47Q10, we switched to the ESP32 for its robust I2C support, GPIO flexibility, and fast prototyping tools. The switch was driven by sensor/display compatibility and ease of development.
+This microcontroller was chosen for its combination of power, flexibility, and compatibility. It supports all needed communication protocols (especially I2C) with flexible GPIO assignment, integrates Wi-Fi and BLE for potential future use, and is backed by strong community support. While it is slightly more expensive than the other two options, its ability to simplify both firmware and hardware integration justifies the cost in the context of our design needs.
+
 
 ---
 
