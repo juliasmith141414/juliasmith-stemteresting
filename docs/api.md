@@ -2,7 +2,7 @@
 
 ## Overview
 
-The tables below describe the messages sent from the distance sensor subsystem (ESP32) using `uint8_t` binary flags (`0` = False, `1` = True). All messages are formatted using a standardized 64-byte UART protocol and occupy the data field (bytes 5–61) of the message frame.
+The tables below describe the messages sent from the distance sensor subsystem (ESP32) using `uint8_t` binary flags (`0` = False, `1` = True) or ASCII-encoded numerical data. All messages are formatted using a standardized 64-byte UART protocol and occupy the data field (bytes 5–61) of the message frame.
 
 ## Message Tables
 
@@ -32,6 +32,17 @@ This message instructs the OLED display what message to show depending on system
 | Example           | `0`                          |
 | Purpose           | Communicates screen status to user |
 
+### Distance Data Message (to Xander Heafey's Subsystem)
+
+This message transmits the measured distance in millimeters as an ASCII-encoded string.
+
+| Field              | Value                              |
+|-------------------|-------------------------------------|
+| Bytes 1–N         | ASCII-encoded distance in mm        |
+| Variable Type     | `bytes`                             |
+| Example           | `"325"`                             |
+| Purpose           | Provides real-time distance to Xander’s subsystem for logging or analytics |
+
 ### Machine Use Status Message (to WiFi)
 
 This message indicates whether the machine is currently in use or idle.
@@ -57,17 +68,18 @@ This project implements the firmware for the distance sensor subsystem using an 
 
 - **UART Messaging Protocol**  
   Each message follows the class-defined structure:  
-  `[Prefix1] [Prefix2] [Sender] [Receiver] [Message Type] [Data...] [Suffix1] [Suffix2]`  
-  All messages are 64 bytes long.
+  `[Prefix1] [Prefix2] [Sender] [Receiver] [Message Type/Data...] [Suffix1] [Suffix2]`  
+  All messages are framed with `AZ` (prefix) and `YB` (suffix) and padded to 64 bytes if needed.
 
 - **Subsystem Communication**  
   This subsystem transmits:
-  - `MSG_SAFETY_RESPONSE` – to Motor
-  - `MSG_OLED_FLAG` – to OLED
-  - `MSG_MACHINE_STATUS` – to WiFi
+  - ASCII distance string – to Xander (Data Logger)
+  - Binary safety flag – to Motor subsystem
+  - Binary display flag – to OLED subsystem
+  - Binary machine-use flag – to WiFi module
 
 - **Distance Logic**  
-  The system checks for a valid distance range (e.g., 200mm–800mm). If valid, it enables the motor and displays status.
+  The system reads distance via I²C from the VL53L1X sensor. Thresholds are applied to determine if the user is standing in a safe zone.
 
 - **Framing and Filtering**  
   Messages not addressed to the ESP32 are forwarded along the daisy-chain bus. Malformed or duplicate messages are filtered out.
