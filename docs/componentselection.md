@@ -190,3 +190,11 @@ Selected for its accuracy, compatibility with our ESP32-based subsystem, and wid
 | Distance Sensor   | VL53L1X (Adafruit 3967)     | DigiKey    | $14.95         |
 
 These components meet the project's design goals for sensor control, data processing, and communication. Their solderability and known compatibility with each other ensured fast prototyping and successful integration.
+
+---
+<h2>Additional Links</h2>
+<ul>
+    <li><a href="https://juliasmith141414.github.io/juliasmith-stemteresting/">Home</a></li>
+    <li><a href="https://egr314-2025-s-301.github.io/main-page/">Team Page</a></li>
+</ul>
+---
