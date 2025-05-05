@@ -80,14 +80,9 @@ This MPLAB X project implements the firmware for the distance sensor subsystem i
 - **Code Structure**  
   The main logic resides in main.c with UART handling and timed messaging built using MCC-generated peripheral drivers (EUSART1, Timer1).
 
-
-## 🔗 Links
-
-<ul style="list-style-type: none; padding-left: 0;">
-  <li>
-    <a href="home_page_link_here" style="color:#004dff; text-decoration: none;">🏠 <strong>Home</strong></a>
-  </li>
-  <li>
-    <a href="team_page_link_here" style="color:#004dff; text-decoration: none;">👥 <strong>Team Page</strong></a>
-  </li>
+<h2>Additional Links</h2>
+<ul>
+    <li><a href="https://github.com/user-attachments/files/20049301/vl53l1x_pico.zip">Code Repository File</a></li>
+    <li><a href="https://juliasmith141414.github.io/juliasmith-stemteresting/">Home</a></li>
+    <li><a href="https://egr314-2025-s-301.github.io/main-page/">Team Page</a></li>
 </ul>
