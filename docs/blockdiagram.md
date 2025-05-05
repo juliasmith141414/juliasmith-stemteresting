@@ -12,7 +12,7 @@ This block diagram was developed with user safety in mind. UART endures quick en
 <h2>Additional Links</h2>
 <ul>
     <li><a href="https://drive.google.com/file/d/1-fcG4vHEsaQ0qRLLkd0bO_16-h85Aeg2/view?usp=sharing">Block Diagram Link</a></li> <br>
-    <li><a hrefhttps:="//github.com/juliasmith141414/juliasmith-stemteresting/blob/main/Smith%20Individual%20Block%20Diagram.drawio.pdf">Block Diagram PDF</a></li> <br>
+    <li><a href="https://github.com/juliasmith141414/juliasmith-stemteresting/blob/main/Smith%20Individual%20Block%20Diagram.drawio.pdf">Block Diagram PDF</a></li> <br>
     <li><a href="https://juliasmith141414.github.io/juliasmith-stemteresting/">Home</a></li>
     <li><a href="https://egr314-2025-s-301.github.io/main-page/">Team Page</a></li>
 </ul>
