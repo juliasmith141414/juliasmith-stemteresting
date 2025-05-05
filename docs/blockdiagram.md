@@ -3,6 +3,7 @@
 
 This is the block diagram for our distance sensor subsystem. The sensor will collect and send distance data constantly when the subsystem is powered on. Raw distance data will be sent to Xander Heafey's OLED subsystem so it can be displayed on his screen when the user selects it. Logic inside the distance sensor subsystem code will assign either a 0 or 1 to distance results based on whether the user is a safe distance from the spinning centrifuge. These values are then sent over UART to Sara Bohart's motor driver subsystem and Ella Greetis's MQTT subsystem.
 <br>
+<br>
 This block diagram was developed with user safety in mind. UART endures fast enough communication for fast response times. I added an OLED screen to my subsystem as well, to make debugging easier.
 <br>
 
