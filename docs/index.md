@@ -3,6 +3,9 @@ My name is Julia Smith. As a member of STEMteresting (Team 301), I am responsibl
 
 Email: jasmi157@asu.edu <br>
 
+## Final Picture
+
+
 ## 📚 Datasheet: Distance Sensor Subsystem
 
 <ul style="list-style-type: none; padding-left: 0;">
