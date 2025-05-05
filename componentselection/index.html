@@ -618,8 +618,22 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#comparison-with-pic18f47q10" class="md-nav__link">
-    Comparison with PIC18F47Q10
+  <a href="#pic18f47q10-300" class="md-nav__link">
+    PIC18F47Q10 – ~$3.00
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#esp32-wroom-32ue-n4-440" class="md-nav__link">
+    ESP32-WROOM-32UE-N4 – $4.40
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparison-table" class="md-nav__link">
+    Comparison Table
   </a>
   
 </li>
@@ -852,8 +866,22 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#comparison-with-pic18f47q10" class="md-nav__link">
-    Comparison with PIC18F47Q10
+  <a href="#pic18f47q10-300" class="md-nav__link">
+    PIC18F47Q10 – ~$3.00
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#esp32-wroom-32ue-n4-440" class="md-nav__link">
+    ESP32-WROOM-32UE-N4 – $4.40
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparison-table" class="md-nav__link">
+    Comparison Table
   </a>
   
 </li>
@@ -1011,7 +1039,10 @@
 Chosen due to my familiarity with the component and the ease of soldering. While larger, it fits within our board space and supplies 1A, ensuring headroom for future expansion.</p>
 <hr />
 <h2 id="microcontroller-selection">Microcontroller Selection</h2>
+<p>This section compares three microcontroller options for the subsystem: the ESP32-S3-WROOM-1-N4 (final selection), the PIC18F47Q10 (original classroom-based choice), and the ESP32-WROOM-32 (a popular alternative ESP variant). The comparison focuses on communication flexibility, compatibility with I2C peripherals, ease of development, and solderability.</p>
+<hr />
 <h3 id="esp32-s3-wroom-1-n4-506"><a href="https://www.digikey.com/en/products/detail/espressif-systems/ESP32-S3-WROOM-1-N4/16162639">ESP32-S3-WROOM-1-N4</a> – $5.06</h3>
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/375f18d5-2e0d-474b-b8d2-364e079eaf60" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="MFG_Attachment-2-ESP32-S3-WROOM-1" src="https://github.com/user-attachments/assets/375f18d5-2e0d-474b-b8d2-364e079eaf60" /></a></p>
 <table>
 <thead>
 <tr>
@@ -1059,56 +1090,242 @@ Chosen due to my familiarity with the component and the ease of soldering. While
 </thead>
 <tbody>
 <tr>
-<td>All GPIOs are flexible for I2C/UART</td>
+<td>Flexible I2C pin assignments</td>
 <td>Slightly higher power consumption</td>
 </tr>
 <tr>
-<td>Integrated Wi-Fi/BLE</td>
-<td>More expensive than PIC18F47Q10</td>
+<td>Built-in Wi-Fi + BLE</td>
+<td>Slightly more expensive</td>
 </tr>
 <tr>
-<td>Strong community and library support</td>
+<td>Fast dev cycle using MicroPython or Arduino</td>
 <td></td>
 </tr>
 <tr>
-<td>Fast development in MicroPython/Arduino</td>
+<td>Community support and driver libraries</td>
 <td></td>
 </tr>
 </tbody>
 </table>
-<h3 id="comparison-with-pic18f47q10">Comparison with PIC18F47Q10</h3>
+<hr />
+<h3 id="pic18f47q10-300"><a href="https://www.digikey.com/en/products/detail/microchip-technology/pic18f47q10-i-pt/10187786">PIC18F47Q10</a> – ~$3.00</h3>
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/3443e163-f268-498f-bc5c-8a70c2ffd998" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="pic" src="https://github.com/user-attachments/assets/3443e163-f268-498f-bc5c-8a70c2ffd998" /></a></p>
 <table>
 <thead>
 <tr>
+<th><strong>Specs</strong></th>
+<th><strong>Value</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Package</td>
+<td>TQFP-44 or DIP</td>
+</tr>
+<tr>
+<td>Supply Voltage Range</td>
+<td>1.8–5.5 V</td>
+</tr>
+<tr>
+<td>Max Current</td>
+<td>~200 mA</td>
+</tr>
+<tr>
+<td>Max GPIO Current</td>
+<td>~25 mA per pin</td>
+</tr>
+<tr>
+<td>Interfaces</td>
+<td>UART, I2C, SPI, ADC, PWM, GPIO</td>
+</tr>
+<tr>
+<td>Wireless</td>
+<td>None</td>
+</tr>
+<tr>
+<td>External Interrupts</td>
+<td>Supported</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Pros</strong></th>
+<th><strong>Cons</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Familiar from in-class labs</td>
+<td>No built-in wireless</td>
+</tr>
+<tr>
+<td>Wide voltage input range</td>
+<td>Fewer libraries and slower development</td>
+</tr>
+<tr>
+<td>Supported by MCC in MPLAB X</td>
+<td>Limited RAM and speed</td>
+</tr>
+<tr>
+<td>Easy to solder and test in lab</td>
+<td>Not as flexible with I2C/SPI pins</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="esp32-wroom-32ue-n4-440"><a href="https://www.digikey.com/en/products/detail/espressif-systems/ESP32-WROOM-32UE-N4/11613136">ESP32-WROOM-32UE-N4</a> – $4.40</h3>
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/6f7ffa71-822c-4632-82b7-8f0d28e40bcc" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="ESP32-WROOM-32UE-N4" src="https://github.com/user-attachments/assets/6f7ffa71-822c-4632-82b7-8f0d28e40bcc" /></a></p>
+<table>
+<thead>
+<tr>
+<th><strong>Specs</strong></th>
+<th><strong>Value</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Package</td>
+<td>PCB surface-mount module</td>
+</tr>
+<tr>
+<td>Supply Voltage Range</td>
+<td>2.3–3.6 V</td>
+</tr>
+<tr>
+<td>Max Current</td>
+<td>~500 mA</td>
+</tr>
+<tr>
+<td>Max GPIO Current</td>
+<td>40 mA per pin</td>
+</tr>
+<tr>
+<td>Interfaces</td>
+<td>UART, I2C, SPI, ADC, PWM, GPIO</td>
+</tr>
+<tr>
+<td>Wireless</td>
+<td>Wi-Fi + BLE (U.FL external antenna)</td>
+</tr>
+<tr>
+<td>External Interrupts</td>
+<td>Supported</td>
+</tr>
+<tr>
+<td>CPU</td>
+<td>Dual-core Xtensa @ 240 MHz</td>
+</tr>
+<tr>
+<td>Flash</td>
+<td>4 MB</td>
+</tr>
+<tr>
+<td>RAM</td>
+<td>520 KB</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Pros</strong></th>
+<th><strong>Cons</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>U.FL connector for external antenna improves wireless signal in enclosures</td>
+<td>Fewer hardware instructions compared to S3</td>
+</tr>
+<tr>
+<td>Dual-core performance for multitasking</td>
+<td>Fewer GPIOs due to flash memory sharing pins</td>
+</tr>
+<tr>
+<td>Lower cost than ESP32-S3-WROOM-1-N4</td>
+<td>No vector instructions or advanced acceleration</td>
+</tr>
+<tr>
+<td>Well-supported in Arduino and ESP-IDF</td>
+<td>Slightly older architecture with fewer new libraries</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Why Not Chosen:</strong><br />
+While the ESP32-WROOM-32UE-N4 offers excellent wireless connectivity with an external antenna and a similar power envelope to the S3, it lacks some critical performance features. Most notably, it does not support vector instructions or hardware acceleration required for advanced peripherals. Additionally, GPIO allocation is less flexible due to internal flash wiring, which increases the risk of pin conflicts. Given our system's reliance on reliable I²C communication and the potential need for multiple peripherals, the S3’s improved I/O multiplexing and library compatibility made it the better fit for our design.</p>
+<hr />
+<h3 id="comparison-table">Comparison Table</h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
 <th><strong>ESP32-S3-WROOM-1-N4</strong></th>
+<th><strong>ESP32-WROOM-32</strong></th>
 <th><strong>PIC18F47Q10</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Wi-Fi + BLE integrated</td>
-<td>No wireless</td>
+<td>Wireless</td>
+<td>Wi-Fi + BLE</td>
+<td>Wi-Fi + BLE</td>
+<td>❌ None</td>
 </tr>
 <tr>
-<td>Flexible GPIO mapping for I2C/SPI</td>
-<td>Limited multiplexing</td>
+<td>I2C Pin Flexibility</td>
+<td>Any GPIO</td>
+<td>Limited</td>
+<td>Limited</td>
 </tr>
 <tr>
-<td>Faster CPU, more memory</td>
-<td>Lower power consumption</td>
+<td>Development Environment</td>
+<td>MicroPython / Arduino</td>
+<td>Arduino / ESP-IDF</td>
+<td>MPLAB X + MCC</td>
 </tr>
 <tr>
-<td>More dev tools (VSCode, Arduino, MicroPython)</td>
-<td>Requires MPLAB X / MCC</td>
+<td>Processing Power</td>
+<td>Dual-core w/ vector ops</td>
+<td>Dual-core</td>
+<td>Single-core</td>
 </tr>
 <tr>
-<td>Better documentation for peripherals</td>
-<td>Easier to learn in classroom context</td>
+<td>Memory (RAM / Flash)</td>
+<td>512KB RAM / 8MB Flash</td>
+<td>520KB / 4MB</td>
+<td>4KB RAM / 64KB Flash</td>
+</tr>
+<tr>
+<td>Power Consumption</td>
+<td>Higher</td>
+<td>Medium</td>
+<td>Low</td>
+</tr>
+<tr>
+<td>Ease of Use in Lab</td>
+<td>Moderate</td>
+<td>High (dev boards)</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Community / Library Support</td>
+<td>Extensive</td>
+<td>Strong</td>
+<td>Moderate</td>
+</tr>
+<tr>
+<td>Price</td>
+<td>$5.06</td>
+<td>~$4.50</td>
+<td>~$3.00</td>
 </tr>
 </tbody>
 </table>
+<hr />
 <p><strong>✅ Final Selection: ESP32-S3-WROOM-1-N4</strong><br />
-While initially working with the PIC18F47Q10, we switched to the ESP32 for its robust I2C support, GPIO flexibility, and fast prototyping tools. The switch was driven by sensor/display compatibility and ease of development.</p>
+This microcontroller was chosen for its combination of power, flexibility, and compatibility. It supports all needed communication protocols (especially I2C) with flexible GPIO assignment, integrates Wi-Fi and BLE for potential future use, and is backed by strong community support. While it is slightly more expensive than the other two options, its ability to simplify both firmware and hardware integration justifies the cost in the context of our design needs.</p>
 <hr />
 <h2 id="distance-sensor">Distance Sensor</h2>
 <h3 id="vl53l1x-adafruit-3967-1495"><a href="https://www.digikey.com/en/products/detail/adafruit-industries-llc/3967/17039169">VL53L1X – Adafruit 3967</a> – $14.95</h3>
