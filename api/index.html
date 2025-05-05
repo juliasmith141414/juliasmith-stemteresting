@@ -522,6 +522,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#distance-data-message-to-xander-heafeys-subsystem" class="md-nav__link">
+    Distance Data Message (to Xander Heafey's Subsystem)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#machine-use-status-message-to-wifi" class="md-nav__link">
     Machine Use Status Message (to WiFi)
   </a>
@@ -798,6 +805,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#distance-data-message-to-xander-heafeys-subsystem" class="md-nav__link">
+    Distance Data Message (to Xander Heafey's Subsystem)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#machine-use-status-message-to-wifi" class="md-nav__link">
     Machine Use Status Message (to WiFi)
   </a>
@@ -861,7 +875,7 @@
 
 <h1 id="api">API</h1>
 <h2 id="overview">Overview</h2>
-<p>The tables below describe the messages sent from the distance sensor subsystem (ESP32) using <code>uint8_t</code> binary flags (<code>0</code> = False, <code>1</code> = True). All messages are formatted using a standardized 64-byte UART protocol and occupy the data field (bytes 5–61) of the message frame.</p>
+<p>The tables below describe the messages sent from the distance sensor subsystem (ESP32) using <code>uint8_t</code> binary flags (<code>0</code> = False, <code>1</code> = True) or ASCII-encoded numerical data. All messages are formatted using a standardized 64-byte UART protocol and occupy the data field (bytes 5–61) of the message frame.</p>
 <h2 id="message-tables">Message Tables</h2>
 <h3 id="safety-response-message-to-motor">Safety Response Message (to Motor)</h3>
 <p>This message indicates whether the user is currently in a safe position based on distance readings.</p>
@@ -935,6 +949,34 @@
 </tr>
 </tbody>
 </table>
+<h3 id="distance-data-message-to-xander-heafeys-subsystem">Distance Data Message (to Xander Heafey's Subsystem)</h3>
+<p>This message transmits the measured distance in millimeters as an ASCII-encoded string.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bytes 1–N</td>
+<td>ASCII-encoded distance in mm</td>
+</tr>
+<tr>
+<td>Variable Type</td>
+<td><code>bytes</code></td>
+</tr>
+<tr>
+<td>Example</td>
+<td><code>"325"</code></td>
+</tr>
+<tr>
+<td>Purpose</td>
+<td>Provides real-time distance to Xander’s subsystem for logging or analytics</td>
+</tr>
+</tbody>
+</table>
 <h3 id="machine-use-status-message-to-wifi">Machine Use Status Message (to WiFi)</h3>
 <p>This message indicates whether the machine is currently in use or idle.</p>
 <table>
@@ -982,21 +1024,22 @@
 <li>
 <p><strong>UART Messaging Protocol</strong><br />
   Each message follows the class-defined structure:<br />
-<code>[Prefix1] [Prefix2] [Sender] [Receiver] [Message Type] [Data...] [Suffix1] [Suffix2]</code><br />
-  All messages are 64 bytes long.</p>
+<code>[Prefix1] [Prefix2] [Sender] [Receiver] [Message Type/Data...] [Suffix1] [Suffix2]</code><br />
+  All messages are framed with <code>AZ</code> (prefix) and <code>YB</code> (suffix) and padded to 64 bytes if needed.</p>
 </li>
 <li>
 <p><strong>Subsystem Communication</strong><br />
   This subsystem transmits:</p>
 </li>
-<li><code>MSG_SAFETY_RESPONSE</code> – to Motor</li>
-<li><code>MSG_OLED_FLAG</code> – to OLED</li>
+<li>ASCII distance string – to Xander (Data Logger)</li>
+<li>Binary safety flag – to Motor subsystem</li>
+<li>Binary display flag – to OLED subsystem</li>
 <li>
-<p><code>MSG_MACHINE_STATUS</code> – to WiFi</p>
+<p>Binary machine-use flag – to WiFi module</p>
 </li>
 <li>
 <p><strong>Distance Logic</strong><br />
-  The system checks for a valid distance range (e.g., 200mm–800mm). If valid, it enables the motor and displays status.</p>
+  The system reads distance via I²C from the VL53L1X sensor. Thresholds are applied to determine if the user is standing in a safe zone.</p>
 </li>
 <li>
 <p><strong>Framing and Filtering</strong><br />
