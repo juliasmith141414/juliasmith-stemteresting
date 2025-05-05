@@ -494,36 +494,36 @@
       
         <li class="md-nav__item">
   <a href="#overview" class="md-nav__link">
-    🌈 Overview
+    Overview
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#tables" class="md-nav__link">
-    📋 Tables
+  <a href="#message-tables" class="md-nav__link">
+    Message Tables
   </a>
   
-    <nav class="md-nav" aria-label="📋 Tables">
+    <nav class="md-nav" aria-label="Message Tables">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#safety-response-message-to-motor" class="md-nav__link">
-    🟥 Safety Response Message (to Motor)
+    Safety Response Message (to Motor)
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#oled-display-message-to-oled" class="md-nav__link">
-    🟧 OLED Display Message (to OLED)
+    OLED Display Message (to OLED)
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#machine-use-status-message-to-wifi" class="md-nav__link">
-    🟨 Machine Use Status Message (to WiFi)
+    Machine Use Status Message (to WiFi)
   </a>
   
 </li>
@@ -534,23 +534,23 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#mplab-file-overview" class="md-nav__link">
-    🟩 MPLAB File Overview
+  <a href="#esp32-file-overview" class="md-nav__link">
+    ESP32 File Overview
   </a>
   
-    <nav class="md-nav" aria-label="🟩 MPLAB File Overview">
+    <nav class="md-nav" aria-label="ESP32 File Overview">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#files" class="md-nav__link">
-    🗂️ Files
+    Files
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#key-features" class="md-nav__link">
-    📑 Key Features
+    Key Features
   </a>
   
 </li>
@@ -770,36 +770,36 @@
       
         <li class="md-nav__item">
   <a href="#overview" class="md-nav__link">
-    🌈 Overview
+    Overview
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#tables" class="md-nav__link">
-    📋 Tables
+  <a href="#message-tables" class="md-nav__link">
+    Message Tables
   </a>
   
-    <nav class="md-nav" aria-label="📋 Tables">
+    <nav class="md-nav" aria-label="Message Tables">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#safety-response-message-to-motor" class="md-nav__link">
-    🟥 Safety Response Message (to Motor)
+    Safety Response Message (to Motor)
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#oled-display-message-to-oled" class="md-nav__link">
-    🟧 OLED Display Message (to OLED)
+    OLED Display Message (to OLED)
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#machine-use-status-message-to-wifi" class="md-nav__link">
-    🟨 Machine Use Status Message (to WiFi)
+    Machine Use Status Message (to WiFi)
   </a>
   
 </li>
@@ -810,23 +810,23 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#mplab-file-overview" class="md-nav__link">
-    🟩 MPLAB File Overview
+  <a href="#esp32-file-overview" class="md-nav__link">
+    ESP32 File Overview
   </a>
   
-    <nav class="md-nav" aria-label="🟩 MPLAB File Overview">
+    <nav class="md-nav" aria-label="ESP32 File Overview">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#files" class="md-nav__link">
-    🗂️ Files
+    Files
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#key-features" class="md-nav__link">
-    📑 Key Features
+    Key Features
   </a>
   
 </li>
@@ -860,11 +860,11 @@
 
 
 <h1 id="api">API</h1>
-<h2 id="overview">🌈 Overview</h2>
-<p>The tables below describe the messages sent from the distance sensor subsystem (Julia) using <code>uint8_t</code> binary flags (0 = False, 1 = True). All messages are formatted using the class UART protocol and occupy the data field (bytes 5–61) of the 64-byte message frame.</p>
-<h2 id="tables">📋 Tables</h2>
-<h3 id="safety-response-message-to-motor">🟥 Safety Response Message (to Motor)</h3>
-<p>🚨 This message tells the motor subsystem whether the user is currently in a safe position.</p>
+<h2 id="overview">Overview</h2>
+<p>The tables below describe the messages sent from the distance sensor subsystem (ESP32) using <code>uint8_t</code> binary flags (<code>0</code> = False, <code>1</code> = True). All messages are formatted using a standardized 64-byte UART protocol and occupy the data field (bytes 5–61) of the message frame.</p>
+<h2 id="message-tables">Message Tables</h2>
+<h3 id="safety-response-message-to-motor">Safety Response Message (to Motor)</h3>
+<p>This message indicates whether the user is currently in a safe position based on distance readings.</p>
 <table>
 <thead>
 <tr>
@@ -874,33 +874,33 @@
 </thead>
 <tbody>
 <tr>
-<td>📦 <strong>Byte 1</strong></td>
+<td>Byte 1</td>
 <td><code>User_Safe_Flag</code></td>
 </tr>
 <tr>
-<td>📐 <strong>Variable Type</strong></td>
+<td>Variable Type</td>
 <td><code>uint8_t</code></td>
 </tr>
 <tr>
-<td>🔻 <strong>Min Value</strong></td>
+<td>Min Value</td>
 <td><code>0</code> (User Not Safe)</td>
 </tr>
 <tr>
-<td>🔺 <strong>Max Value</strong></td>
+<td>Max Value</td>
 <td><code>1</code> (User Safe)</td>
 </tr>
 <tr>
-<td>🔢 <strong>Example</strong></td>
+<td>Example</td>
 <td><code>1</code></td>
 </tr>
 <tr>
-<td>💡 <strong>Use</strong></td>
-<td>Tells the motor whether to activate based on user position</td>
+<td>Purpose</td>
+<td>Controls braking behavior of the motor subsystem</td>
 </tr>
 </tbody>
 </table>
-<h3 id="oled-display-message-to-oled">🟧 OLED Display Message (to OLED)</h3>
-<p>🖥️ This message instructs the OLED display what message to show based on user status.</p>
+<h3 id="oled-display-message-to-oled">OLED Display Message (to OLED)</h3>
+<p>This message instructs the OLED display what message to show depending on system state.</p>
 <table>
 <thead>
 <tr>
@@ -910,33 +910,33 @@
 </thead>
 <tbody>
 <tr>
-<td>📦 <strong>Byte 1</strong></td>
+<td>Byte 1</td>
 <td><code>OLED_Display_Flag</code></td>
 </tr>
 <tr>
-<td>📐 <strong>Variable Type</strong></td>
+<td>Variable Type</td>
 <td><code>uint8_t</code></td>
 </tr>
 <tr>
-<td>🔻 <strong>Min Value</strong></td>
+<td>Min Value</td>
 <td><code>0</code> (Display 'Stand on X')</td>
 </tr>
 <tr>
-<td>🔺 <strong>Max Value</strong></td>
+<td>Max Value</td>
 <td><code>1</code> (Display 'Initializing')</td>
 </tr>
 <tr>
-<td>🔢 <strong>Example</strong></td>
-<td><code>1</code></td>
+<td>Example</td>
+<td><code>0</code></td>
 </tr>
 <tr>
-<td>💡 <strong>Use</strong></td>
-<td>Tells the OLED whether to show initialization or waiting instructions</td>
+<td>Purpose</td>
+<td>Communicates screen status to user</td>
 </tr>
 </tbody>
 </table>
-<h3 id="machine-use-status-message-to-wifi">🟨 Machine Use Status Message (to WiFi)</h3>
-<p>📶 This message tells the WiFi module whether the machine is currently in use.</p>
+<h3 id="machine-use-status-message-to-wifi">Machine Use Status Message (to WiFi)</h3>
+<p>This message indicates whether the machine is currently in use or idle.</p>
 <table>
 <thead>
 <tr>
@@ -946,72 +946,68 @@
 </thead>
 <tbody>
 <tr>
-<td>📦 <strong>Byte 1</strong></td>
+<td>Byte 1</td>
 <td><code>Machine_Use_Status</code></td>
 </tr>
 <tr>
-<td>📐 <strong>Variable Type</strong></td>
+<td>Variable Type</td>
 <td><code>uint8_t</code></td>
 </tr>
 <tr>
-<td>🔻 <strong>Min Value</strong></td>
+<td>Min Value</td>
 <td><code>0</code> (Idle)</td>
 </tr>
 <tr>
-<td>🔺 <strong>Max Value</strong></td>
+<td>Max Value</td>
 <td><code>1</code> (In Use)</td>
 </tr>
 <tr>
-<td>🔢 <strong>Example</strong></td>
+<td>Example</td>
 <td><code>1</code></td>
 </tr>
 <tr>
-<td>💡 <strong>Use</strong></td>
-<td>Tells the WiFi module whether the machine is active</td>
+<td>Purpose</td>
+<td>Broadcasts usage status to the WiFi subsystem</td>
 </tr>
 </tbody>
 </table>
-<h2 id="mplab-file-overview">🟩 MPLAB File Overview</h2>
-<p>This MPLAB X project implements the firmware for the distance sensor subsystem in our team’s UART-based communication network. It continuously reads simulated distance data and broadcasts key system state messages to other subsystems (Motor, OLED, and WiFi) using a standardized UART protocol.</p>
-<h3 id="files">🗂️ Files</h3>
-<ul style="list-style-type: none; padding-left: 0;">
-  <li>
-    <a href="https://github.com/user-attachments/files/19401314/CLASSIC_MESSAGE_STRUCTURE.X.2.zip)" style="color:#004dff; text-decoration: none;">📁 <strong>MPLABS Zip File</strong></a>
-  </li>
-  </ul>
-
-<h3 id="key-features">📑 Key Features</h3>
+<h2 id="esp32-file-overview">ESP32 File Overview</h2>
+<p>This project implements the firmware for the distance sensor subsystem using an ESP32 microcontroller. It continuously reads distance values from the VL53L1X sensor and transmits structured UART messages to the motor, OLED, and WiFi subsystems.</p>
+<h3 id="files">Files</h3>
+<ul>
+<li><a href="https://github.com/user-attachments/files/20049301/vl53l1x_pico.zip">ESP32 VL53L1X Firmware (Zip)</a></li>
+</ul>
+<h3 id="key-features">Key Features</h3>
 <ul>
 <li>
-<p><strong>UART Messaging Protocol</strong> 
+<p><strong>UART Messaging Protocol</strong><br />
   Each message follows the class-defined structure:<br />
-  [Prefix1] [Prefix2] [Sender] [Receiver] [Message Type] [Data...] [Suffix1] [Suffix2]<br />
-  All messages are 64 bytes in length and framed for reliability.</p>
+<code>[Prefix1] [Prefix2] [Sender] [Receiver] [Message Type] [Data...] [Suffix1] [Suffix2]</code><br />
+  All messages are 64 bytes long.</p>
 </li>
 <li>
 <p><strong>Subsystem Communication</strong><br />
   This subsystem transmits:</p>
 </li>
-<li>User distance data (MSG_DISTANCE_DATA) – broadcast to all</li>
-<li>Safety flag (MSG_SAFETY_RESPONSE) – sent to Motor subsystem</li>
-<li>Display flag (MSG_OLED_FLAG) – sent to OLED subsystem</li>
+<li><code>MSG_SAFETY_RESPONSE</code> – to Motor</li>
+<li><code>MSG_OLED_FLAG</code> – to OLED</li>
 <li>
-<p>Machine use status (MSG_MACHINE_STATUS) – sent to WiFi module</p>
+<p><code>MSG_MACHINE_STATUS</code> – to WiFi</p>
 </li>
 <li>
-<p><strong>Timeout Handling &amp; Message Trashing</strong><br />
-  Messages from the subsystem itself or malformed data are discarded using timer interrupts.</p>
+<p><strong>Distance Logic</strong><br />
+  The system checks for a valid distance range (e.g., 200mm–800mm). If valid, it enables the motor and displays status.</p>
 </li>
 <li>
-<p><strong>Message Forwarding</strong><br />
-  The subsystem forwards any UART messages not addressed to itself to maintain the daisy-chain topology.</p>
+<p><strong>Framing and Filtering</strong><br />
+  Messages not addressed to the ESP32 are forwarded along the daisy-chain bus. Malformed or duplicate messages are filtered out.</p>
 </li>
 <li>
-<p><strong>Code Structure</strong><br />
-  The main logic resides in main.c with UART handling and timed messaging built using MCC-generated peripheral drivers (EUSART1, Timer1).</p>
+<p><strong>Timing and Buffer Management</strong><br />
+  Includes timeout handling, garbage cleanup, and scheduled message transmission via <code>uasyncio</code>.</p>
 </li>
 </ul>
-<h2>Additional Links</h2>
+<h2>Additional Links and Files</h2>
 <ul>
     <li><a href="https://github.com/user-attachments/files/20049301/vl53l1x_pico.zip">Code Repository File</a></li>
     <li><a href="https://juliasmith141414.github.io/juliasmith-stemteresting/">Home</a></li>
