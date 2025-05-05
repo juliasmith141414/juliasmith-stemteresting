@@ -4,7 +4,7 @@ My name is Julia Smith. As a member of STEMteresting (Team 301), I am responsibl
 Email: jasmi157@asu.edu <br>
 
 ## Final Picture: Top
-![image](https://github.com/juliasmith141414/juliasmith-stemteresting/blob/main/IMG_3495.jpeg)
+![top](https://github.com/user-attachments/assets/2db6152d-453a-48a6-a49d-1fc1ee861536)
 
 ## Final Picture: Bottom
 ![image](https://github.com/user-attachments/assets/b93a5eb2-0c0e-4d3e-97b7-bba4aca05144)
