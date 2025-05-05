@@ -1,86 +1,81 @@
 # API
 
-## 🌈 Overview
+## Overview
 
-The tables below describe the messages sent from the distance sensor subsystem (Julia) using `uint8_t` binary flags (0 = False, 1 = True). All messages are formatted using the class UART protocol and occupy the data field (bytes 5–61) of the 64-byte message frame.
+The tables below describe the messages sent from the distance sensor subsystem (ESP32) using `uint8_t` binary flags (`0` = False, `1` = True). All messages are formatted using a standardized 64-byte UART protocol and occupy the data field (bytes 5–61) of the message frame.
 
-## 📋 Tables
+## Message Tables
 
-### 🟥 Safety Response Message (to Motor)
+### Safety Response Message (to Motor)
 
-🚨 This message tells the motor subsystem whether the user is currently in a safe position.
+This message indicates whether the user is currently in a safe position based on distance readings.
 
-| Field | Value |
-|-------|-------|
-| 📦 **Byte 1** | `User_Safe_Flag` |
-| 📐 **Variable Type** | `uint8_t` |
-| 🔻 **Min Value** | `0` (User Not Safe) |
-| 🔺 **Max Value** | `1` (User Safe) |
-| 🔢 **Example** | `1` |
-| 💡 **Use** | Tells the motor whether to activate based on user position |
+| Field              | Value                        |
+|-------------------|------------------------------|
+| Byte 1            | `User_Safe_Flag`             |
+| Variable Type     | `uint8_t`                    |
+| Min Value         | `0` (User Not Safe)          |
+| Max Value         | `1` (User Safe)              |
+| Example           | `1`                          |
+| Purpose           | Controls braking behavior of the motor subsystem |
 
-### 🟧 OLED Display Message (to OLED)
+### OLED Display Message (to OLED)
 
-🖥️ This message instructs the OLED display what message to show based on user status.
+This message instructs the OLED display what message to show depending on system state.
 
-| Field | Value |
-|-------|-------|
-| 📦 **Byte 1** | `OLED_Display_Flag` |
-| 📐 **Variable Type** | `uint8_t` |
-| 🔻 **Min Value** | `0` (Display 'Stand on X') |
-| 🔺 **Max Value** | `1` (Display 'Initializing') |
-| 🔢 **Example** | `1` |
-| 💡 **Use** | Tells the OLED whether to show initialization or waiting instructions |
+| Field              | Value                        |
+|-------------------|------------------------------|
+| Byte 1            | `OLED_Display_Flag`          |
+| Variable Type     | `uint8_t`                    |
+| Min Value         | `0` (Display 'Stand on X')   |
+| Max Value         | `1` (Display 'Initializing') |
+| Example           | `0`                          |
+| Purpose           | Communicates screen status to user |
 
-### 🟨 Machine Use Status Message (to WiFi)
+### Machine Use Status Message (to WiFi)
 
-📶 This message tells the WiFi module whether the machine is currently in use.
+This message indicates whether the machine is currently in use or idle.
 
-| Field | Value |
-|-------|-------|
-| 📦 **Byte 1** | `Machine_Use_Status` |
-| 📐 **Variable Type** | `uint8_t` |
-| 🔻 **Min Value** | `0` (Idle) |
-| 🔺 **Max Value** | `1` (In Use) |
-| 🔢 **Example** | `1` |
-| 💡 **Use** | Tells the WiFi module whether the machine is active |
- 
-## 🟩 MPLAB File Overview
+| Field              | Value                        |
+|-------------------|------------------------------|
+| Byte 1            | `Machine_Use_Status`         |
+| Variable Type     | `uint8_t`                    |
+| Min Value         | `0` (Idle)                   |
+| Max Value         | `1` (In Use)                 |
+| Example           | `1`                          |
+| Purpose           | Broadcasts usage status to the WiFi subsystem |
 
-This MPLAB X project implements the firmware for the distance sensor subsystem in our team’s UART-based communication network. It continuously reads simulated distance data and broadcasts key system state messages to other subsystems (Motor, OLED, and WiFi) using a standardized UART protocol.
+## ESP32 File Overview
 
-### 🗂️ Files
+This project implements the firmware for the distance sensor subsystem using an ESP32 microcontroller. It continuously reads distance values from the VL53L1X sensor and transmits structured UART messages to the motor, OLED, and WiFi subsystems.
 
-<ul style="list-style-type: none; padding-left: 0;">
-  <li>
-    <a href="https://github.com/user-attachments/files/19401314/CLASSIC_MESSAGE_STRUCTURE.X.2.zip)" style="color:#004dff; text-decoration: none;">📁 <strong>MPLABS Zip File</strong></a>
-  </li>
-  </ul>
+### Files
 
-### 📑 Key Features
+- [ESP32 VL53L1X Firmware (Zip)](https://github.com/user-attachments/files/20049301/vl53l1x_pico.zip)
 
-- **UART Messaging Protocol** 
+### Key Features
+
+- **UART Messaging Protocol**  
   Each message follows the class-defined structure:  
-  [Prefix1] [Prefix2] [Sender] [Receiver] [Message Type] [Data...] [Suffix1] [Suffix2]  
-  All messages are 64 bytes in length and framed for reliability.
+  `[Prefix1] [Prefix2] [Sender] [Receiver] [Message Type] [Data...] [Suffix1] [Suffix2]`  
+  All messages are 64 bytes long.
 
 - **Subsystem Communication**  
   This subsystem transmits:
-  - User distance data (MSG_DISTANCE_DATA) – broadcast to all
-  - Safety flag (MSG_SAFETY_RESPONSE) – sent to Motor subsystem
-  - Display flag (MSG_OLED_FLAG) – sent to OLED subsystem
-  - Machine use status (MSG_MACHINE_STATUS) – sent to WiFi module
+  - `MSG_SAFETY_RESPONSE` – to Motor
+  - `MSG_OLED_FLAG` – to OLED
+  - `MSG_MACHINE_STATUS` – to WiFi
 
-- **Timeout Handling & Message Trashing**  
-  Messages from the subsystem itself or malformed data are discarded using timer interrupts.
+- **Distance Logic**  
+  The system checks for a valid distance range (e.g., 200mm–800mm). If valid, it enables the motor and displays status.
 
-- **Message Forwarding**  
-  The subsystem forwards any UART messages not addressed to itself to maintain the daisy-chain topology.
+- **Framing and Filtering**  
+  Messages not addressed to the ESP32 are forwarded along the daisy-chain bus. Malformed or duplicate messages are filtered out.
 
-- **Code Structure**  
-  The main logic resides in main.c with UART handling and timed messaging built using MCC-generated peripheral drivers (EUSART1, Timer1).
+- **Timing and Buffer Management**  
+  Includes timeout handling, garbage cleanup, and scheduled message transmission via `uasyncio`.
 
-<h2>Additional Links</h2>
+<h2>Additional Links and Files</h2>
 <ul>
     <li><a href="https://github.com/user-attachments/files/20049301/vl53l1x_pico.zip">Code Repository File</a></li>
     <li><a href="https://juliasmith141414.github.io/juliasmith-stemteresting/">Home</a></li>
