@@ -6,7 +6,8 @@ This document compares and justifies the selection of major electrical component
 
 ## 3.3V Voltage Regulator
 
-### Option 1: [LM2575D2T-3.3R4G](https://www.digikey.com/en/products/detail/onsemi/LM2575D2T-3-3R4G/1476688) – $3.32
+### Option 1: [LM2575D2T-3.3R4G](https://www.digikey.com/en/products/detail/onsemi/LM2575D2T-3-3R4G/1476688?s=N4IgTCBcDaIDIFkwFYDsyAiYAqBaAzAHT4BKALAOIgC6AvkA) – $3.32
+![LM2575D2T-3 3R4G](https://github.com/user-attachments/assets/f6508738-157a-43e2-9fbc-c0e109be11c5)
 
 | **Pros** | **Cons** |
 |----------|----------|
@@ -15,7 +16,8 @@ This document compares and justifies the selection of major electrical component
 | Easy to hand solder (TO-263-5) | Less efficient than modern buck converters |
 | Previously used in other circuits | |
 
-### Option 2: [TPS62152RGTR](https://www.digikey.com/en/products/detail/texas-instruments/TPS62152RGTR/2533893) – $1.42
+### Option 2: [TPS62152RGTR](https://www.digikey.com/en/products/detail/texas-instruments/TPS62152RGTR/2833441?s=N4IgTCBcDaICoAUDKA2MBGArGASgcThxAF0BfIA) – $1.42
+![TPS62152RGTR](https://github.com/user-attachments/assets/eaa7be34-4257-473a-9a6d-83de6231d573)
 
 | **Pros** | **Cons** |
 |----------|----------|
@@ -23,7 +25,9 @@ This document compares and justifies the selection of major electrical component
 | Low cost | Requires multiple external passives |
 | Fixed output simplifies design | No in-class experience with part |
 
-### Option 3: [LM3671MF-3.3/NOPB](https://www.digikey.com/en/products/detail/texas-instruments/LM3671MF-3.3-NOPB/812000) – $1.56
+
+### Option 3: [LM3671MF-3.3/NOPB](https://www.digikey.com/en/products/detail/texas-instruments/LM3671MF-3-3-NOPB/1590062?s=N4IgTCBcDaIDIFkDMA2A7ARgQMQLRIDokB6AOQHkAFAIRAF0BfIA) – $1.56
+![LM3671MF-3 3](https://github.com/user-attachments/assets/83e80638-460a-4973-ab18-f6ed9c3c28aa)
 
 | **Pros** | **Cons** |
 |----------|----------|
@@ -75,6 +79,7 @@ While initially working with the PIC18F47Q10, we switched to the ESP32 for its r
 ## Distance Sensor
 
 ### [VL53L1X – Adafruit 3967](https://www.digikey.com/en/products/detail/adafruit-industries-llc/3967/17039169) – $14.95
+![3967_distance_sensor](https://github.com/user-attachments/assets/78ddf26a-1d17-4409-8e99-2303e3e02603)\
 
 | **Pros** | **Cons** |
 |----------|----------|
@@ -83,7 +88,8 @@ While initially working with the PIC18F47Q10, we switched to the ESP32 for its r
 | I2C interface for easy integration | |
 | Library support available for ESP32 | |
 
-### Option 2: [VL53L0X](https://www.digikey.com/en/products/detail/stmicroelectronics/VL53L0X/6564842) – ~$12.50
+### Option 2: [VL53L0X](https://www.adafruit.com/product/3317) – ~$12.50
+![VL53L0X](https://github.com/user-attachments/assets/66e0db2a-4128-443d-b49a-b20d7abafcdc)
 
 | **Pros** | **Cons** |
 |----------|----------|
@@ -91,13 +97,18 @@ While initially working with the PIC18F47Q10, we switched to the ESP32 for its r
 | Good library support | Less suited for large distance |
 | Small module | |
 
-### Option 3: [GP2Y0A21YK0F](https://www.pololu.com/product/136) – $13.95
+### Option 3: [SparkFun VL6180 Time-of-Flight Distance Sensor – Qwiic](https://www.adafruit.com/product/3316) – $13.95
+![VL6180X](https://github.com/user-attachments/assets/597eadc2-a19e-4f6a-8bef-822d20d8cbea)
 
 | **Pros** | **Cons** |
 |----------|----------|
-| Simple analog output | Non-linear response curve |
-| Low cost | Not surface-mount |
-| Easy to read with ADC | Lower accuracy, poor precision |
+| I²C communication via Qwiic connector | Shorter range (0–200 mm) |
+| Well-documented Arduino and ESP32 libraries | Less accurate at longer distances |
+| Compact and low power consumption | |
+| Easy integration with other Qwiic-compatible devices | |
+
+This option is useful in applications where close-range detection is sufficient and rapid setup is preferred due to the Qwiic system’s plug-and-play design. While it lacks the extended range of the VL53L1X, it offers reliable performance in short-distance sensing tasks and fully meets the I²C communication requirement.
+
 
 **✅ Final Selection: VL53L1X**  
 Selected for its accuracy, compatibility with our ESP32-based subsystem, and wide sensing range. Surface-mount breakout simplifies PCB integration and library support accelerates development.
