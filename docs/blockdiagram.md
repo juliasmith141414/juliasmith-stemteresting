@@ -1,7 +1,10 @@
 # Block Diagram
 ## Block Diagram of Subsystem: Distance Sensor
 
-This is the block diagram for our distance sensor subsystem. The sensor will wait for user input from the external OLED subsytem by Xander Heafey. Once the user input is received, the distance sensor will be in the "on" state. Distastance data will be collected and transmitted to the external Motor Driver Subsystem by Sara Bohart to initiate motor rotations at speeds which correlate with the collected distance data.  
+This is the block diagram for our distance sensor subsystem. The sensor will collect and send distance data constantly when the subsystem is powered on. Raw distance data will be sent to Xander Heafey's OLED subsystem so it can be displayed on his screen when the user selects it. Logic inside the distance sensor subsystem code will assign either a 0 or 1 to distance results based on whether the user is a safe distance from the spinning centrifuge. These values are then sent over UART to Sara Bohart's motor driver subsystem and Ella Greetis's MQTT subsystem.
+<br>
+This block diagram was developed with user safety in mind. UART endures fast enough communication for fast response times. I added an OLED screen to my subsystem as well, to make debugging easier.
+<br>
 
 ![Smith Individual Block Diagram drawio](https://github.com/user-attachments/assets/62a99dc5-8048-45bb-b4ae-7a00291f79a5)
 
