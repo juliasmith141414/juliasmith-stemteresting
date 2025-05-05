@@ -1,176 +1,115 @@
 # Component Selection
 
-## Objective
-The purpose of this page is to compare, and contrast multiple solutions for each major component in my subsystem design. This includes identifying off-the-shelf and custom electrical or mechanical components, assessing compatibility with project specifications, and articulating rationale for final choices.
-
-## Electrical Block Diagram
-<img width="444" alt="block diagram image on git" src="https://github.com/user-attachments/assets/f0ce3cfd-3833-4a22-a8e6-265df952e3ed" style="max-width: 300px; height: auto;" /> <br>
-
-This diagram outlines the key components and subsystems: microcontroller, distance sensor (via I²C), motor driver, and actuators. Each subsystem requires separate research and component selection.
+This document compares and justifies the selection of major electrical components used in my subsystem. All components are surface-mount and suitable for hand-soldering or reflow, based on Peralta lab constraints.
 
 ---
 
-## Major Component Selections
+## 3.3V Voltage Regulator
 
-### **Microcontroller: PIC18F47Q10-I/PT**
-<img src="https://github.com/user-attachments/assets/2f574860-11a0-4407-83ab-fafb947c047d" width="300" height="300" /> <br>
-**Cost:** $1.49 <br>
-**Operating Voltage:** 1.8V - 5.5V <br>
-[Datasheet](https://arizonastateu-my.sharepoint.com/:b:/g/personal/jasmi157_sundevils_asu_edu/EY412CZrEBFCm1RPcBUdK0ABFQC27qYPnXhWjqNXUzvurw?e=bMb4OQ)  
+### Option 1: [LM2575D2T-3.3R4G](https://www.digikey.com/en/products/detail/onsemi/LM2575D2T-3-3R4G/1476688) – $3.32
 
-| **Pros**                                                  | **Cons**                                                |
-|-----------------------------------------------------------|---------------------------------------------------------|
-| Compatible with **MPLab Snap Programmer**                 | Requires **MCC configuration** for all peripherals       |
-| Supports **multiple communication protocols** (UART, I²C) | Higher complexity than simpler microcontrollers          |
-| Extensively documented with **sample code**               | Surface-mount version may be difficult to solder         |
-| Integrated **ADC, PWM, and GPIO**                        | Slightly higher cost than lower-performance alternatives |
+| **Pros** | **Cons** |
+|----------|----------|
+| 1A output current capacity | Large footprint |
+| Fixed 3.3V simplifies design | Requires external diode and inductor |
+| Easy to hand solder (TO-263-5) | Less efficient than modern buck converters |
+| Previously used in other circuits | |
 
----
+### Option 2: [TPS62152RGTR](https://www.digikey.com/en/products/detail/texas-instruments/TPS62152RGTR/2533893) – $1.42
 
-### **MPLab Snap Programmer: PG160100**
-<img src="https://github.com/user-attachments/assets/1ad9faf8-0440-4068-9b8d-6f026b02ac68" width="300" height="400" /> <br>
-**Cost:** $14.99 <br>
-**Operating Voltage:** 1.20V - 5.5V<br>
-[Datasheet](https://arizonastateu-my.sharepoint.com/:b:/g/personal/jasmi157_sundevils_asu_edu/EQGcT4hhqEpHhpjXQ1mo-LEBesul2oAfO8pAhaCQ58yQCQ?e=vgC0Pv)  
+| **Pros** | **Cons** |
+|----------|----------|
+| Compact package saves board space | QFN package difficult to solder by hand |
+| Low cost | Requires multiple external passives |
+| Fixed output simplifies design | No in-class experience with part |
 
-| **Pros**                                                  | **Cons**                                                |
-|-----------------------------------------------------------|---------------------------------------------------------|
-| Affordable and **official Microchip support**             | May require **firmware updates**                        |
-| **Compatible** with multiple PIC microcontrollers         | Limited debugging features                              |
-| Easy to integrate with **MPLab X IDE**                    | Not as durable as other higher-end programmers          |
+### Option 3: [LM3671MF-3.3/NOPB](https://www.digikey.com/en/products/detail/texas-instruments/LM3671MF-3.3-NOPB/812000) – $1.56
 
----
+| **Pros** | **Cons** |
+|----------|----------|
+| Smallest footprint of the three | Max output only 500 mA |
+| SOT-23-5 package is easier to solder than QFN | Narrow input voltage range (2.7–5.5V) |
+| Low quiescent current | |
 
-## **Voltage Regulators**
-
-#### **Option 1: LM2574MX-3.3/NOPB (Chosen)**
-<img src="https://github.com/user-attachments/assets/1e9eaddd-e5c4-426c-9f26-3c28b0cb6cc6" width="300" height="300" /> <br>
-[Datasheet](https://github.com/user-attachments/files/19035115/LM2574MX-3.3-NOPB.pdf)<br>
-**Max Current:** **0.5A**  
-**Efficiency:** ~72% at 12V input  
-**Operating Voltage:** 4.75V – 40V  
-**Switching Frequency:** 52kHz  
-
-| **Pros**                                              | **Cons**                                      |
-|-------------------------------------------------------|-----------------------------------------------|
-| **Compact and simple step-down (buck) regulator**     | **Lower current capacity (0.5A max)**        |
-| **Fixed 3.3V output – no external resistors needed**  | **Requires external inductor & diode**       |
-| **Wide input voltage range (4.75V - 40V)**            | **Less efficient than higher-frequency buck converters** |
-| **Thermal shutdown & current limiting protection**    | **Lower efficiency (~72%) compared to newer switchers** |
-| **Minimal external components required**             | **Limited to applications with low current needs** |
+**✅ Final Selection: LM2575D2T-3.3R4G**  
+Chosen due to my familiarity with the component and the ease of soldering. While larger, it fits within our board space and supplies 1A, ensuring headroom for future expansion.
 
 ---
 
-#### **Option 2: AMS1117-3.3V (Alternative)**
-<img src="https://github.com/user-attachments/assets/d1f93a3a-8333-49b8-9a18-0645716dbe16" width="300" height="300" /> <br>
-[Datasheet](https://arizonastateu-my.sharepoint.com/:b:/g/personal/jasmi157_sundevils_asu_edu/EXAMPLE_AMS1117.pdf) 
-**Max Current:** **800mA**  
-**Efficiency:** **Linear, ~50-60%**  
-**Operating Voltage:** **4.5V – 15V**  
+## Microcontroller Selection
 
-| **Pros**                                      | **Cons**                                        |
-|-----------------------------------------------|-------------------------------------------------|
-| **Small & simple to use (3-pin LDO)**         | **Lower efficiency** compared to switching regulators |
-| **Minimal external components required**      | **Dissipates more heat (wasted as power loss)** |
-| **Cost-effective & widely available**         | Max **800mA**, less than LM2575                 |
-| **Ideal for low-noise applications**         | Requires good heat dissipation if near max load |
+### [ESP32-S3-WROOM-1-N4](https://www.digikey.com/en/products/detail/espressif-systems/ESP32-S3-WROOM-1-N4/16162639) – $5.06
 
----
+| **Specs** | **Value** |
+|-----------|-----------|
+| Package | PCB surface-mount module |
+| Supply Voltage Range | 3.0–3.6 V |
+| Max Current | 500 mA |
+| Max GPIO Current | 40 mA per pin |
+| Interfaces | UART, I2C, SPI, ADC, PWM, GPIO |
+| Wireless | Wi-Fi + BLE |
+| External Interrupts | Supported |
 
-#### **Option 3: MP2315 Step-Down Regulator (Alternative)**
-<img src="https://github.com/user-attachments/assets/0ec08087-8771-4c70-b557-854364f03e4d" width="300" height="300" /> <br>
-[Datasheet](https://arizonastateu-my.sharepoint.com/:b:/g/personal/jasmi157_sundevils_asu_edu/EXAMPLE_MP2315.pdf)  
-**Max Current:** **2.5A**  
-**Efficiency:** **Up to 90%**  
-**Operating Voltage:** **4.5V – 24V**  
+| **Pros** | **Cons** |
+|----------|----------|
+| All GPIOs are flexible for I2C/UART | Slightly higher power consumption |
+| Integrated Wi-Fi/BLE | More expensive than PIC18F47Q10 |
+| Strong community and library support | |
+| Fast development in MicroPython/Arduino | |
 
-| **Pros**                                             | **Cons**                                      |
-|------------------------------------------------------|-----------------------------------------------|
-| **High efficiency (~90%) saves power**               | Requires **external inductor & capacitors**  |
-| **Compact size** (SMT, small footprint)              | Slightly more complex than AMS1117          |
-| **Supports up to 2.5A** (ideal for high-power loads) | Higher cost than AMS1117                    |
-| **Adjustable output voltage available**              | More difficult to solder for beginners       |
+### Comparison with PIC18F47Q10
 
+| **ESP32-S3-WROOM-1-N4** | **PIC18F47Q10** |
+|-------------------------|------------------|
+| Wi-Fi + BLE integrated | No wireless |
+| Flexible GPIO mapping for I2C/SPI | Limited multiplexing |
+| Faster CPU, more memory | Lower power consumption |
+| More dev tools (VSCode, Arduino, MicroPython) | Requires MPLAB X / MCC |
+| Better documentation for peripherals | Easier to learn in classroom context |
 
----
-
-### **Distance Sensor Options**
-
-#### **Option 1: VL53L1CXV0FY/1**
-<img src="https://github.com/user-attachments/assets/60dd9436-97b2-49df-bd5d-6accfdb9a356" width="300" height="300" /> <br>
-[Datasheet](https://arizonastateu-my.sharepoint.com/:b:/g/personal/jasmi157_sundevils_asu_edu/EbF6q-VkyolOulMk80JgWMkB3oZ_hcvkSHapQ7gW-guFWQ?e=OiwQhq)  
-[Product Link](https://www.digikey.com/en/products/detail/stmicroelectronics/VL53L1CXV0FY-1/8258055)  
-**Cost:** $5.77  
-**Max Range:** 4 Meters  
-**Operating Voltage:** 2.6V - 3.5V  
-**FOV:** 27° <br>
-**Communication:** I²C  
-**Mount:** Surface  
-
-| **Pros**                                                 | **Cons**                                                 |
-|----------------------------------------------------------|----------------------------------------------------------|
-| **Extended range** up to 4 meters                        | Surface-mount **LGA-16** package may require reflow soldering |
-| **I²C communication** simplifies integration with MCUs   | Requires **precise alignment** for accurate measurements  |
-| Supports **variable timing budgets** for power efficiency| More expensive than **VL53L0X**                          |
-| **Multi-target detection** with programmable distance modes | Sensitive to ambient lighting conditions in some environments |
+**✅ Final Selection: ESP32-S3-WROOM-1-N4**  
+While initially working with the PIC18F47Q10, we switched to the ESP32 for its robust I2C support, GPIO flexibility, and fast prototyping tools. The switch was driven by sensor/display compatibility and ease of development.
 
 ---
 
-#### **Option 2: VL53L0X**
-<img src="https://github.com/user-attachments/assets/e787c161-59c0-4130-a716-be647bf55d72" width="300" height="300" /> <br>
-[Datasheet](https://arizonastateu-my.sharepoint.com/:b:/g/personal/jasmi157_sundevils_asu_edu/EVZtUUkWE9xGhCSLo-Ec1scBudzi0_jGqGujjsDPeXDivA?e=c6nOMb)  
-[Product Link](https://estore.st.com/en/products/imaging-and-photonics-solutions/time-of-flight-sensors/vl53l0x.html)  
-**Cost:** $2.64  
-**Max Range:** 2 Meters  
-**Operating Voltage:** 2.8V - 3.3V  
-**FOV:** 25° <br>
-**Communication:** I²C  
-**Mount:** Surface  
+## Distance Sensor
 
-| **Pros**                                                | **Cons**                                               |
-|---------------------------------------------------------|--------------------------------------------------------|
-| Compact and **low-cost** sensor for short-range sensing | **Limited range** (up to 1.2 meters)                   |
-| Higher FOV of 25°        | **LGA package** can be difficult to solder manually     |
-| **Low power consumption** ideal for portable devices    | Sensitive to ambient lighting interference              |
+### [VL53L1X – Adafruit 3967](https://www.digikey.com/en/products/detail/adafruit-industries-llc/3967/17039169) – $14.95
 
----
+| **Pros** | **Cons** |
+|----------|----------|
+| Up to 4m range | More expensive than analog options |
+| Millimeter-level accuracy | Requires initialization/config |
+| I2C interface for easy integration | |
+| Library support available for ESP32 | |
 
-#### **Option 3: TMF8801 Time-of-Flight Distance Sensor**
-<img src="https://github.com/user-attachments/assets/f16c2f09-108c-432d-8cc9-10be5da8c93b" width="300" height="300" /> <br>
-[Datasheet](https://github.com/user-attachments/files/19034104/2304140030_Advanced-Monolithic-Systems-TMF8801-1B_C1852800.pdf) <br>
-[Product Link](https://jlcpcb.com/partdetail/Ams-TMF88011B/C1852800)  
-**Cost:** $3.57
-**Max Range:** 2.5 Meters  
-**Operating Voltage:** 2.7V – 3.6V  
-**Communication:** I²C  
-**Mount:** Surface-Mount (OLGA-12 Package)  
-**Field of View:** 3&deg;  
+### Option 2: [VL53L0X](https://www.digikey.com/en/products/detail/stmicroelectronics/VL53L0X/6564842) – ~$12.50
 
-| **Pros**                                                  | **Cons**                                                  |
-|-----------------------------------------------------------|-----------------------------------------------------------|
-| Compact **surface-mount package** suitable for space-constrained designs | Low FOV of 3°  |
-| Operates at **3.3V**, compatible with low-voltage MCUs     | Limited to **2.5 meters** maximum range                   |
-| **Low power consumption**, ideal for battery-powered applications | Very small, may be difficult to mount manually      |
-| **High accuracy** with minimal ambient light sensitivity  | May require **external components** for optimal operation |
+| **Pros** | **Cons** |
+|----------|----------|
+| Lower cost | 2m max range only |
+| Good library support | Less suited for large distance |
+| Small module | |
 
+### Option 3: [GP2Y0A21YK0F](https://www.pololu.com/product/136) – $13.95
+
+| **Pros** | **Cons** |
+|----------|----------|
+| Simple analog output | Non-linear response curve |
+| Low cost | Not surface-mount |
+| Easy to read with ADC | Lower accuracy, poor precision |
+
+**✅ Final Selection: VL53L1X**  
+Selected for its accuracy, compatibility with our ESP32-based subsystem, and wide sensing range. Surface-mount breakout simplifies PCB integration and library support accelerates development.
 
 ---
 
-### **Final Component Selections**
-After evaluating range, cost, and ease of integration, the **VL53L1CXV0FY/1** sensor was selected due to its **extended range capabilities**, **multi-target detection**, and **FOV of 27°**, making it the best fit for our users.
+## Final Major Components Selected
 
-For voltage regulation, the **LM2574MX-3.3/NOPB** was chosen as the final voltage regulator. It provides **moderate efficiency (~72%)**, supports up to **0.5A output current**, and includes **built-in protections** such as thermal shutdown and current limiting. Its **switching regulator design** reduces power dissipation compared to linear regulators, making it a reliable choice for low-power applications within the system.
+| **Component**      | **Part Number**             | **Source** | **Unit Price** |
+|-------------------|-----------------------------|------------|----------------|
+| Voltage Regulator | LM2575D2T-3.3R4G            | DigiKey    | $3.32          |
+| Microcontroller   | ESP32-S3-WROOM-1-N4         | DigiKey    | $5.06          |
+| Distance Sensor   | VL53L1X (Adafruit 3967)     | DigiKey    | $14.95         |
 
----
-
-## **Power Budget**
-![image](https://github.com/user-attachments/assets/039d18e6-2ede-46cf-98b2-902b85683dc9)  <br>
-<h2>Additional Links</h2>
-<ul>
-    <li><a href="https://docs.google.com/spreadsheets/d/12uf9W3mrbqPYXF1pln1ugqOVY8jhmh9nDuVUHxvh6Tg/edit?usp=sharing">Power Budget Spreadsheet</a></li>
-    <li><a href="https://arizonastateu-my.sharepoint.com/:b:/g/personal/jasmi157_sundevils_asu_edu/EY98v2uzDuJGu2QtrsfiZEkBGJH39mKIZ5E7EZyC-jLRFQ?e=B9aNIO">Power Budget PDF</a></li> <br>
-    <li><a href="https://juliasmith141414.github.io/">Home</a></li>
-    <li><a href="https://egr314-2025-s-301.github.io/main-page/">Team Page</a></li>
-</ul>
-
----
+These components meet the project's design goals for sensor control, data processing, and communication. Their solderability and known compatibility with each other ensured fast prototyping and successful integration.
