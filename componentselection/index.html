@@ -552,6 +552,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#component-selection-process-and-decision-making" class="md-nav__link">
+    Component Selection Process and Decision-Making
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#33v-voltage-regulator" class="md-nav__link">
     3.3V Voltage Regulator
   </a>
@@ -685,6 +692,26 @@
     Distance Sensor Needs for ESP 32
   </a>
   
+    <nav class="md-nav" aria-label="Distance Sensor Needs for ESP 32">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pinout-diagram" class="md-nav__link">
+    Pinout Diagram
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#io-resource-allocation-summary" class="md-nav__link">
+    I/O Resource Allocation Summary
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -699,12 +726,18 @@
     Power Budget
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#upon-testing-it-is-clear-this-power-budget-is-accurate-the-subsystem-works-as-expected-with-no-exceptions" class="md-nav__link">
-    Upon testing it is clear this power budget is accurate. The subsystem works as expected with no exceptions.
+    <nav class="md-nav" aria-label="Power Budget">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#power-budget-design-explanation" class="md-nav__link">
+    Power Budget Design Explanation
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -822,6 +855,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#component-selection-process-and-decision-making" class="md-nav__link">
+    Component Selection Process and Decision-Making
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#33v-voltage-regulator" class="md-nav__link">
     3.3V Voltage Regulator
   </a>
@@ -955,6 +995,26 @@
     Distance Sensor Needs for ESP 32
   </a>
   
+    <nav class="md-nav" aria-label="Distance Sensor Needs for ESP 32">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pinout-diagram" class="md-nav__link">
+    Pinout Diagram
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#io-resource-allocation-summary" class="md-nav__link">
+    I/O Resource Allocation Summary
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -969,12 +1029,18 @@
     Power Budget
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#upon-testing-it-is-clear-this-power-budget-is-accurate-the-subsystem-works-as-expected-with-no-exceptions" class="md-nav__link">
-    Upon testing it is clear this power budget is accurate. The subsystem works as expected with no exceptions.
+    <nav class="md-nav" aria-label="Power Budget">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#power-budget-design-explanation" class="md-nav__link">
+    Power Budget Design Explanation
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1003,7 +1069,8 @@
 
 <h1 id="component-selection">Component Selection</h1>
 <p>This document compares and justifies the selection of major electrical components used in my subsystem. All components are surface-mount and suitable for hand-soldering or reflow, based on Peralta lab constraints.</p>
-<hr />
+<h2 id="component-selection-process-and-decision-making">Component Selection Process and Decision-Making</h2>
+<p>We identified key system requirements for each subsystem (e.g., current draw, I2C compatibility, GPIO availability) and researched multiple off-the-shelf surface-mount options. Each candidate was evaluated based on datasheet specifications, price, solderability, and support in MicroPython. Final selections were made after modeling each subsystem on a breadboard and confirming UART and I2C functionality using the ESP32-S3.</p>
 <h2 id="33v-voltage-regulator">3.3V Voltage Regulator</h2>
 <h3 id="option-1-lm2575d2t-33r4g-332">Option 1: <a href="https://www.digikey.com/en/products/detail/onsemi/LM2575D2T-3-3R4G/1476688?s=N4IgTCBcDaIDIFkwFYDsyAiYAqBaAzAHT4BKALAOIgC6AvkA">LM2575D2T-3.3R4G</a> – $3.32</h3>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/f6508738-157a-43e2-9fbc-c0e109be11c5" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="LM2575D2T-3 3R4G" src="https://github.com/user-attachments/assets/f6508738-157a-43e2-9fbc-c0e109be11c5" /></a></p>
@@ -1083,10 +1150,8 @@
 </table>
 <p><strong>✅ Final Selection: LM2575D2T-3.3R4G</strong><br />
 Chosen due to my familiarity with the component and the ease of soldering. While larger, it fits within our board space and supplies 1A, ensuring headroom for future expansion.</p>
-<hr />
 <h2 id="microcontroller-selection">Microcontroller Selection</h2>
 <p>This section compares three microcontroller options for the subsystem: the ESP32-S3-WROOM-1-N4 (final selection), the PIC18F47Q10 (original classroom-based choice), and the ESP32-WROOM-32 (a popular alternative ESP variant). The comparison focuses on communication flexibility, compatibility with I2C peripherals, ease of development, and solderability.</p>
-<hr />
 <h3 id="esp32-s3-wroom-1-n4-506"><a href="https://www.digikey.com/en/products/detail/espressif-systems/ESP32-S3-WROOM-1-N4/16162639">ESP32-S3-WROOM-1-N4</a> – $5.06</h3>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/375f18d5-2e0d-474b-b8d2-364e079eaf60" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="MFG_Attachment-2-ESP32-S3-WROOM-1" src="https://github.com/user-attachments/assets/375f18d5-2e0d-474b-b8d2-364e079eaf60" /></a></p>
 <table>
@@ -1153,7 +1218,6 @@ Chosen due to my familiarity with the component and the ease of soldering. While
 </tr>
 </tbody>
 </table>
-<hr />
 <h3 id="pic18f47q10-300"><a href="https://www.digikey.com/en/products/detail/microchip-technology/pic18f47q10-i-pt/10187786">PIC18F47Q10</a> – ~$3.00</h3>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/3443e163-f268-498f-bc5c-8a70c2ffd998" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="pic" src="https://github.com/user-attachments/assets/3443e163-f268-498f-bc5c-8a70c2ffd998" /></a></p>
 <table>
@@ -1220,7 +1284,6 @@ Chosen due to my familiarity with the component and the ease of soldering. While
 </tr>
 </tbody>
 </table>
-<hr />
 <h3 id="esp32-wroom-32ue-n4-440"><a href="https://www.digikey.com/en/products/detail/espressif-systems/ESP32-WROOM-32UE-N4/11613136">ESP32-WROOM-32UE-N4</a> – $4.40</h3>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/6f7ffa71-822c-4632-82b7-8f0d28e40bcc" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="ESP32-WROOM-32UE-N4" src="https://github.com/user-attachments/assets/6f7ffa71-822c-4632-82b7-8f0d28e40bcc" /></a></p>
 <table>
@@ -1301,7 +1364,6 @@ Chosen due to my familiarity with the component and the ease of soldering. While
 </table>
 <p><strong>Why Not Chosen:</strong><br />
 While the ESP32-WROOM-32UE-N4 offers excellent wireless connectivity with an external antenna and a similar power envelope to the S3, it lacks some critical performance features. Most notably, it does not support vector instructions or hardware acceleration required for advanced peripherals. Additionally, GPIO allocation is less flexible due to internal flash wiring, which increases the risk of pin conflicts. Given our system's reliance on reliable I²C communication and the potential need for multiple peripherals, the S3’s improved I/O multiplexing and library compatibility made it the better fit for our design.</p>
-<hr />
 <h3 id="comparison-table">Comparison Table</h3>
 <table>
 <thead>
@@ -1369,10 +1431,8 @@ While the ESP32-WROOM-32UE-N4 offers excellent wireless connectivity with an ext
 </tr>
 </tbody>
 </table>
-<hr />
 <p><strong>✅ Final Selection: ESP32-S3-WROOM-1-N4</strong><br />
 This microcontroller was chosen for its combination of power, flexibility, and compatibility. It supports all needed communication protocols (especially I2C) with flexible GPIO assignment, integrates Wi-Fi and BLE for potential future use, and is backed by strong community support. While it is slightly more expensive than the other two options, its ability to simplify both firmware and hardware integration justifies the cost in the context of our design needs.</p>
-<hr />
 <h2 id="distance-sensor">Distance Sensor</h2>
 <h3 id="vl53l1x-adafruit-3967-1495"><a href="https://www.digikey.com/en/products/detail/adafruit-industries-llc/3967/17039169">VL53L1X – Adafruit 3967</a> – $14.95</h3>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/78ddf26a-1d17-4409-8e99-2303e3e02603" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="3967_distance_sensor" src="https://github.com/user-attachments/assets/78ddf26a-1d17-4409-8e99-2303e3e02603" /></a>\</p>
@@ -1457,7 +1517,6 @@ This microcontroller was chosen for its combination of power, flexibility, and c
 <p>This option is useful in applications where close-range detection is sufficient and rapid setup is preferred due to the Qwiic system’s plug-and-play design. While it lacks the extended range of the VL53L1X, it offers reliable performance in short-distance sensing tasks and fully meets the I²C communication requirement.</p>
 <p><strong>✅ Final Selection: VL53L1X</strong><br />
 Selected for its accuracy, compatibility with our ESP32-based subsystem, and wide sensing range. Surface-mount breakout simplifies PCB integration and library support accelerates development.</p>
-<hr />
 <h2 id="esp32-s3-wroom-1-n4">ESP32-S3-WROOM-1-N4</h2>
 <table>
 <thead>
@@ -1582,6 +1641,12 @@ Selected for its accuracy, compatibility with our ESP32-based subsystem, and wid
 </tr>
 </tbody>
 </table>
+<h3 id="pinout-diagram">Pinout Diagram</h3>
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/14d66d79-75e1-4bd2-8677-e85738cb206f" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="pinout_diAgram" src="https://github.com/user-attachments/assets/14d66d79-75e1-4bd2-8677-e85738cb206f" /></a><br>
+<em>Figure: Pinout diagram used to assign subsystem pins.</em> <br>
+Source: <a href="https://github.com/user-attachments/files/20051666/esp32-s3-wroom-1_wroom-1u_datasheet_en.pdf">ESP32 Datasheet</a></p>
+<h3 id="io-resource-allocation-summary">I/O Resource Allocation Summary</h3>
+<p>The ESP32-S3’s I/O multiplexing allowed flexible allocation of UART and I2C pins without conflict. With 3 UART channels, 2 I2C buses, and more than 30 usable GPIOs, the ESP32 exceeded our subsystem's requirements. No functionality was sacrificed due to hardware limitations.</p>
 <h2 id="final-major-components-selected">Final Major Components Selected</h2>
 <table>
 <thead>
@@ -1615,17 +1680,17 @@ Selected for its accuracy, compatibility with our ESP32-based subsystem, and wid
 </table>
 <p>These components meet the project's design goals for sensor control, data processing, and communication. Their solderability and known compatibility with each other ensured fast prototyping and successful integration.</p>
 <h2 id="power-budget">Power Budget</h2>
-<p>The power budget (below) shows the maximum current each major component pulls from the power supply and the maximum current the power supply can provide. 
-<a class="glightbox" href="https://github.com/user-attachments/assets/13dd7ff3-c585-48f6-b871-d8983342dfea" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="powerbudget" src="https://github.com/user-attachments/assets/13dd7ff3-c585-48f6-b871-d8983342dfea" /></a></p>
-<h2 id="upon-testing-it-is-clear-this-power-budget-is-accurate-the-subsystem-works-as-expected-with-no-exceptions">Upon testing it is clear this power budget is accurate. The subsystem works as expected with no exceptions.</h2>
-<hr />
+<p>The power budget (below) shows the maximum current each major component pulls from the power supply and the maximum current the power supply can provide.</p>
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/13dd7ff3-c585-48f6-b871-d8983342dfea" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="powerbudget" src="https://github.com/user-attachments/assets/13dd7ff3-c585-48f6-b871-d8983342dfea" /></a></p>
+<p>Upon testing it is clear this power budget is accurate. The subsystem works as expected with no exceptions.</p>
+<h3 id="power-budget-design-explanation">Power Budget Design Explanation</h3>
+<p>The power budget confirmed that our selected 3.3V regulator (LM2575D2T-3.3) supplies more than enough current (1A) to support the ESP32-S3, OLED, and VL53L1X sensor, which together draw well under the 500 mA budgeted limit. This ensured we wouldn’t need additional regulators or MOSFET switching. A 25% margin was added for safety.</p>
 <h2>Additional Links</h2>
 <ul>
     <li><a href="https://github.com/user-attachments/files/20051370/Julia.Power.Budget.-.Sheet1.1.pdf">Power Budget PDF</a></li>    
     <li><a href="https://juliasmith141414.github.io/juliasmith-stemteresting/">Home</a></li>
     <li><a href="https://egr314-2025-s-301.github.io/main-page/">Team Page</a></li>
 </ul>
-<hr />
 
 
 
