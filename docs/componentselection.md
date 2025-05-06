@@ -234,7 +234,7 @@ The power budget (below) shows the maximum current each major component pulls fr
 ![powerbudget](https://github.com/user-attachments/assets/13dd7ff3-c585-48f6-b871-d8983342dfea)
 
 Upon testing it is clear this power budget is accurate. The subsystem works as expected with no exceptions. 
-
+---
 
 ---
 <h2>Additional Links</h2>
