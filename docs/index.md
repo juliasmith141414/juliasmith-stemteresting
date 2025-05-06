@@ -25,9 +25,6 @@ Email: jasmi157@asu.edu <br>
     <a href="https://juliasmith141414.github.io/juliasmith-stemteresting/schematic/" style="color:#004dff; text-decoration: none;"> <strong>Schematic</strong></a>
   </li>
   <li>
-    <a href="https://juliasmith141414.github.io/juliasmith-stemteresting/billofmaterials/" style="color:#750787; text-decoration: none;"> <strong>Bill of Materials</strong></a>
-  </li>
-  <li>
     <a href="https://juliasmith141414.github.io/juliasmith-stemteresting/api/" style="color:#ff1493; text-decoration: none;"> <strong>API</strong></a>
   </li>
 </ul>
