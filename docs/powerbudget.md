@@ -14,7 +14,7 @@ operation under all conditions.
 ![image](https://github.com/user-attachments/assets/0f41f124-63d7-44ed-8848-bb24d10bd36e) <br>
 
 
-<h2>Additional Links</h2>
+<h2>Files and Links</h2>
 <ul>
     <li><a href="https://docs.google.com/spreadsheets/d/12uf9W3mrbqPYXF1pln1ugqOVY8jhmh9nDuVUHxvh6Tg/edit?usp=sharing">Power Budget Spreadsheet</a></li>
     <li><a href="https://arizonastateu-my.sharepoint.com/:b:/g/personal/jasmi157_sundevils_asu_edu/EY98v2uzDuJGu2QtrsfiZEkBGJH39mKIZ5E7EZyC-jLRFQ?e=B9aNIO">Power Budget PDF</a></li> <br>
