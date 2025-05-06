@@ -661,6 +661,20 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#esp32-s3-wroom-1-n4" class="md-nav__link">
+    ESP32-S3-WROOM-1-N4
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#distance-sensor-needs-for-esp-32" class="md-nav__link">
+    Distance Sensor Needs for ESP 32
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#final-major-components-selected" class="md-nav__link">
     Final Major Components Selected
   </a>
@@ -893,6 +907,20 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#esp32-s3-wroom-1-n4" class="md-nav__link">
+    ESP32-S3-WROOM-1-N4
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#distance-sensor-needs-for-esp-32" class="md-nav__link">
+    Distance Sensor Needs for ESP 32
+  </a>
   
 </li>
       
@@ -1390,6 +1418,122 @@ This microcontroller was chosen for its combination of power, flexibility, and c
 <p><strong>✅ Final Selection: VL53L1X</strong><br />
 Selected for its accuracy, compatibility with our ESP32-based subsystem, and wide sensing range. Surface-mount breakout simplifies PCB integration and library support accelerates development.</p>
 <hr />
+<h2 id="esp32-s3-wroom-1-n4">ESP32-S3-WROOM-1-N4</h2>
+<table>
+<thead>
+<tr>
+<th><strong>ESP Info</strong></th>
+<th><strong>Answer</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Model</td>
+<td>ESP32-S3</td>
+</tr>
+<tr>
+<td>Product Page URL</td>
+<td><a href="https://www.espressif.com/en/products/socs/esp32-s3">Link</a></td>
+</tr>
+<tr>
+<td>ESP32-S3-WROOM-1-N4 Datasheet URL</td>
+<td><a href="https://www.espressif.com/sites/default/files/documentation/esp32-s3-wroom-1_wroom-1u_datasheet_en.pdf">Datasheet</a></td>
+</tr>
+<tr>
+<td>ESP32 S3 Datasheet URL</td>
+<td><a href="https://www.espressif.com/sites/default/files/documentation/esp32-s3_datasheet_en.pdf">Datasheet</a></td>
+</tr>
+<tr>
+<td>ESP32 S3 Technical Reference Manual URL</td>
+<td><a href="https://www.espressif.com/sites/default/files/documentation/esp32-s3_technical_reference_manual_en.pdf">Technical Manual</a></td>
+</tr>
+<tr>
+<td>Vendor link</td>
+<td><a href="https://www.digikey.com/en/products/detail/espressif-systems/ESP32-S3-WROOM-1-N4/16162639">DigiKey</a></td>
+</tr>
+<tr>
+<td>Code Examples</td>
+<td><a href="https://github.com/drakxtwo/vl53l1x_pico.git">Github</a></td>
+</tr>
+<tr>
+<td>External Resources URL(s)</td>
+<td><a href="https://awesome-micropython.com/?utm_source=chatgpt.com#distance-ir">Awesome MicroPython</a></td>
+</tr>
+<tr>
+<td>Unit cost</td>
+<td>$5.06</td>
+</tr>
+<tr>
+<td>Absolute Maximum Current for entire IC</td>
+<td>0.5A</td>
+</tr>
+<tr>
+<td>Supply Voltage Range</td>
+<td>3.0 (min) / 3.3 (nominal) / 3.6 (max)</td>
+</tr>
+<tr>
+<td>Maximum GPIO current (per pin)</td>
+<td>40 mA</td>
+</tr>
+<tr>
+<td>Supports External Interrupts?</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Required Programming Hardware, Cost, URL</td>
+<td><a href="https://docs.espressif.com/projects/esp-idf/en/stable/esp32s3/get-started/index.html">Link</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="distance-sensor-needs-for-esp-32">Distance Sensor Needs for ESP 32</h2>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th># Available</th>
+<th>Needed</th>
+<th>Pins Chosen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UART2</td>
+<td>3</td>
+<td>1</td>
+<td>IO17 (TX), IO46 (RX)</td>
+</tr>
+<tr>
+<td>I2C (Sensor)</td>
+<td>5</td>
+<td>1</td>
+<td>IO5 (SCL), IO4 (SDA)</td>
+</tr>
+<tr>
+<td>I2C (OLED)</td>
+<td>4</td>
+<td>1</td>
+<td>IO7 (SCL), IO6 (SDA)</td>
+</tr>
+<tr>
+<td>GPIO (LEDs)</td>
+<td>33</td>
+<td>5</td>
+<td>IO14, IO21, IO47, IO48, IO45</td>
+</tr>
+<tr>
+<td>USB Programmer</td>
+<td>4</td>
+<td>2</td>
+<td>IO19 (D-), IO20 (D+)</td>
+</tr>
+<tr>
+<td>Reset Switch</td>
+<td>1</td>
+<td>1</td>
+<td>IO3 (EN)</td>
+</tr>
+</tbody>
+</table>
 <h2 id="final-major-components-selected">Final Major Components Selected</h2>
 <table>
 <thead>
@@ -1423,7 +1567,9 @@ Selected for its accuracy, compatibility with our ESP32-based subsystem, and wid
 </table>
 <p>These components meet the project's design goals for sensor control, data processing, and communication. Their solderability and known compatibility with each other ensured fast prototyping and successful integration.</p>
 <h2 id="power-budget">Power Budget</h2>
-<p><a class="glightbox" href="https://github.com/user-attachments/assets/13dd7ff3-c585-48f6-b871-d8983342dfea" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="powerbudget" src="https://github.com/user-attachments/assets/13dd7ff3-c585-48f6-b871-d8983342dfea" /></a></p>
+<p>The power budget (below) shows the maximum current each major component pulls from the power supply and the maximum current the power supply can provide. 
+<a class="glightbox" href="https://github.com/user-attachments/assets/13dd7ff3-c585-48f6-b871-d8983342dfea" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="powerbudget" src="https://github.com/user-attachments/assets/13dd7ff3-c585-48f6-b871-d8983342dfea" /></a></p>
+<p>Upon testing it is clear this power budget is accurate. The subsystem works as expected with no exceptions. </p>
 <hr />
 <h2>Additional Links</h2>
 <ul>
