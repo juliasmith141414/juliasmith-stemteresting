@@ -198,6 +198,16 @@ Selected for its accuracy, compatibility with our ESP32-based subsystem, and wid
 | Supports External Interrupts?               | Yes                                          |
 | Required Programming Hardware, Cost, URL    | [Link](https://docs.espressif.com/projects/esp-idf/en/stable/esp32s3/get-started/index.html) |
 
+### Rational for ESP 32
+I chose the ESP 32 instead of the PIC18F47Q10 for the following reasons: <br>
+<ul>
+     <li>Versatility in customizing GPIO pins.</li>
+     <li>Numerous existing external resources for debugging and coding.</li>
+     <li>I was able to model the distance sensor working with the ESP 32 on a solderless breadboard, while the through hole PIC18F44Q10 proved far more difficult to model</li>
+<ul>
+     
+    
+
 ## Distance Sensor Needs for ESP 32
 
 | Module          | # Available | Needed | Pins Chosen                         |
