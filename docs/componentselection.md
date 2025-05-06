@@ -204,7 +204,7 @@ I chose the ESP 32 instead of the PIC18F47Q10 for the following reasons: <br>
      <li>Versatility in customizing GPIO pins.</li>
      <li>Numerous existing external resources for debugging and coding.</li>
      <li>I was able to model the distance sensor working with the ESP 32 on a solderless breadboard, while the through hole PIC18F44Q10 proved far more difficult to model</li>
-<ul>
+</ul>
      
     
 
