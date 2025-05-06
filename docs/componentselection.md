@@ -191,9 +191,14 @@ Selected for its accuracy, compatibility with our ESP32-based subsystem, and wid
 
 These components meet the project's design goals for sensor control, data processing, and communication. Their solderability and known compatibility with each other ensured fast prototyping and successful integration.
 
+## Power Budget
+![powerbudget](https://github.com/user-attachments/assets/13dd7ff3-c585-48f6-b871-d8983342dfea)
+
+
 ---
 <h2>Additional Links</h2>
 <ul>
+    <li><a href="https://github.com/user-attachments/files/20051370/Julia.Power.Budget.-.Sheet1.1.pdf">Power Budget PDF</a></li>    
     <li><a href="https://juliasmith141414.github.io/juliasmith-stemteresting/">Home</a></li>
     <li><a href="https://egr314-2025-s-301.github.io/main-page/">Team Page</a></li>
 </ul>
