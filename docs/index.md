@@ -3,12 +3,6 @@ My name is Julia Smith. As a member of STEMteresting (Team 301), I am responsibl
 
 Email: jasmi157@asu.edu <br>
 
-## Final Picture: Top
-![top](https://github.com/user-attachments/assets/2db6152d-453a-48a6-a49d-1fc1ee861536)
-
-## Final Picture: Bottom
-![image](https://github.com/user-attachments/assets/b93a5eb2-0c0e-4d3e-97b7-bba4aca05144)
-
 ## 📚 Datasheet: Distance Sensor Subsystem
 
 <ul style="list-style-type: none; padding-left: 0;">
@@ -23,6 +17,9 @@ Email: jasmi157@asu.edu <br>
   </li>
   <li>
     <a href="https://juliasmith141414.github.io/juliasmith-stemteresting/api/" style="color:#ff1493; text-decoration: none;"> <strong>API</strong></a>
+  </li>
+  <li>
+    <a href="https://juliasmith141414.github.io/juliasmith-stemteresting/resources/" style="color:#ff1493; text-decoration: none;"> <strong>API</strong></a>
   </li>
 </ul>
 
