@@ -680,6 +680,27 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#distance-sensor-needs-for-esp-32" class="md-nav__link">
+    Distance Sensor Needs for ESP 32
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final-major-components-selected" class="md-nav__link">
+    Final Major Components Selected
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#power-budget" class="md-nav__link">
+    Power Budget
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -919,6 +940,27 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#distance-sensor-needs-for-esp-32" class="md-nav__link">
+    Distance Sensor Needs for ESP 32
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final-major-components-selected" class="md-nav__link">
+    Final Major Components Selected
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#power-budget" class="md-nav__link">
+    Power Budget
+  </a>
   
 </li>
       
@@ -1475,46 +1517,101 @@ Selected for its accuracy, compatibility with our ESP32-based subsystem, and wid
      <li>Versatility in customizing GPIO pins.</li>
      <li>Numerous existing external resources for debugging and coding.</li>
      <li>I was able to model the distance sensor working with the ESP 32 on a solderless breadboard, while the through hole PIC18F44Q10 proved far more difficult to model</li>
-<ul>
+</ul>
 
-
-
-## Distance Sensor Needs for ESP 32
-
-| Module          | # Available | Needed | Pins Chosen                         |
-|-----------------|-------------|--------|-------------------------------------|
-| UART2           | 3           | 1      | IO17 (TX), IO46 (RX)                |
-| I2C (Sensor)    | 5           | 1      | IO5 (SCL), IO4 (SDA)                |
-| I2C (OLED)      | 4           | 1      | IO7 (SCL), IO6 (SDA)                |
-| GPIO (LEDs)     | 33          | 5      | IO14, IO21, IO47, IO48, IO45        |
-| USB Programmer  | 4           | 2      | IO19 (D-), IO20 (D+)                |
-| Reset Switch    | 1           | 1      | IO3 (EN)                            |
-
-## Final Major Components Selected
-
-| **Component**      | **Part Number**             | **Source** | **Unit Price** |
-|-------------------|-----------------------------|------------|----------------|
-| Voltage Regulator | LM2575D2T-3.3R4G            | DigiKey    | $3.32          |
-| Microcontroller   | ESP32-S3-WROOM-1-N4         | DigiKey    | $5.06          |
-| Distance Sensor   | VL53L1X (Adafruit 3967)     | DigiKey    | $14.95         |
-
-These components meet the project's design goals for sensor control, data processing, and communication. Their solderability and known compatibility with each other ensured fast prototyping and successful integration.
-
-## Power Budget
-The power budget (below) shows the maximum current each major component pulls from the power supply and the maximum current the power supply can provide. 
-![powerbudget](https://github.com/user-attachments/assets/13dd7ff3-c585-48f6-b871-d8983342dfea)
-
-Upon testing it is clear this power budget is accurate. The subsystem works as expected with no exceptions. 
-
-
----
+<h2 id="distance-sensor-needs-for-esp-32">Distance Sensor Needs for ESP 32</h2>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th># Available</th>
+<th>Needed</th>
+<th>Pins Chosen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UART2</td>
+<td>3</td>
+<td>1</td>
+<td>IO17 (TX), IO46 (RX)</td>
+</tr>
+<tr>
+<td>I2C (Sensor)</td>
+<td>5</td>
+<td>1</td>
+<td>IO5 (SCL), IO4 (SDA)</td>
+</tr>
+<tr>
+<td>I2C (OLED)</td>
+<td>4</td>
+<td>1</td>
+<td>IO7 (SCL), IO6 (SDA)</td>
+</tr>
+<tr>
+<td>GPIO (LEDs)</td>
+<td>33</td>
+<td>5</td>
+<td>IO14, IO21, IO47, IO48, IO45</td>
+</tr>
+<tr>
+<td>USB Programmer</td>
+<td>4</td>
+<td>2</td>
+<td>IO19 (D-), IO20 (D+)</td>
+</tr>
+<tr>
+<td>Reset Switch</td>
+<td>1</td>
+<td>1</td>
+<td>IO3 (EN)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="final-major-components-selected">Final Major Components Selected</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Component</strong></th>
+<th><strong>Part Number</strong></th>
+<th><strong>Source</strong></th>
+<th><strong>Unit Price</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Voltage Regulator</td>
+<td>LM2575D2T-3.3R4G</td>
+<td>DigiKey</td>
+<td>$3.32</td>
+</tr>
+<tr>
+<td>Microcontroller</td>
+<td>ESP32-S3-WROOM-1-N4</td>
+<td>DigiKey</td>
+<td>$5.06</td>
+</tr>
+<tr>
+<td>Distance Sensor</td>
+<td>VL53L1X (Adafruit 3967)</td>
+<td>DigiKey</td>
+<td>$14.95</td>
+</tr>
+</tbody>
+</table>
+<p>These components meet the project's design goals for sensor control, data processing, and communication. Their solderability and known compatibility with each other ensured fast prototyping and successful integration.</p>
+<h2 id="power-budget">Power Budget</h2>
+<p>The power budget (below) shows the maximum current each major component pulls from the power supply and the maximum current the power supply can provide. 
+<a class="glightbox" href="https://github.com/user-attachments/assets/13dd7ff3-c585-48f6-b871-d8983342dfea" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="powerbudget" src="https://github.com/user-attachments/assets/13dd7ff3-c585-48f6-b871-d8983342dfea" /></a></p>
+<p>Upon testing it is clear this power budget is accurate. The subsystem works as expected with no exceptions. </p>
+<hr />
 <h2>Additional Links</h2>
 <ul>
     <li><a href="https://github.com/user-attachments/files/20051370/Julia.Power.Budget.-.Sheet1.1.pdf">Power Budget PDF</a></li>    
     <li><a href="https://juliasmith141414.github.io/juliasmith-stemteresting/">Home</a></li>
     <li><a href="https://egr314-2025-s-301.github.io/main-page/">Team Page</a></li>
 </ul>
----
+<hr />
 
 
 
