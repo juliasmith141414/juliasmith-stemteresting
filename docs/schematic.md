@@ -25,14 +25,32 @@ Key features:
 - 0.1 µF caps on each power pin
 - Switchable power from either barrel jack or ribbon cable
 
-## PCB Top Layer
+## Distance Sensor Subsystem PCB Top Layer
 <img width="548" alt="top_pcb" src="https://github.com/user-attachments/assets/3b97d5df-dba3-4d25-bcd7-1ae6f64a5ea8" />
 
-## PCB Bottom Layer
+## Distance Sensor Subsystem PCB Bottom Layer
 <img width="548" alt="bottom_pcb" src="https://github.com/user-attachments/assets/e360e623-efd1-489b-94ce-e66cfdb09660" />
 
-## PCB 3D View
+## Distance Sensor Subsystem PCB 3D View
 <img width="551" alt="3d_pcb_top" src="https://github.com/user-attachments/assets/219c89c0-2678-4348-9a92-8da911ca9e9a" />
+
+## Motor Driver PCB Top Layer
+![sara_top](https://github.com/user-attachments/assets/bd28a33f-5139-43d4-84e6-5b4f866ea191)
+
+## Motor Driver PCB Bottom Layer
+![sara_bottom](https://github.com/user-attachments/assets/66eee712-e346-47d7-825d-afdc33b1f216)
+
+## HMI Subsystem PCB Top Layer
+![xander_top](https://github.com/user-attachments/assets/8d033fb0-926f-4a9d-8880-c28e81c9e37e)
+
+## HMI Subsystem PCB Bottom Layer
+![xander_bottom](https://github.com/user-attachments/assets/81de64c3-09be-415e-881b-5e9a94615458)
+
+## MQTT Subsystem PCB Top Layer
+![ella_top](https://github.com/user-attachments/assets/f3a094eb-6111-4699-bacb-b5ffcc4293d5)
+
+## MQTT Subsystem PCB Bottom Layer
+![ella_bottom](https://github.com/user-attachments/assets/ae09cb50-0874-4862-a57c-8ff2af6915e4)
 
 ## Final Team PCBs Top View
 ![IMG_3495](https://github.com/user-attachments/assets/319744ac-c69b-4caa-bee4-9716b6aa9672)
