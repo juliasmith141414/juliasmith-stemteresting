@@ -886,13 +886,11 @@
 <p>Design began with modeling the sensor and ESP32 on a breadboard. Once UART and I²C worked reliably, the schematic was designed with all required features: USB programming, power switching, debugging pins, pullups, and a reset switch. The PCB layout emphasized hand-solderability, avoiding fine-pitch ICs.</p>
 <p>Ribbon cable integration was double-checked to ensure correct signal direction and voltage compatibility. Extra test pads and headers were added to future-proof the board.</p>
 <h2 id="proposed-improvements-for-version-20">Proposed Improvements for Version 2.0</h2>
-<p>If a Version 2.0 were developed, I would:
-- Move the sensor closer to the board edge to improve line-of-sight
-- Use a smaller 3.3V regulator with integrated passives to save board space
-- Add a dedicated I²C multiplexer to simplify bus sharing with OLED
-- Add a screw terminal for secure off-board wiring
-- Remove unecessary debug headers
-- Remove unecessary 0 Ohm resirtors</p>
+<p>If a Version 2.0 were developed, I would fix some problems I ran into. Specifically the pin choice for SCL and SDA lines. Originally I picked two SDA and SCL lines; keeping the bus for the distance sensor and the OLED screen seperate. This was an unecessary precaution on my part. In a perfected version I would use a dedicated I²C multiplexer to simplify bus sharing with the OLED and distance sensor. Additionally, in the schematic above the selected SCL2 line is on IO39; a dedicated boot pin. This mistake necessitated that I cut the trace to the SCL2 line, and manually jump the boot pin to GND in order to flash the ESP 32. This is cumbersome and inefficient. The manual boot method also increases the likely hood of accidentally shorting the device and causing damage. To circumvent this, IO39 should be connected to a switch identical to the setup for the EN pin. This would allow the user to initialize boot with a button instead; saving time and reducing the possibility for error. In turn the SDA and SCL lines would be shared between the oled and distance sensor.</p>
+<p>I would also remove the unecesary debug headers and 0 ohm resistors once the design was perfected. I would also use an alternate variation on the female usb connector (B4) that lay parallel to the baord instead of perpendicular in order to prioritize sturdiness. </p>
+<p>In order to operate reliably in any environment, a clamp should be placed on the D+ and D- lines between the USB connector (B4) and the ESP 32 (A1). This ensures consistent operation even when other noise is present.</p>
+<p>Overall the initial PCB operated very well because I used breakout debug headers everywhere. If I was unsure of a component's placement, I added a header, or  0 ohm resistor. This allowed me to make changes even after receiving the board.</p>
+<p>I would also like to eliminate the need for the daughter board entirely. Fabrication and budget limitations led me to use the daughter board version of the distance sensor, however, idealy, these would be custom fabricated on a smaller, seperate PCB. Overall, this would reduce the price of manfacuring on large scales by about $9.00 per board. </p>
 <p>These enhancements would reduce board size, improve debugging, and better isolate each feature.</p>
 <h2>Files and Links</h2>
 <ul>
