@@ -2,7 +2,9 @@
 
 This document compares and justifies the selection of major electrical components used in my subsystem. All components are surface-mount and suitable for hand-soldering or reflow, based on Peralta lab constraints.
 
----
+## Component Selection Process and Decision-Making
+
+We identified key system requirements for each subsystem (e.g., current draw, I2C compatibility, GPIO availability) and researched multiple off-the-shelf surface-mount options. Each candidate was evaluated based on datasheet specifications, price, solderability, and support in MicroPython. Final selections were made after modeling each subsystem on a breadboard and confirming UART and I2C functionality using the ESP32-S3.
 
 ## 3.3V Voltage Regulator
 
@@ -25,7 +27,6 @@ This document compares and justifies the selection of major electrical component
 | Low cost | Requires multiple external passives |
 | Fixed output simplifies design | No in-class experience with part |
 
-
 ### Option 3: [LM3671MF-3.3/NOPB](https://www.digikey.com/en/products/detail/texas-instruments/LM3671MF-3-3-NOPB/1590062?s=N4IgTCBcDaIDIFkDMA2A7ARgQMQLRIDokB6AOQHkAFAIRAF0BfIA) – $1.56
 ![LM3671MF-3 3](https://github.com/user-attachments/assets/83e80638-460a-4973-ab18-f6ed9c3c28aa)
 
@@ -38,13 +39,9 @@ This document compares and justifies the selection of major electrical component
 **✅ Final Selection: LM2575D2T-3.3R4G**  
 Chosen due to my familiarity with the component and the ease of soldering. While larger, it fits within our board space and supplies 1A, ensuring headroom for future expansion.
 
----
-
 ## Microcontroller Selection
 
 This section compares three microcontroller options for the subsystem: the ESP32-S3-WROOM-1-N4 (final selection), the PIC18F47Q10 (original classroom-based choice), and the ESP32-WROOM-32 (a popular alternative ESP variant). The comparison focuses on communication flexibility, compatibility with I2C peripherals, ease of development, and solderability.
-
----
 
 ### [ESP32-S3-WROOM-1-N4](https://www.digikey.com/en/products/detail/espressif-systems/ESP32-S3-WROOM-1-N4/16162639) – $5.06  
 ![MFG_Attachment-2-ESP32-S3-WROOM-1](https://github.com/user-attachments/assets/375f18d5-2e0d-474b-b8d2-364e079eaf60)
@@ -66,8 +63,6 @@ This section compares three microcontroller options for the subsystem: the ESP32
 | Fast dev cycle using MicroPython or Arduino | |
 | Community support and driver libraries | |
 
----
-
 ### [PIC18F47Q10](https://www.digikey.com/en/products/detail/microchip-technology/pic18f47q10-i-pt/10187786) – ~$3.00  
 ![pic](https://github.com/user-attachments/assets/3443e163-f268-498f-bc5c-8a70c2ffd998)
 
@@ -88,11 +83,8 @@ This section compares three microcontroller options for the subsystem: the ESP32
 | Supported by MCC in MPLAB X | Limited RAM and speed |
 | Easy to solder and test in lab | Not as flexible with I2C/SPI pins |
 
----
-
 ### [ESP32-WROOM-32UE-N4](https://www.digikey.com/en/products/detail/espressif-systems/ESP32-WROOM-32UE-N4/11613136) – $4.40  
 ![ESP32-WROOM-32UE-N4](https://github.com/user-attachments/assets/6f7ffa71-822c-4632-82b7-8f0d28e40bcc)
-
 
 | **Specs** | **Value** |
 |-----------|-----------|
@@ -117,9 +109,6 @@ This section compares three microcontroller options for the subsystem: the ESP32
 **Why Not Chosen:**  
 While the ESP32-WROOM-32UE-N4 offers excellent wireless connectivity with an external antenna and a similar power envelope to the S3, it lacks some critical performance features. Most notably, it does not support vector instructions or hardware acceleration required for advanced peripherals. Additionally, GPIO allocation is less flexible due to internal flash wiring, which increases the risk of pin conflicts. Given our system's reliance on reliable I²C communication and the potential need for multiple peripherals, the S3’s improved I/O multiplexing and library compatibility made it the better fit for our design.
 
----
-
-
 ### Comparison Table
 
 | Feature                    | **ESP32-S3-WROOM-1-N4** | **ESP32-WROOM-32** | **PIC18F47Q10** |
@@ -134,13 +123,8 @@ While the ESP32-WROOM-32UE-N4 offers excellent wireless connectivity with an ext
 | Community / Library Support| Extensive                | Strong              | Moderate         |
 | Price                     | $5.06                    | ~$4.50              | ~$3.00           |
 
----
-
 **✅ Final Selection: ESP32-S3-WROOM-1-N4**  
 This microcontroller was chosen for its combination of power, flexibility, and compatibility. It supports all needed communication protocols (especially I2C) with flexible GPIO assignment, integrates Wi-Fi and BLE for potential future use, and is backed by strong community support. While it is slightly more expensive than the other two options, its ability to simplify both firmware and hardware integration justifies the cost in the context of our design needs.
-
-
----
 
 ## Distance Sensor
 
@@ -178,7 +162,6 @@ This option is useful in applications where close-range detection is sufficient 
 **✅ Final Selection: VL53L1X**  
 Selected for its accuracy, compatibility with our ESP32-based subsystem, and wide sensing range. Surface-mount breakout simplifies PCB integration and library support accelerates development.
 
----
 ## ESP32-S3-WROOM-1-N4
 
 | **ESP Info**                                | **Answer**                                  |
@@ -219,6 +202,14 @@ I chose the ESP 32 instead of the PIC18F47Q10 for the following reasons: <br>
 | USB Programmer  | 4           | 2      | IO19 (D-), IO20 (D+)                |
 | Reset Switch    | 1           | 1      | IO3 (EN)                            |
 
+### Pinout Diagram
+![pinout_diAgram](https://github.com/user-attachments/assets/14d66d79-75e1-4bd2-8677-e85738cb206f)<br>
+*Figure: Pinout diagram used to assign subsystem pins.* <br>
+Source: [ESP32 Datasheet](https://github.com/user-attachments/files/20051666/esp32-s3-wroom-1_wroom-1u_datasheet_en.pdf)
+
+### I/O Resource Allocation Summary
+The ESP32-S3’s I/O multiplexing allowed flexible allocation of UART and I2C pins without conflict. With 3 UART channels, 2 I2C buses, and more than 30 usable GPIOs, the ESP32 exceeded our subsystem's requirements. No functionality was sacrificed due to hardware limitations.
+
 ## Final Major Components Selected
 
 | **Component**      | **Part Number**             | **Source** | **Unit Price** |
@@ -230,17 +221,20 @@ I chose the ESP 32 instead of the PIC18F47Q10 for the following reasons: <br>
 These components meet the project's design goals for sensor control, data processing, and communication. Their solderability and known compatibility with each other ensured fast prototyping and successful integration.
 
 ## Power Budget
-The power budget (below) shows the maximum current each major component pulls from the power supply and the maximum current the power supply can provide. 
+
+The power budget (below) shows the maximum current each major component pulls from the power supply and the maximum current the power supply can provide.
+
 ![powerbudget](https://github.com/user-attachments/assets/13dd7ff3-c585-48f6-b871-d8983342dfea)
 
-Upon testing it is clear this power budget is accurate. The subsystem works as expected with no exceptions. 
----
+Upon testing it is clear this power budget is accurate. The subsystem works as expected with no exceptions.
 
----
+### Power Budget Design Explanation
+
+The power budget confirmed that our selected 3.3V regulator (LM2575D2T-3.3) supplies more than enough current (1A) to support the ESP32-S3, OLED, and VL53L1X sensor, which together draw well under the 500 mA budgeted limit. This ensured we wouldn’t need additional regulators or MOSFET switching. A 25% margin was added for safety.
+
 <h2>Additional Links</h2>
 <ul>
     <li><a href="https://github.com/user-attachments/files/20051370/Julia.Power.Budget.-.Sheet1.1.pdf">Power Budget PDF</a></li>    
     <li><a href="https://juliasmith141414.github.io/juliasmith-stemteresting/">Home</a></li>
     <li><a href="https://egr314-2025-s-301.github.io/main-page/">Team Page</a></li>
 </ul>
----
