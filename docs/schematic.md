@@ -1,4 +1,4 @@
-# Final Schematic and PCB Design
+# Schematic
 
 ## Overview
 
