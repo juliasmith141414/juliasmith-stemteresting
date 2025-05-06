@@ -175,11 +175,39 @@ This microcontroller was chosen for its combination of power, flexibility, and c
 
 This option is useful in applications where close-range detection is sufficient and rapid setup is preferred due to the Qwiic system’s plug-and-play design. While it lacks the extended range of the VL53L1X, it offers reliable performance in short-distance sensing tasks and fully meets the I²C communication requirement.
 
-
 **✅ Final Selection: VL53L1X**  
 Selected for its accuracy, compatibility with our ESP32-based subsystem, and wide sensing range. Surface-mount breakout simplifies PCB integration and library support accelerates development.
 
 ---
+## ESP32-S3-WROOM-1-N4
+
+| **ESP Info**                                | **Answer**                                  |
+|---------------------------------------------|----------------------------------------------|
+| Model                                        | ESP32-S3                                     |
+| Product Page URL                            | [Link](https://www.espressif.com/en/products/socs/esp32-s3) |
+| ESP32-S3-WROOM-1-N4 Datasheet URL           | [Datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-s3-wroom-1_wroom-1u_datasheet_en.pdf) |
+| ESP32 S3 Datasheet URL                      | [Datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-s3_datasheet_en.pdf) |
+| ESP32 S3 Technical Reference Manual URL     | [Technical Manual](https://www.espressif.com/sites/default/files/documentation/esp32-s3_technical_reference_manual_en.pdf) |
+| Vendor link                                 | [DigiKey](https://www.digikey.com/en/products/detail/espressif-systems/ESP32-S3-WROOM-1-N4/16162639) |
+| Code Examples                               | [Github](https://github.com/drakxtwo/vl53l1x_pico.git)|
+| External Resources URL(s)                   | [Awesome MicroPython](https://awesome-micropython.com/?utm_source=chatgpt.com#distance-ir) |
+| Unit cost                                   | $5.06                                        |
+| Absolute Maximum Current for entire IC      | 0.5A                                         |
+| Supply Voltage Range                        | 3.0 (min) / 3.3 (nominal) / 3.6 (max)        |
+| Maximum GPIO current (per pin)              | 40 mA                                        |
+| Supports External Interrupts?               | Yes                                          |
+| Required Programming Hardware, Cost, URL    | [Link](https://docs.espressif.com/projects/esp-idf/en/stable/esp32s3/get-started/index.html) |
+
+## Distance Sensor Needs for ESP 32
+
+| Module          | # Available | Needed | Pins Chosen                         |
+|-----------------|-------------|--------|-------------------------------------|
+| UART2           | 3           | 1      | IO17 (TX), IO46 (RX)                |
+| I2C (Sensor)    | 5           | 1      | IO5 (SCL), IO4 (SDA)                |
+| I2C (OLED)      | 4           | 1      | IO7 (SCL), IO6 (SDA)                |
+| GPIO (LEDs)     | 33          | 5      | IO14, IO21, IO47, IO48, IO45        |
+| USB Programmer  | 4           | 2      | IO19 (D-), IO20 (D+)                |
+| Reset Switch    | 1           | 1      | IO3 (EN)                            |
 
 ## Final Major Components Selected
 
@@ -192,7 +220,10 @@ Selected for its accuracy, compatibility with our ESP32-based subsystem, and wid
 These components meet the project's design goals for sensor control, data processing, and communication. Their solderability and known compatibility with each other ensured fast prototyping and successful integration.
 
 ## Power Budget
+The power budget (below) shows the maximum current each major component pulls from the power supply and the maximum current the power supply can provide. 
 ![powerbudget](https://github.com/user-attachments/assets/13dd7ff3-c585-48f6-b871-d8983342dfea)
+
+Upon testing it is clear this power budget is accurate. The subsystem works as expected with no exceptions. 
 
 
 ---
