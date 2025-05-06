@@ -29,7 +29,7 @@
 
     
       
-        <title>Schematic - Julia Smith</title>
+        <title>Final Schematic and PCB Design - Julia Smith</title>
       
     
     
@@ -93,7 +93,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#schematic" class="md-skip">
+        <a href="#final-schematic-and-pcb-design" class="md-skip">
           Skip to content
         </a>
       
@@ -128,7 +128,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Schematic
+              Final Schematic and PCB Design
             
           </span>
         </div>
@@ -328,7 +328,7 @@
   
     
   
-  Schematic
+  Final Schematic and PCB Design
 
       </a>
     </li>
@@ -557,7 +557,7 @@
           
   
   <span class="md-ellipsis">
-    Schematic
+    Final Schematic and PCB Design
   </span>
   
 
@@ -568,7 +568,7 @@
         
   
   <span class="md-ellipsis">
-    Schematic
+    Final Schematic and PCB Design
   </span>
   
 
@@ -597,7 +597,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#schematic_1" class="md-nav__link">
+  <a href="#schematic" class="md-nav__link">
     Schematic
   </a>
   
@@ -620,6 +620,48 @@
         <li class="md-nav__item">
   <a href="#pcb-3d-view" class="md-nav__link">
     PCB 3D View
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final-team-pcbs-top-view" class="md-nav__link">
+    Final Team PCBs Top View
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final-team-pcbs-bottom-view" class="md-nav__link">
+    Final Team PCBs Bottom View
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functionality-justification" class="md-nav__link">
+    Functionality Justification
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#design-and-decision-making-process" class="md-nav__link">
+    Design and Decision-Making Process
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proposed-improvements-for-version-20" class="md-nav__link">
+    Proposed Improvements for Version 2.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#files-and-links" class="md-nav__link">
+    Files and Links
   </a>
   
 </li>
@@ -707,7 +749,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#schematic_1" class="md-nav__link">
+  <a href="#schematic" class="md-nav__link">
     Schematic
   </a>
   
@@ -730,6 +772,48 @@
         <li class="md-nav__item">
   <a href="#pcb-3d-view" class="md-nav__link">
     PCB 3D View
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final-team-pcbs-top-view" class="md-nav__link">
+    Final Team PCBs Top View
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final-team-pcbs-bottom-view" class="md-nav__link">
+    Final Team PCBs Bottom View
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functionality-justification" class="md-nav__link">
+    Functionality Justification
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#design-and-decision-making-process" class="md-nav__link">
+    Design and Decision-Making Process
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proposed-improvements-for-version-20" class="md-nav__link">
+    Proposed Improvements for Version 2.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#files-and-links" class="md-nav__link">
+    Files and Links
   </a>
   
 </li>
@@ -757,26 +841,67 @@
   
 
 
-<h1 id="schematic">Schematic</h1>
+<h1 id="final-schematic-and-pcb-design">Final Schematic and PCB Design</h1>
 <h2 id="overview">Overview</h2>
-<p>The schematic illustrates the electrical connections and components of my subsystem, 
-including the microcontroller, sensors, voltage regulator, and and debugging components. </p>
-<p>It defines how signals and power are distributed, ensuring proper operation and 
-integration of all hardware. </p>
-<h2 id="schematic_1">Schematic</h2>
+<p>This page documents the final schematic and PCB layout of my distance sensor subsystem. It uses an ESP32-S3-WROOM-1-N4 microcontroller to control a VL53L1X Time-of-Flight sensor and transmit processed data via UART. The board was designed using Altium, with all components selected to be surface-mount and suitable for hand soldering. The system includes regulated power from a 3.3V switching regulator, UART and I²C communication, an onboard OLED for debugging, and expansion headers.</p>
+<p>This hardware design enables the subsystem to:
+- Continuously collect distance readings
+- Classify the distance as safe (1) or unsafe (0)
+- Transmit results via UART to teammate subsystems
+- Optionally display raw distance on an OLED screen during debugging</p>
+<hr />
+<h2 id="schematic">Schematic</h2>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/f99bc89f-4a74-4043-bd7c-da7d3043d4cf" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="schematic" src="https://github.com/user-attachments/assets/f99bc89f-4a74-4043-bd7c-da7d3043d4cf" /></a></p>
+<p>Key features:
+- ESP32-S3-WROOM-1-N4 microcontroller
+- VL53L1X sensor via I²C (IO5, IO4)
+- OLED screen via I²C (IO7, IO6)
+- UART TX to downstream (IO17), RX from upstream (IO46)
+- USB programming via IO19 (D-) and IO20 (D+)
+- EN (IO3) connected to reset button
+- Bypass capacitors and pull-ups per datasheets
+- 0.1 µF caps on each power pin
+- Switchable power from either barrel jack or ribbon cable</p>
+<hr />
 <h2 id="pcb-top-layer">PCB Top Layer</h2>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/3b97d5df-dba3-4d25-bcd7-1ae6f64a5ea8" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img width="548" alt="top_pcb" src="https://github.com/user-attachments/assets/3b97d5df-dba3-4d25-bcd7-1ae6f64a5ea8" /></a></p>
 <h2 id="pcb-bottom-layer">PCB Bottom Layer</h2>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/e360e623-efd1-489b-94ce-e66cfdb09660" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img width="548" alt="bottom_pcb" src="https://github.com/user-attachments/assets/e360e623-efd1-489b-94ce-e66cfdb09660" /></a></p>
 <h2 id="pcb-3d-view">PCB 3D View</h2>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/219c89c0-2678-4348-9a92-8da911ca9e9a" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img width="551" alt="3d_pcb_top" src="https://github.com/user-attachments/assets/219c89c0-2678-4348-9a92-8da911ca9e9a" /></a></p>
-<h2>Additional Links</h2>
+<h2 id="final-team-pcbs-top-view">Final Team PCBs Top View</h2>
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/319744ac-c69b-4caa-bee4-9716b6aa9672" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="IMG_3495" src="https://github.com/user-attachments/assets/319744ac-c69b-4caa-bee4-9716b6aa9672" /></a></p>
+<h2 id="final-team-pcbs-bottom-view">Final Team PCBs Bottom View</h2>
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/9721313e-c11a-46b6-ab50-37a94a1b4dd8" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="IMG_3496" src="https://github.com/user-attachments/assets/9721313e-c11a-46b6-ab50-37a94a1b4dd8" /></a></p>
+<h2 id="functionality-justification">Functionality Justification</h2>
+<p>This schematic satisfies all subsystem and user requirements by:
+- Ensuring reliable sensor readings with millimeter accuracy
+- Providing real-time binary decision data over UART
+- Including an OLED to visually debug distance readings
+- Supporting USB programming with no extra hardware
+- Allowing safe operation near dangerous machinery</p>
+<p>The ESP32’s I/O multiplexing allowed flexible pin routing. All signal types were considered (I²C, UART, digital out). The regulator supports a wide 9–12V input and provides clean 3.3V power.</p>
+<hr />
+<h2 id="design-and-decision-making-process">Design and Decision-Making Process</h2>
+<p>Design began with modeling the sensor and ESP32 on a breadboard. Once UART and I²C worked reliably, the schematic was designed with all required features: USB programming, power switching, debugging pins, pullups, and a reset switch. The PCB layout emphasized hand-solderability, avoiding fine-pitch ICs.</p>
+<p>Ribbon cable integration was double-checked to ensure correct signal direction and voltage compatibility. Extra test pads and headers were added to future-proof the board.</p>
+<hr />
+<h2 id="proposed-improvements-for-version-20">Proposed Improvements for Version 2.0</h2>
+<p>If a Version 2.0 were developed, I would:
+- Move the sensor closer to the board edge to improve line-of-sight
+- Use a smaller 3.3V regulator with integrated passives to save board space
+- Add a dedicated I²C multiplexer to simplify bus sharing with OLED
+- Include current measurement test pads for debugging power consumption
+- Add a screw terminal for secure off-board wiring</p>
+<p>These enhancements would reduce board size, improve debugging, and better isolate each feature.</p>
+<hr />
+<h2 id="files-and-links">Files and Links</h2>
 <ul>
-    <li><a href="https://github.com/user-attachments/files/20047940/altium_distance_sensor.zip">Altium Project Zip File</a></li>
-    <li><a href="https://github.com/user-attachments/files/20047904/JAS_SCHEMATIC_ESP32.pdf">Schematic PDF</a></li> <br>
-    <li><a href="https://juliasmith141414.github.io/">Home</a></li>
-    <li><a href="https://egr314-2025-s-301.github.io/main-page/">Team Page</a></li>
+<li><a href="https://github.com/user-attachments/files/20047940/altium_distance_sensor.zip">Altium Project ZIP</a></li>
+<li><a href="https://github.com/user-attachments/files/20051808/Project.Outputs.for.PCB_Projectfinalfinal.zip">Gerber Files ZIP</a></li>
+<li><a href="https://github.com/user-attachments/files/20047904/JAS_SCHEMATIC_ESP32.pdf">Schematic PDF</a></li>
+<li><a href="https://juliasmith141414.github.io/">Home Page</a></li>
+<li><a href="https://egr314-2025-s-301.github.io/main-page/">Team Page</a></li>
 </ul>
 
 
