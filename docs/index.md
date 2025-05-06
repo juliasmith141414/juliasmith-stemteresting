@@ -19,7 +19,7 @@ Email: jasmi157@asu.edu <br>
     <a href="https://juliasmith141414.github.io/juliasmith-stemteresting/api/" style="color:#ff1493; text-decoration: none;"> <strong>API</strong></a>
   </li>
   <li>
-    <a href="https://juliasmith141414.github.io/juliasmith-stemteresting/resources/" style="color:#ff1493; text-decoration: none;"> <strong>API</strong></a>
+    <a href="https://juliasmith141414.github.io/juliasmith-stemteresting/resources/" style="color:#ff1493; text-decoration: none;"> <strong>Resources</strong></a>
   </li>
 </ul>
 
