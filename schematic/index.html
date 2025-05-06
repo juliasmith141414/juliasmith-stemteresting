@@ -639,6 +639,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#bill-of-materials" class="md-nav__link">
+    Bill of Materials
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#functionality-justification" class="md-nav__link">
     Functionality Justification
   </a>
@@ -655,13 +662,6 @@
         <li class="md-nav__item">
   <a href="#proposed-improvements-for-version-20" class="md-nav__link">
     Proposed Improvements for Version 2.0
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#files-and-links" class="md-nav__link">
-    Files and Links
   </a>
   
 </li>
@@ -791,6 +791,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#bill-of-materials" class="md-nav__link">
+    Bill of Materials
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#functionality-justification" class="md-nav__link">
     Functionality Justification
   </a>
@@ -807,13 +814,6 @@
         <li class="md-nav__item">
   <a href="#proposed-improvements-for-version-20" class="md-nav__link">
     Proposed Improvements for Version 2.0
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#files-and-links" class="md-nav__link">
-    Files and Links
   </a>
   
 </li>
@@ -849,7 +849,6 @@
 - Classify the distance as safe (1) or unsafe (0)
 - Transmit results via UART to teammate subsystems
 - Optionally display raw distance on an OLED screen during debugging</p>
-<hr />
 <h2 id="schematic">Schematic</h2>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/f99bc89f-4a74-4043-bd7c-da7d3043d4cf" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="schematic" src="https://github.com/user-attachments/assets/f99bc89f-4a74-4043-bd7c-da7d3043d4cf" /></a></p>
 <p>Key features:
@@ -862,7 +861,6 @@
 - Bypass capacitors and pull-ups per datasheets
 - 0.1 µF caps on each power pin
 - Switchable power from either barrel jack or ribbon cable</p>
-<hr />
 <h2 id="pcb-top-layer">PCB Top Layer</h2>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/3b97d5df-dba3-4d25-bcd7-1ae6f64a5ea8" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img width="548" alt="top_pcb" src="https://github.com/user-attachments/assets/3b97d5df-dba3-4d25-bcd7-1ae6f64a5ea8" /></a></p>
 <h2 id="pcb-bottom-layer">PCB Bottom Layer</h2>
@@ -873,6 +871,9 @@
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/319744ac-c69b-4caa-bee4-9716b6aa9672" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="IMG_3495" src="https://github.com/user-attachments/assets/319744ac-c69b-4caa-bee4-9716b6aa9672" /></a></p>
 <h2 id="final-team-pcbs-bottom-view">Final Team PCBs Bottom View</h2>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/9721313e-c11a-46b6-ab50-37a94a1b4dd8" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="IMG_3496" src="https://github.com/user-attachments/assets/9721313e-c11a-46b6-ab50-37a94a1b4dd8" /></a></p>
+<h2 id="bill-of-materials">Bill of Materials</h2>
+<p>The bill of Materials below shows the necessary components to build one complete distance sensor subsystem board.
+<a class="glightbox" href="https://github.com/user-attachments/assets/448b0d76-822a-4298-a584-1d6c9d30a84a" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img width="796" alt="BOM" src="https://github.com/user-attachments/assets/448b0d76-822a-4298-a584-1d6c9d30a84a" /></a></p>
 <h2 id="functionality-justification">Functionality Justification</h2>
 <p>This schematic satisfies all subsystem and user requirements by:
 - Ensuring reliable sensor readings with millimeter accuracy
@@ -881,27 +882,26 @@
 - Supporting USB programming with no extra hardware
 - Allowing safe operation near dangerous machinery</p>
 <p>The ESP32’s I/O multiplexing allowed flexible pin routing. All signal types were considered (I²C, UART, digital out). The regulator supports a wide 9–12V input and provides clean 3.3V power.</p>
-<hr />
 <h2 id="design-and-decision-making-process">Design and Decision-Making Process</h2>
 <p>Design began with modeling the sensor and ESP32 on a breadboard. Once UART and I²C worked reliably, the schematic was designed with all required features: USB programming, power switching, debugging pins, pullups, and a reset switch. The PCB layout emphasized hand-solderability, avoiding fine-pitch ICs.</p>
 <p>Ribbon cable integration was double-checked to ensure correct signal direction and voltage compatibility. Extra test pads and headers were added to future-proof the board.</p>
-<hr />
 <h2 id="proposed-improvements-for-version-20">Proposed Improvements for Version 2.0</h2>
 <p>If a Version 2.0 were developed, I would:
 - Move the sensor closer to the board edge to improve line-of-sight
 - Use a smaller 3.3V regulator with integrated passives to save board space
 - Add a dedicated I²C multiplexer to simplify bus sharing with OLED
-- Include current measurement test pads for debugging power consumption
-- Add a screw terminal for secure off-board wiring</p>
+- Add a screw terminal for secure off-board wiring
+- Remove unecessary debug headers
+- Remove unecessary 0 Ohm resirtors</p>
 <p>These enhancements would reduce board size, improve debugging, and better isolate each feature.</p>
-<hr />
-<h2 id="files-and-links">Files and Links</h2>
+<h2>Files and Links</h2>
 <ul>
-<li><a href="https://github.com/user-attachments/files/20047940/altium_distance_sensor.zip">Altium Project ZIP</a></li>
-<li><a href="https://github.com/user-attachments/files/20051808/Project.Outputs.for.PCB_Projectfinalfinal.zip">Gerber Files ZIP</a></li>
-<li><a href="https://github.com/user-attachments/files/20047904/JAS_SCHEMATIC_ESP32.pdf">Schematic PDF</a></li>
-<li><a href="https://juliasmith141414.github.io/">Home Page</a></li>
-<li><a href="https://egr314-2025-s-301.github.io/main-page/">Team Page</a></li>
+    <li><a href="https://github.com/user-attachments/files/20047904/JAS_SCHEMATIC_ESP32.pdf">Schematic PDF</a></li>
+    <li><a href="https://github.com/user-attachments/files/20047940/altium_distance_sensor.zip">Altium Project ZIP</a></li>
+    <li><a href="https://github.com/user-attachments/files/20051808/Project.Outputs.for.PCB_Projectfinalfinal.zip">Gerber Files ZIP</a></li>
+    <li><a href="https://github.com/user-attachments/files/20051945/JULIA.BOM.-.Sheet1.pdf">Bill of Materials PDF</a></li><br>
+    <li><a href="https://juliasmith141414.github.io/">Home</a></li>
+    <li><a href="https://egr314-2025-s-301.github.io/main-page/">Team Page</a></li>
 </ul>
 
 
